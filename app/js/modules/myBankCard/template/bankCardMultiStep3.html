@@ -1,0 +1,37 @@
+<ion-view class="page--wallet" view-title="">
+    <pc-logo></pc-logo>
+    <ion-content class="has-header content--no-footer">
+        <div class="item item-divider">
+            {{'Add a bank card' | translate}}
+            <div steps-navigation label="'3/3' | translate" prev="dash.bankCardMultiStep2"></div>
+        </div>
+        <div class="padding20 form">
+
+            <form name="step3Form">
+                <p>{{'An SMS with a security code has been sent to the number' | translate}}: {{bcMultiStep3.phoneNumber}}</p>
+
+                <label class="item-input">
+                    <span class="item-label">{{'Verification Code (OTP)' | translate}}</span>
+                    <input type="tel" ng-model="bcMultiStep3.smsCode" required>
+                </label>
+
+               <button class="button"
+               on-click="bcMultiStep3.requestOTP()"
+               is-sent="bcMultiStep3.isOTPSent"
+               count-down="bcMultiStep3.countDown"
+               label="{{'Request OTP' | translate}}">
+               </button>
+
+                <form-error error-msg="bcMultiStep3.errorMsg"></form-error>
+
+                <div class="row row-no-padding padding-vertical">
+                    <button class="button button-full button-positive" ng-disabled="step3Form.$invalid" ng-click="bcMultiStep3.submit()">
+                    {{'Confirm' | translate }}
+                    </button>
+                 </div>
+
+            </form>
+
+        </div>
+    </ion-content>
+</ion-view>

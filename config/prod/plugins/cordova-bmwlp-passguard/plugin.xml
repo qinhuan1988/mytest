@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-bmwlp-passguard"
+        version="1.0.0">
+
+    <name>SecurityKeyboard</name>
+    <description>iOS, Android payment api, generate encription string by key and factor</description>
+
+    <platform name="android">
+        <js-module src="www/android/passguardmanager.js" name="passguardmanager">
+            <clobbers target="passguardmanager" />
+        </js-module>
+
+        <hook type="after_plugin_install" src="hooks/android/override-main-activity.js" />
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="PassGuardManager">
+                <param name="android-package" value="com.mcongroup.bmw.memberapp.prod.PassGuardManager" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/PassGuardManager.java" target-dir="src/com/mcon/group/bmw/memberapp/prod/" />
+
+        <lib-file src="src/android/libs/armeabi" arch="all" />
+        <lib-file src="src/android/libs/passguard.jar" arch="all" />
+    </platform>
+
+
+
+
+    <platform name="ios">
+
+        <js-module src="www/ios/passguardmanager.js" name="passguardmanager">
+            <clobbers target="passguardmanager" />
+        </js-module>
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="PassGuardManager">
+                <param name="ios-package" value="CDVPassGuardManager" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/Plugins/CDVPassGuardManager.h" />
+        <source-file src="src/ios/Plugins/CDVPassGuardManager.m" />
+
+        <header-file src="src/ios/PassGuardManager.h"/>
+        <source-file src="src/ios/PassGuardManager.m"/>
+
+        <header-file src="src/ios/libPassGuardCtrl/PassGuardCtrl.h"/>
+        <header-file src="src/ios/libPassGuardCtrl/PassGuardViewController.h"/>
+        <header-file src="src/ios/libPassGuardCtrl/PGTigerBrowserWebView.h"/>
+        <resource-file src="src/ios/libPassGuardCtrl/PassGuardCtrlBundle.bundle"/>
+
+        <source-file src="src/ios/libPassGuardCtrl/libPassGuardCtrl.a" framework="true" />
+        <framework src="Security.framework" />
+        <framework src="libstdc++.6.0.9.tbd" />
+        <framework src="AudioToolbox.framework" />
+    </platform>
+
+
+</plugin>

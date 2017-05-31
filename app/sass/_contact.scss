@@ -1,0 +1,8 @@
+.contact-tabs-menu {
+    @extend .tabs-menu;
+    background: $background-color-tertiary;
+
+    .layer-divider:first-child {
+        margin-top: 0;
+    }
+}

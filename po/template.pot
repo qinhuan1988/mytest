@@ -1,0 +1,2674 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: modules/benefits/templates/programme.html:39
+msgid "(1)  Only valid in 2017; for vehicles equipped with Professional Navigation Systems (HU-H), Business Navigation Systems (Entry Nav), or Professional and Business Navigation Systems (CIC)."
+msgstr ""
+
+#: modules/benefits/templates/programme.html:42
+msgid "(2)  Based on availability of participating dealerships."
+msgstr ""
+
+#: modules/benefits/templates/programme.html:45
+msgid "(3)  For the duration of your car repair or maintenance we offer you a reimbursement of up to 200RMB on your transportation costs."
+msgstr ""
+
+#: modules/benefits/templates/programme.html:48
+msgid "(4)  Priority for appointments made in advance. Service is based on availability of participating dealerships."
+msgstr ""
+
+#: modules/benefits/templates/pointsRules.html:19
+msgid "*For MINI and BMW Lifestyle products, original parts, and other purchases made at participating dealerships. Based on the Recommended Retail Price. Certain restrictions may apply."
+msgstr ""
+
+#: modules/benefits/templates/pointsRules.html:8
+msgid "1 RMB spent = 1 status point.*"
+msgstr ""
+
+#: modules/dealers/templates/forgotPinStep1.html:6
+#: modules/myBankCard/template/bankCardMultiStep1.html:6
+msgid "1/3"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep1.html:6
+msgid "1/4"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep1.html:7
+msgid "1/5"
+msgstr ""
+
+#: modules/dealers/templates/forgotPinStep2.html:5
+#: modules/myBankCard/template/bankCardMultiStep2.html:6
+msgid "2/3"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep2.html:5
+msgid "2/4"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep2.html:6
+msgid "2/5"
+msgstr ""
+
+#: modules/dealers/templates/forgotPinStep3.html:6
+#: modules/myBankCard/template/bankCardMultiStep3.html:6
+msgid "3/3"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep3.html:5
+msgid "3/4"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep3.html:6
+msgid "3/5"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep4.html:5
+msgid "4/4"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep4.html:6
+msgid "4/5"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep5.html:6
+msgid "5/5"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:19
+msgid "ABC"
+msgstr ""
+
+#: modules/home/home.html:24
+msgid "ABOUT-in-homepage"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi-changenow.html:11
+msgid "About Charging Service"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:40
+msgid "About Installment repayment"
+msgstr ""
+
+#: modules/common/templates/tabs-power-press.html:31
+msgid "About-in-iDrive"
+msgstr ""
+
+#: modules/about/about.html:4
+msgid "About-title-after-login"
+msgstr ""
+
+#: modules/registration/templates/BMWOwnerCarList.html:11
+msgid "According to our records, your current vehicle information is as follows:"
+msgstr ""
+
+#: modules/myBankCard/template/paymentMethod.html:19
+msgid "Account"
+msgstr ""
+
+#: modules/myWallet/myWallet.html:19
+msgid "Add Card"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:117
+msgid "Add Dealer"
+msgstr ""
+
+#: modules/giftCards/giftCardStep2.html:5
+msgid "Add a Gift card"
+msgstr ""
+
+#: modules/registration/templates/addCar.html:2
+msgid "Add a New Vehicle"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep1.html:5
+#: modules/myBankCard/template/bankCardMultiStep2.html:5
+#: modules/myBankCard/template/bankCardMultiStep3.html:5
+#: modules/myBankCard/template/bankCardStep1.html:6
+#: modules/myBankCard/template/bankCardStep2.html:5
+#: modules/myBankCard/template/bankCardStep3.html:5
+#: modules/myBankCard/template/paymentMethod.html:59
+#: modules/myWallet/quickPayQR.html:21
+msgid "Add a bank card"
+msgstr ""
+
+#: modules/myBankCard/template/paymentMethod.html:64
+msgid "Add a gift card"
+msgstr ""
+
+#: modules/dealers/templates/dealers.html:76
+msgid "Add a new Dealer"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:178
+msgid "Add a new Vehicle"
+msgstr ""
+
+#: modules/vehicles/templates/addVehicle.html:1
+#: modules/vehicles/templates/addVehicleProof.html:1
+msgid "Add a new vehicle"
+msgstr ""
+
+#: modules/registration/templates/BMWOwnerCarList.html:44
+msgid "Add another vehicle"
+msgstr ""
+
+#: modules/offers/templates/offerInfo.html:48
+msgid "Add to Favorites"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:173
+msgid "Add vehicle"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:13
+#: modules/myProfile/address.html:10
+#: modules/myProfile/address.html:5
+#: modules/myProfile/myProfile.html:29
+#: modules/registration/templates/step4.html:29
+msgid "Address"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:54
+#: modules/dealers/templates/dealerInfo.html:105
+msgid "Address & Map"
+msgstr ""
+
+#: modules/myBankCard/template/paymentMethod.html:36
+msgid "Alipay"
+msgstr ""
+
+#: modules/dealers/templates/addDealerPartial.html:11
+#: modules/dealers/templates/addDealerPartial.html:27
+#: modules/dealers/templates/addDealerPartial.html:43
+msgid "All"
+msgstr ""
+
+#: modules/overview/overview.html:9
+msgid "All Chats"
+msgstr ""
+
+#: modules/offers/templates/offers.html:16
+msgid "All Offers"
+msgstr ""
+
+#: modules/dealers/templates/dealers.html:7
+msgid "All your BMW Dealers and membership cards at a glance."
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep3.html:11
+msgid "An SMS with a security code has been sent to the number"
+msgstr ""
+
+#: modules/benefits/templates/levels.html:29
+msgid "An overview and history of your collected membership points."
+msgstr ""
+
+#: modules/activity/activity.html:11
+msgid "An overview of the most recent transactions on your account."
+msgstr ""
+
+#: modules/api/run/apiSettingsRun.js:78
+msgid "Application error, please try again later"
+msgstr ""
+
+#: modules/giftCards/addCard.html:11
+msgid "Apply for a credit card with the China Construction Bank and enjoy even more benefits. Send in your application today: it is free!"
+msgstr ""
+
+#: modules/giftCards/addCard.html:22
+msgid "Apply now"
+msgstr ""
+
+#: modules/login/login.html:17
+msgid "As a member of the Priority Plus Alliance, you enjoy exclusive benefits. Log in now with your password. If you do not have a password, you can log in with a verification code (OTP) sent to your mobile phone."
+msgstr ""
+
+#: modules/benefits/templates/pointsRules.html:16
+msgid "Attend a BMW Group event or activity."
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:22
+msgid "BCM"
+msgstr ""
+
+#: modules/dash/directives/centralCardLayer.js:67
+msgid "BLUE Diamond"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:19
+#: modules/sideMenu/side-menu-bmw.html:3
+#: modules/sideMenu/side-menu-overview.html:11
+msgid "BMW"
+msgstr ""
+
+#: modules/partners/partners.html:5
+msgid "BMW ALLIANCE partners are being updated frequently, so be sure to check in for new offers!"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:28
+msgid "BMW Apps"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:8
+msgid "BMW Chat Wallpaper"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-1.html:22
+msgid "BMW Customer Services Overview"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:12
+msgid "BMW Dealer Card"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:18
+msgid "BMW Digital Magazine"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:13
+msgid "BMW GIF Stickers"
+msgstr ""
+
+#: modules/chats/templates/chat.html:2
+msgid "BMW Group Assistant Chat"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:13
+msgid "BMW Joint Gift Card"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-4.html:3
+#: modules/sideMenu/side-menu-bmw.html:20
+msgid "BMW New Vehicles"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:48
+msgid "BMW Official Owner Club"
+msgstr ""
+
+#: modules/dash/memberCard.html:8
+msgid "BMW PAY"
+msgstr ""
+
+#: modules/common/templates/tabs-power-press.html:23
+#: modules/myWallet/myWallet.html:15
+msgid "BMW Pay"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:38
+msgid "BMW Ringtone"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:33
+msgid "BMW Social Media"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:14
+msgid "BMW Special Gift Card"
+msgstr ""
+
+#: modules/offers/templates/previewLayer.html:33
+#: modules/sideMenu/side-menu-bmw-8.html:43
+#: modules/sideMenu/side-menu-offers-news.html:49
+msgid "BMW TV"
+msgstr ""
+
+#: modules/registration/controllers/Step1Ctrl.js:168
+#: modules/registration/templates/step1.html:46
+msgid "BMW Terms and Conditions"
+msgstr ""
+
+#: modules/dash/DashCtrl.js:289
+msgid "BMW Terms and conditions"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:23
+msgid "BMW Website"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:11
+msgid "BMW Wholesale Card"
+msgstr ""
+
+#: modules/offers/templates/previewLayer.html:29
+#: modules/sideMenu/side-menu-offers-news.html:39
+msgid "BMW club forum"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:3
+#: modules/sideMenu/side-menu-overview.html:26
+msgid "BMW financial service"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi.html:3
+#: modules/sideMenu/side-menu-overview.html:19
+msgid "BMW mobility service"
+msgstr ""
+
+#: modules/offers/templates/previewLayer.html:31
+#: modules/sideMenu/side-menu-offers-news.html:44
+msgid "BMW newsletter"
+msgstr ""
+
+#: modules/offers/templates/previewLayer.html:18
+#: modules/sideMenu/side-menu-offers-news.html:24
+msgid "BMW shop"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:31
+msgid "BMWi"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:33
+msgid "BOB"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:20
+msgid "BOC"
+msgstr ""
+
+#: modules/common/services/localeService.js:70
+#: modules/sideMenu/side-menu.html:6
+msgid "Back"
+msgstr ""
+
+#: modules/common/templates/comingSoon.html:15
+msgid "Back to Home"
+msgstr ""
+
+#: modules/myBankCard/PaymentMethodCtrl.js:91
+msgid "Bank List"
+msgstr ""
+
+#: modules/dealers/controllers/ReplaceCardCtrl.js:52
+msgid "Bank card number does not exist in the system."
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-2.html:13
+msgid "Book Service Appointment"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi-reachnow.html:7
+msgid "Book a car"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-6.html:12
+msgid "Buy accessories online"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-5.html:3
+#: modules/sideMenu/side-menu-bmw.html:24
+msgid "Buy bmw certified used car online"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:21
+msgid "CCB"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:25
+msgid "CEB"
+msgstr ""
+
+#: modules/common/templates/tabs.html:4
+msgid "CHAT"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:31
+msgid "CIB"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:24
+msgid "CMB"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:29
+msgid "CMBC"
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step2.html:26
+msgid "CVN"
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step2.html:26
+msgid "CVN invalid"
+msgstr ""
+
+#: modules/common/directives/validateLastName.js:21
+#: modules/myBankCard/template/bankCardMultiStep2.html:15
+#: modules/myBankCard/template/bankCardStep2.html:15
+msgid "CVN2"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep2.html:15
+#: modules/myBankCard/template/bankCardStep2.html:15
+msgid "CVN2 invalid"
+msgstr ""
+
+#: modules/offers/templates/offerInfo.html:51
+msgid "Call"
+msgstr ""
+
+#: modules/common/services/dialogService.js:138
+msgid "Call US"
+msgstr ""
+
+#: modules/chats/ChatCtrl.js:353
+#: modules/common/services/dialogService.js:35
+#: modules/dash/DashCtrl.js:265
+#: modules/dealers/templates/addDealer.html:13
+msgid "Cancel"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:152
+#: modules/dash/memberDashboard.html:193
+#: modules/dash/memberDashboard.html:227
+#: modules/registration/templates/BMWOwnerCarList.html:19
+#: modules/vehicles/templates/vehicles.html:116
+#: modules/vehicles/templates/vehicles.html:33
+#: modules/vehicles/templates/vehicles.html:90
+msgid "Car model"
+msgstr ""
+
+#: modules/giftCards/giftCardStep2.html:16
+msgid "Card Back No."
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep2.html:12
+#: modules/myBankCard/template/bankCardStep2.html:12
+msgid "Card Expiry Date: MMYY"
+msgstr ""
+
+#: modules/dealers/templates/forgotPinStep2.html:17
+#: modules/giftCards/giftCardStep2.html:12
+msgid "Card No."
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep1.html:22
+#: modules/myBankCard/template/bankCardStep1.html:44
+#: modules/settings/forgetPaymentPassword/step2.html:20
+msgid "Card Number"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep1.html:45
+msgid "Card Number has to be 16 or 19 digitals"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:95
+msgid "Card Type"
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step2.html:23
+msgid "Card expiration date: MMYY"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep2.html:12
+#: modules/myBankCard/template/bankCardStep2.html:12
+#: modules/settings/forgetPaymentPassword/step2.html:23
+msgid "Card expirty time format incorrect"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep1.html:25
+msgid "Cardholder ID Number"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep1.html:14
+msgid "Cardholder name"
+msgstr ""
+
+#: modules/activity/claimPoints.html:36
+msgid "Cashier Receipt ID"
+msgstr ""
+
+#: modules/activity/claimPoints.html:37
+msgid "Cashiers Receipt ID"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep1.html:5
+#: modules/dealers/templates/changePinStep2.html:4
+#: modules/dealers/templates/changePinStep3.html:4
+#: modules/dealers/templates/changePinStep4.html:4
+#: modules/dealers/templates/dealerInfo.html:130
+msgid "Change PIN"
+msgstr ""
+
+#: modules/changePassword/changePassword.html:36
+#: modules/myProfile/myProfile.html:82
+msgid "Change Password"
+msgstr ""
+
+#: modules/myWallet/myWallet.html:45
+msgid "Change my payment password"
+msgstr ""
+
+#: modules/changePassword/changePassword.html:1
+#: modules/settings/changePaymentPassword/step1.html:6
+#: modules/settings/changePaymentPassword/step2.html:6
+#: modules/settings/changePaymentPassword/step3.html:6
+msgid "Change password"
+msgstr ""
+
+#: modules/myWallet/changePaymentMethod.html:5
+#: modules/myWallet/quickPayQR.html:33
+msgid "Change payment method"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi-changenow.html:3
+#: modules/sideMenu/side-menu-mobi.html:12
+msgid "ChangeNow"
+msgstr ""
+
+#: modules/mobilityServices/mobility-services.html:32
+msgid "ChargeNow"
+msgstr ""
+
+#: modules/chats/templates/chat.html:5
+msgid "Chat server connecting..."
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:154
+#: modules/dealers/templates/dealers.html:67
+msgid "Chat with Dealer"
+msgstr ""
+
+#: modules/dash/directives/dashRadialGauge.js:139
+msgid "Check Now"
+msgstr ""
+
+#: modules/vehicles/templates/addVehiclePartial.html:37
+msgid "Check your Vehicle Number"
+msgstr ""
+
+#: modules/offers/templates/offerInfo.html:50
+msgid "Choose Offer"
+msgstr ""
+
+#: modules/dealers/templates/addDealerPartial.html:19
+#: modules/myProfile/myProfile.html:22
+#: modules/registration/templates/step4.html:23
+msgid "City"
+msgstr ""
+
+#: modules/activity/claimPoints.html:66
+msgid "Claim"
+msgstr ""
+
+#: modules/activity/claimPoints.html:5
+msgid "Claim points"
+msgstr ""
+
+#: modules/aem/aemModalTemplate.html:17
+msgid "Close"
+msgstr ""
+
+#: modules/benefits/templates/benefits.html:9
+#: modules/benefits/templates/levels.html:8
+#: modules/points/points.html:15
+msgid "Collect points and earn upgrades to a higher Membership Level. Each new Class offers even more exciting rewards."
+msgstr ""
+
+#: modules/dash/DashCtrl.js:263
+msgid "Comfirm to logout"
+msgstr ""
+
+#: modules/dash/DashCtrl.js:236
+msgid "Coming soon"
+msgstr ""
+
+#: modules/common/templates/comingSoon.html:7
+msgid "Coming soon!"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-1.html:3
+#: modules/sideMenu/side-menu-bmw.html:8
+msgid "Communicate with BMW China"
+msgstr ""
+
+#: modules/dealers/templates/dealers.html:61
+msgid "Communicate with Dealer"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-2.html:3
+#: modules/sideMenu/side-menu-bmw.html:12
+msgid "Communicate with your BMW Dearler"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-3.html:3
+#: modules/sideMenu/side-menu-bmw.html:16
+msgid "Communicate with your BMW Vehicle"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-4.html:13
+msgid "Compare Models"
+msgstr ""
+
+#: modules/registration/templates/congratulationMsg.html:13
+msgid "Complete your personal information?"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-4.html:18
+msgid "Configure models"
+msgstr ""
+
+#: modules/giftCards/giftCardStep1.html:16
+#: modules/myBankCard/template/bankCardMultiStep3.html:29
+#: modules/myWallet/changePaymentMethod.html:20
+msgid "Confirm"
+msgstr ""
+
+#: modules/registration/templates/congratulationMsg.html:8
+msgid "Congratulations!"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:136
+msgid "Connect Your Vehicle"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:1
+#: modules/overview/overview.html:13
+msgid "Contact"
+msgstr ""
+
+#: modules/common/services/dialogService.js:34
+#: modules/registration/templates/BMWOwnerCarList.html:40
+#: modules/registration/templates/congratulationMsg.html:17
+#: modules/registration/templates/step2.html:25
+#: modules/registration/templates/step3.html:36
+#: modules/registration/templates/step4.html:70
+msgid "Continue"
+msgstr ""
+
+#: modules/chats/ChatCtrl.js:351
+msgid "Copy Text"
+msgstr ""
+
+#: modules/registration/templates/step4.html:11
+msgid "Country"
+msgstr ""
+
+#: modules/forgetPassword/step2.html:13
+msgid "Create a new password"
+msgstr ""
+
+#: modules/forgetPassword/step1.html:51
+msgid "Create new password"
+msgstr ""
+
+#: modules/registration/templates/step2.html:2
+msgid "Create your password"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:10
+msgid "Credit Card"
+msgstr ""
+
+#: modules/giftCards/addCard.html:8
+msgid "Credit card application"
+msgstr ""
+
+#: modules/dash/DashCtrl.js:293
+#: modules/sideMenu/side-menu-overview.html:60
+msgid "Customer Consent"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-1.html:7
+msgid "Customer Interactive Center"
+msgstr ""
+
+#: modules/registration/templates/step1.html:51
+msgid "Customer consent Terms and Conditions"
+msgstr ""
+
+#: modules/giftCards/templates/dateofbirth.html:1
+msgid "Date of Birth"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:47
+msgid "Date of birth"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:41
+msgid "Date of purchase"
+msgstr ""
+
+#: modules/activity/activity.html:23
+#: modules/activity/claimPoints.html:50
+#: modules/activity/claimPoints.html:61
+msgid "Dealer"
+msgstr ""
+
+#: modules/dealers/templates/dealers.html:65
+msgid "Dealer Locator"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-2.html:8
+msgid "Dealer Locator/Dearler Contact"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:65
+msgid "Dealer Points"
+msgstr ""
+
+#: modules/dealers/controllers/AddDealerPartialCtrl.js:55
+msgid "Dealer T&C"
+msgstr ""
+
+#: modules/dealers/templates/addDealerPartial.html:55
+msgid "Dealer Terms and Conditions"
+msgstr ""
+
+#: modules/dealers/templates/addDealerPartial.html:35
+msgid "Dealership"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:67
+msgid "Deposit"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:9
+msgid "Deposit Card"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-3.html:17
+msgid "Destinations"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-5.html:7
+msgid "Discover bmw certified used car"
+msgstr ""
+
+#: modules/vehicles/controllers/VehiclesCtrl.js:105
+msgid "Do you want to remove this vehicle?"
+msgstr ""
+
+#: modules/dealers/controllers/DealerInfoCtrl.js:101
+msgid "Do you wish to replace your previous membership card?"
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step6.html:12
+msgid "Done"
+msgstr ""
+
+#: modules/common/services/backButtonAndroid.js:19
+msgid "Double click to exit"
+msgstr ""
+
+#: modules/mobilityServices/mobility-services.html:20
+msgid "DriveNow"
+msgstr ""
+
+#: modules/myProfile/myProfile.html:50
+msgid "E-mail"
+msgstr ""
+
+#: modules/common/directives/validateEmail.js:16
+#: modules/registration/templates/step4.html:38
+msgid "E-mail address"
+msgstr ""
+
+#: modules/home/home.html:27
+msgid "EARN POINTS"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:26
+msgid "ECITIC"
+msgstr ""
+
+#: modules/home/HomeCtrl.js:62
+msgid "Earn Points"
+msgstr ""
+
+#: modules/benefits/templates/points.html:1
+msgid "Earn Status Points"
+msgstr ""
+
+#: modules/points/points.html:46
+msgid "Earn points"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:33
+msgid "Email"
+msgstr ""
+
+#: modules/common/services/dialogService.js:156
+msgid "Email US"
+msgstr ""
+
+#: modules/common/directives/validateEmail.js:29
+msgid "Email address"
+msgstr ""
+
+#: modules/common/directives/validateEmail.js:24
+msgid "Email invalid"
+msgstr ""
+
+#: modules/registration/templates/step5.html:7
+msgid "Enjoy exclusive special offers from your favorite dealership. Simply select from the list below. You can add more dealerships anytime."
+msgstr ""
+
+#: modules/myWallet/myWallet.html:35
+msgid "Enroll Credit Card"
+msgstr ""
+
+#: modules/registration/templates/step1.html:39
+msgid "Enter Code"
+msgstr ""
+
+#: modules/settings/changePaymentPassword/step2.html:12
+msgid "Enter New Payment Password"
+msgstr ""
+
+#: modules/forgetPassword/step1.html:44
+#: modules/requestOTP/requestOTP.html:40
+msgid "Enter OTP"
+msgstr ""
+
+#: modules/settings/changePaymentPassword/step1.html:12
+msgid "Enter Previous Payment Password"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep3.html:8
+msgid "Enter new PIN."
+msgstr ""
+
+#: modules/dealers/templates/changePinStep2.html:8
+msgid "Enter old PIN."
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step2.html:8
+msgid "Enter your personal information"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:73
+msgid "Estimate mileage:"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:71
+msgid "Exclusive offers from this dealer group"
+msgstr ""
+
+#: modules/offers/templates/offerItem.html:41
+msgid "Expires at"
+msgstr ""
+
+#: modules/offers/templates/offers.html:22
+msgid "Expiry Date Ascending"
+msgstr ""
+
+#: modules/dealers/templates/dealerPointsDetails.html:12
+msgid "Expiry date"
+msgstr ""
+
+#: modules/partners/partners.html:13
+msgid "Explore Now"
+msgstr ""
+
+#: modules/benefits/templates/benefits.html:17
+#: modules/points/points.html:35
+msgid "Explore the range of exclusive benefits available for each of the Priority Plus Alliance Levels."
+msgstr ""
+
+#: modules/partners/partners.html:11
+msgid "Exploring surprising discount exclusive for BMW Loyalty Member."
+msgstr ""
+
+#: modules/faq/faq.html:1
+#: modules/landingPages/templates/contact.html:43
+msgid "FAQ"
+msgstr ""
+
+#: modules/common/directives/validateLastName.js:30
+#: modules/registration/templates/step1.html:13
+msgid "Family name"
+msgstr ""
+
+#: modules/common/directives/validateLastName.js:26
+msgid "Family name too long"
+msgstr ""
+
+#: modules/common/directives/validateLastName.js:20
+msgid "Family name too short"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:73
+#: modules/giftCards/templates/gender.html:9
+msgid "Female"
+msgstr ""
+
+#: modules/activity/activity.html:15
+msgid "Filter"
+msgstr ""
+
+#: modules/myWallet/myWallet.html:31
+msgid "Financial Services Selfservice"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-4.html:23
+#: modules/sideMenu/side-menu-bmw-5.html:12
+msgid "Find a car and negotiate online"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:9
+msgid "Find all information about our network of dealerships."
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-4.html:8
+msgid "Find out what suits you"
+msgstr ""
+
+#: modules/registration/controllers/Step3Ctrl.js:37
+#: modules/vehicles/controllers/AddVehicleCtrl.js:55
+#: modules/vehicles/controllers/AddVehicleProofCtrl.js:84
+#: modules/vehicles/templates/vinInfo.html:3
+msgid "Find your VIN"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:212
+#: modules/vehicles/templates/vehicles.html:86
+msgid "For security reason, the information will be checked before the vehicle is added to your account."
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:142
+msgid "Forget Pin"
+msgstr ""
+
+#: modules/login/login.html:45
+msgid "Forgot Password"
+msgstr ""
+
+#: modules/myWallet/myWallet.html:48
+msgid "Forgot my payment password"
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step2.html:4
+#: modules/settings/forgetPaymentPassword/step3.html:4
+#: modules/settings/forgetPaymentPassword/step4.html:6
+#: modules/settings/forgetPaymentPassword/step5.html:6
+msgid "Forgot password"
+msgstr ""
+
+#: modules/myBankCard/template/paymentPassword.html:16
+#: modules/myWallet/quickPaymentPassword.html:10
+msgid "Forgot password?"
+msgstr ""
+
+#: modules/forgetPassword/step1.html:15
+msgid "Forgot your password?"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:184
+msgid "Freeze your card!"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:32
+msgid "GDB"
+msgstr ""
+
+#: modules/dash/directives/centralCardLayer.js:49
+msgid "GOLD"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:71
+#: modules/giftCards/templates/gender.html:1
+msgid "Gender"
+msgstr ""
+
+#: modules/myBankCard/template/paymentMethod.html:47
+msgid "Gift card"
+msgstr ""
+
+#: modules/common/directives/validateFirstName.js:29
+#: modules/registration/templates/step1.html:17
+msgid "Given name"
+msgstr ""
+
+#: modules/common/directives/validateFirstName.js:25
+msgid "Given name too long"
+msgstr ""
+
+#: modules/common/directives/validateFirstName.js:20
+msgid "Given name too short"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:27
+msgid "HXB"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:180
+msgid "Have you misplaced your membership card?"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:61
+msgid "How to earn?"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:13
+msgid "How to use Self-Service"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep2.html:37
+#: modules/myBankCard/template/bankCardStep2.html:40
+msgid "I accept the Terms and Conditions"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:18
+msgid "ICBC"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:25
+#: modules/registration/templates/step4.html:52
+msgid "ID Card"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep1.html:58
+msgid "ID Card Opposite Image"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep1.html:49
+msgid "ID Card Positive Image"
+msgstr ""
+
+#: modules/giftCards/templates/IDnumber.html:1
+#: modules/myProfile/IDNumber.html:15
+#: modules/myProfile/IDNumber.html:5
+msgid "ID Number"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:23
+#: modules/registration/templates/step4.html:49
+msgid "ID Type"
+msgstr ""
+
+#: modules/common/directives/validateIdNumber.js:26
+#: modules/giftCards/addCreditCard.html:33
+#: modules/myProfile/myProfile.html:64
+#: modules/registration/templates/step4.html:57
+#: modules/settings/forgetPaymentPassword/step2.html:17
+msgid "ID number"
+msgstr ""
+
+#: modules/common/directives/validateIdNumber.js:21
+#: modules/myBankCard/template/bankCardStep1.html:26
+#: modules/settings/forgetPaymentPassword/step2.html:17
+msgid "ID number has to be 18 characters"
+msgstr ""
+
+#: modules/myProfile/IDNumber.html:11
+msgid "ID number is incorrect"
+msgstr ""
+
+#: modules/giftCards/templates/IDtype.html:1
+#: modules/myProfile/myProfile.html:57
+msgid "ID type"
+msgstr ""
+
+#: modules/giftCards/templates/myIdDate.html:1
+msgid "ID valid till"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:64
+msgid "ID valid untill"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:54
+msgid "ID validity time"
+msgstr ""
+
+#: modules/giftCards/templates/IDvalidity.html:1
+msgid "ID validity type"
+msgstr ""
+
+#: modules/activity/claimPoints.html:8
+msgid "If points earned on your membership card are not visible in your activities, you can claim them. You will receive an update after the request is processed."
+msgstr ""
+
+#: modules/requestOTP/requestOTP.html:16
+msgid "If you do not have a password, please enter the information below and log in with a verification code (OTP)."
+msgstr ""
+
+#: modules/forgetPassword/step1.html:18
+msgid "If you have forgotten your password, please enter the information below. You will receive a confirmation code (OTP) and be required to create a new password."
+msgstr ""
+
+#: modules/common/services/dialogService.js:29
+msgid "If you wish to get back to the Loyalty App directly, you can click on the link at the top left of the screen \"BMWLoyalty\"."
+msgstr ""
+
+#: modules/vehicles/templates/addVehiclePartial.html:5
+msgid "In order to link a vehicle to your account to receive status points and manage your information, please add below your VIN."
+msgstr ""
+
+#: modules/myBankCard/template/cardHolderInfo.html:3
+msgid "Info"
+msgstr ""
+
+#: modules/forgetPassword/step2.html:15
+msgid "Input the OTP and create a new password"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:57
+msgid "Insurance expiry date:"
+msgstr ""
+
+#: translations/server.response.js:1
+msgid "Internal Error"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-1.html:27
+msgid "Join Events"
+msgstr ""
+
+#: modules/home/home.html:9
+msgid "LOG IN"
+msgstr ""
+
+#: modules/sideMenu/side-menu-overview.html:54
+msgid "LOGOUT"
+msgstr ""
+
+#: modules/settings/settings.html:6
+msgid "Language"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:65
+msgid "Latest inspection:"
+msgstr ""
+
+#: modules/sideMenu/side-menu-overview.html:58
+msgid "Legal Disclaimer"
+msgstr ""
+
+#: modules/common/directives/validateLength.js:33
+msgid "Lenght should be"
+msgstr ""
+
+#: modules/login/login.html:14
+#: modules/login/login.html:54
+#: modules/requestOTP/requestOTP.html:52
+msgid "Log in"
+msgstr ""
+
+#: modules/login/login.html:60
+#: modules/requestOTP/requestOTP.html:13
+msgid "Log in with an OTP"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:56
+#: modules/giftCards/templates/IDvalidity.html:5
+msgid "Long term"
+msgstr ""
+
+#: modules/benefits/templates/levels.html:37
+msgid "Look up all your current loyalty vouchers in one place."
+msgstr ""
+
+#: modules/myWallet/transactionHistory.html:23
+msgid "Loyalty Card"
+msgstr ""
+
+#: modules/sideMenu/side-menu-lp.html:24
+msgid "Loyalty FAQ"
+msgstr ""
+
+#: modules/common/templates/tabs.html:12
+#: modules/sideMenu/side-menu-me.html:3
+#: modules/sideMenu/side-menu-overview.html:40
+msgid "ME"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:23
+msgid "MINI"
+msgstr ""
+
+#: modules/offers/templates/previewLayer.html:20
+#: modules/sideMenu/side-menu-offers-news.html:29
+msgid "MINI shop"
+msgstr ""
+
+#: modules/common/templates/tabs.html:14
+msgid "MORE"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:76
+#: modules/giftCards/templates/gender.html:5
+msgid "Male"
+msgstr ""
+
+#: modules/activity/claimPoints.html:21
+msgid "Member ID"
+msgstr ""
+
+#: modules/benefits/templates/benefits.html:1
+msgid "Membership Benefits"
+msgstr ""
+
+#: modules/points/levelBenefits.html:5
+msgid "Membership Classes"
+msgstr ""
+
+#: modules/dealers/templates/forgotPinStep2.html:11
+#: modules/myProfile/myProfile.html:11
+msgid "Membership ID"
+msgstr ""
+
+#: modules/common/directives/validateMembershipId.js:22
+msgid "Membership ID invalid"
+msgstr ""
+
+#: modules/benefits/templates/levels.html:1
+msgid "Membership Levels"
+msgstr ""
+
+#: modules/benefits/templates/benefits.html:5
+#: modules/points/points.html:5
+msgid "Membership level"
+msgstr ""
+
+#: modules/activity/claimPoints.html:10
+msgid "Member’s information"
+msgstr ""
+
+#: modules/sideMenu/side-menu.html:10
+msgid "Menu"
+msgstr ""
+
+#: modules/partners/partners.html:10
+msgid "Merchant offer"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:81
+#: modules/giftCards/templates/phone.html:1
+msgid "Mobile Phone"
+msgstr ""
+
+#: modules/forgetPassword/step1.html:24
+#: modules/registration/templates/step1.html:22
+#: modules/requestOTP/requestOTP.html:21
+#: modules/settings/forgetPaymentPassword/step2.html:29
+msgid "Mobile phone"
+msgstr ""
+
+#: modules/login/login.html:23
+msgid "Mobile phone / Membership ID"
+msgstr ""
+
+#: modules/mobilityServices/mobility-services.html:1
+msgid "Mobility Services"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:48
+#: modules/sideMenu/side-menu-mobi-reachnow.html:19
+msgid "More"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:27
+msgid "Motorrad"
+msgstr ""
+
+#: modules/offers/templates/previewLayer.html:22
+#: modules/sideMenu/side-menu-offers-news.html:34
+msgid "Motorrad Shop"
+msgstr ""
+
+#: modules/dash/directives/dashRadialGauge.js:180
+msgid "My Activity Log"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:13
+msgid "My Dealerships"
+msgstr ""
+
+#: modules/offers/templates/offers.html:19
+msgid "My Favorites"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:157
+msgid "My History"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi-reachnow.html:11
+msgid "My Trips"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:21
+msgid "My Vehicles"
+msgstr ""
+
+#: modules/common/templates/tabs-power-press.html:7
+#: modules/dash/directives/dashRadialGauge.js:133
+#: modules/dash/memberCard.html:15
+#: modules/myWallet/myWallet.html:27
+#: modules/offers/templates/previewLayer.html:9
+#: modules/sideMenu/side-menu-offers-news.html:9
+msgid "My Vouchers"
+msgstr ""
+
+#: modules/myWallet/myWallet.html:1
+msgid "My Wallet"
+msgstr ""
+
+#: modules/activity/activity.html:8
+msgid "My activity log"
+msgstr ""
+
+#: modules/common/services/dialogService.js:135
+#: modules/common/services/dialogService.js:153
+#: modules/dealers/controllers/DealerInfoCtrl.js:103
+#: modules/vehicles/controllers/VehiclesCtrl.js:107
+msgid "NO"
+msgstr ""
+
+#: modules/activity/claimPoints.html:13
+#: modules/giftCards/addCreditCard.html:9
+#: modules/giftCards/templates/name.html:1
+#: modules/settings/forgetPaymentPassword/step2.html:13
+msgid "Name"
+msgstr ""
+
+#: modules/giftCards/templates/namePinyin.html:1
+msgid "Name Pinyin"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:16
+msgid "Name(Pinyin)"
+msgstr ""
+
+#: modules/changePassword/changePassword.html:12
+#: modules/forgetPassword/step2.html:20
+msgid "New password"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep1.html:26
+#: modules/dealers/templates/forgotPinStep1.html:28
+#: modules/dealers/templates/forgotPinStep2.html:23
+#: modules/dealers/templates/replaceCardStep1.html:19
+#: modules/giftCards/giftCardStep2.html:23
+#: modules/giftCards/paymentPasswordForUnlinkCard.html:21
+#: modules/myBankCard/template/bankCardMultiStep1.html:30
+#: modules/myBankCard/template/bankCardMultiStep2.html:42
+#: modules/myBankCard/template/bankCardStep1.html:71
+#: modules/myBankCard/template/bankCardStep2.html:44
+#: modules/myBankCard/template/bankCardStep3.html:24
+#: modules/settings/forgetPaymentPassword/step1.html:19
+#: modules/settings/forgetPaymentPassword/step3.html:17
+msgid "Next"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-3.html:12
+msgid "Next trips"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:34
+msgid "No Dealers available!"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:9
+msgid "No Vehicles... Add Vehicle now?"
+msgstr ""
+
+#: modules/offers/templates/coupons.html:41
+#: modules/offers/templates/favorites.html:19
+#: modules/offers/templates/offers.html:34
+msgid "No result found"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:130
+msgid "No vehicle available!"
+msgstr ""
+
+#: modules/common/templates/tabs.html:6
+#: modules/sideMenu/side-menu-offers-news.html:3
+#: modules/sideMenu/side-menu-overview.html:33
+msgid "OFFERS & NEWS"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep1.html:15
+#: modules/dealers/templates/forgotPinStep1.html:16
+#: modules/dealers/templates/replaceCardStep1.html:11
+#: modules/myBankCard/template/bankCardStep3.html:13
+#: modules/settings/forgetPaymentPassword/step3.html:10
+msgid "OTP"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep1.html:12
+#: modules/dealers/templates/forgotPinStep1.html:13
+#: modules/dealers/templates/replaceCardStep1.html:8
+#: modules/myBankCard/template/bankCardStep3.html:10
+#: modules/settings/forgetPaymentPassword/step3.html:8
+msgid "One time password is sent to number:"
+msgstr ""
+
+#: modules/overview/overview.html:4
+msgid "Overview"
+msgstr ""
+
+#: modules/myBankCard/BankCardCtrl.js:150
+#: modules/myBankCard/BankCardCtrl.js:341
+msgid "P&C Terms and conditions"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:30
+msgid "PAB"
+msgstr ""
+
+#: modules/common/directives/validatePinNumber.js:15
+#: modules/common/directives/validatePinNumber.js:25
+msgid "PIN number"
+msgstr ""
+
+#: modules/common/directives/validatePinNumber.js:21
+msgid "PIN number has to be of 6 digits"
+msgstr ""
+
+#: modules/dash/directives/centralCardLayer.js:55
+msgid "PLATINUM"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:145
+msgid "POI send to car"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:23
+msgid "PSBC"
+msgstr ""
+
+#: modules/dash/directives/centralCardLayer.js:61
+msgid "PURE Diamond"
+msgstr ""
+
+#: modules/mobilityServices/mobility-services.html:26
+msgid "ParkNow"
+msgstr ""
+
+#: modules/activity/activity.html:33
+#: modules/activity/claimPoints.html:46
+#: modules/activity/claimPoints.html:56
+msgid "Partner"
+msgstr ""
+
+#: modules/common/templates/tabs-power-press.html:15
+msgid "Partner Benefits"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:28
+#: modules/registration/templates/step4.html:53
+msgid "Passport"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:40
+#: modules/giftCards/templates/passportNumber.html:1
+#: modules/myProfile/myProfile.html:71
+#: modules/myProfile/passportNumber.html:14
+#: modules/myProfile/passportNumber.html:5
+msgid "Passport Number"
+msgstr ""
+
+#: modules/myProfile/passportNumber.html:10
+msgid "Passport is incorrect"
+msgstr ""
+
+#: modules/common/directives/validatePassportNumber.js:26
+#: modules/registration/templates/step4.html:62
+msgid "Passport number"
+msgstr ""
+
+#: modules/common/directives/validatePassportNumber.js:21
+msgid "Passport number has to be 9 characters"
+msgstr ""
+
+#: modules/login/login.html:28
+#: modules/registration/templates/step2.html:11
+msgid "Password"
+msgstr ""
+
+#: modules/common/directives/repeatPassword.js:22
+#: modules/common/directives/repeatPassword.js:36
+msgid "Passwords do not match."
+msgstr ""
+
+#: modules/dash/directives/dashRadialGauge.js:106
+msgid "Pay Now"
+msgstr ""
+
+#: modules/myWallet/quickPayQR.html:27
+msgid "Pay with"
+msgstr ""
+
+#: modules/myBankCard/template/paymentMethod.html:11
+msgid "Payment Methods"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep4.html:5
+msgid "Payment Password"
+msgstr ""
+
+#: modules/dash/directives/dashRadialGauge.js:99
+msgid "Payment Service"
+msgstr ""
+
+#: modules/giftCards/giftCardStep1.html:1
+#: modules/giftCards/paymentPasswordForUnlinkCard.html:5
+#: modules/myBankCard/template/paymentPassword.html:5
+#: modules/myBankCard/template/paymentPasswordForUnlinkCard.html:5
+#: modules/myWallet/quickPaymentPassword.html:4
+msgid "Payment password"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep5.html:5
+msgid "Payment password confirmation"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-1.html:12
+msgid "Personal Assistant"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:23
+msgid "Phone"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:37
+msgid "Please Add Dealer"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:133
+msgid "Please Add Vehicle"
+msgstr ""
+
+#: modules/landingPages/controllers/ContactCtrl.js:36
+msgid "Please E-mail us to:"
+msgstr ""
+
+#: modules/dealers/templates/addDealer.html:6
+msgid "Please add your dealership below and enjoy exclusive benefits."
+msgstr ""
+
+#: modules/common/templates/comingSoon.html:12
+msgid "Please check back soon."
+msgstr ""
+
+#: modules/api/run/apiSettingsRun.js:75
+msgid "Please check the internet connection"
+msgstr ""
+
+#: modules/registration/templates/step4.html:7
+msgid "Please complete your profile information. You can edit your information anytime."
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep4.html:10
+msgid "Please create  a payment password"
+msgstr ""
+
+#: modules/landingPages/controllers/ContactCtrl.js:26
+#: modules/offers/services/OffersService.js:417
+msgid "Please dial our 7x24 customer service hotline:"
+msgstr ""
+
+#: modules/common/directives/validatePhoneNumber.js:21
+msgid "Please enter a valid mobile phone"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep5.html:10
+msgid "Please enter again your payment password"
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step4.html:12
+msgid "Please enter your new payment password."
+msgstr ""
+
+#: modules/dealers/templates/forgotPinStep3.html:9
+msgid "Please enter your password"
+msgstr ""
+
+#: modules/giftCards/giftCardStep1.html:7
+#: modules/giftCards/paymentPasswordForUnlinkCard.html:10
+#: modules/myBankCard/template/paymentPassword.html:8
+#: modules/myBankCard/template/paymentPasswordForUnlinkCard.html:9
+#: modules/myWallet/quickPaymentPassword.html:7
+msgid "Please enter your payment password to verify"
+msgstr ""
+
+#: modules/registration/templates/step1.html:10
+msgid "Please enter your real contact information in order to retrieve your information and create your account."
+msgstr ""
+
+#: modules/dealers/templates/dealerPointsDetails.html:8
+msgid "Please note: once points have past the expiry dates, they can no longer be redeemed. Make the most of your points and redeem them before they expire."
+msgstr ""
+
+#: modules/activity/activity.html:25
+#: modules/activity/activity.html:35
+#: modules/activity/activity.html:45
+msgid "Please select"
+msgstr ""
+
+#: modules/vehicles/controllers/AddVehicleProofCtrl.js:48
+msgid "Please select a file less than 3 mb in size to upload."
+msgstr ""
+
+#: modules/myWallet/quickPayQR.html:30
+msgid "Please select payment"
+msgstr ""
+
+#: modules/dealers/templates/dealers.html:42
+msgid "Points"
+msgstr ""
+
+#: modules/dealers/templates/dealerPointsDetails.html:5
+msgid "Points Expiry"
+msgstr ""
+
+#: modules/dealers/templates/dealerPointsDetails.html:15
+msgid "Points expiring"
+msgstr ""
+
+#: modules/dash/directives/dashRadialGauge.js:72
+msgid "Points to next level"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:54
+msgid "Points to the next level"
+msgstr ""
+
+#: modules/myProfile/myProfile.html:36
+#: modules/myProfile/postcode.html:6
+#: modules/registration/templates/step4.html:33
+msgid "Postcode"
+msgstr ""
+
+#: modules/myProfile/preferredContact.html:5
+msgid "Preferred Communication Channel"
+msgstr ""
+
+#: modules/myProfile/myProfile.html:43
+msgid "Preferred communication channel"
+msgstr ""
+
+#: modules/registration/templates/step4.html:43
+msgid "Preferred means of contact"
+msgstr ""
+
+#: modules/benefits/templates/programme.html:1
+#: modules/points/pointSystem.html:5
+#: modules/points/points.html:25
+msgid "Programme Benefits"
+msgstr ""
+
+#: modules/benefits/templates/benefits.html:14
+msgid "Programme benefits"
+msgstr ""
+
+#: modules/myBankCard/template/paymentMethod.html:16
+msgid "Provider"
+msgstr ""
+
+#: modules/dealers/templates/addDealerPartial.html:3
+#: modules/myProfile/myProfile.html:15
+#: modules/registration/templates/step4.html:17
+msgid "Province"
+msgstr ""
+
+#: modules/myWallet/quickPayQR.html:12
+msgid "QRCode"
+msgstr ""
+
+#: modules/home/home.html:17
+msgid "REGISTER NOW"
+msgstr ""
+
+#: modules/settings/changePaymentPassword/step3.html:12
+msgid "Re-Enter new payment password"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep4.html:8
+msgid "Re-enter new PIN."
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step5.html:11
+msgid "Re-enter your new payment password."
+msgstr ""
+
+#: modules/dash/memberDashboard.html:101
+#: modules/dealers/templates/dealers.html:50
+msgid "Reach next level"
+msgstr ""
+
+#: modules/mobilityServices/mobility-services.html:8
+msgid "ReachNow"
+msgstr ""
+
+#: modules/common/directives/myCaptcha.js:67
+msgid "Refresh CAPTCHA"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:88
+#: modules/giftCards/templates/region.html:1
+msgid "Region"
+msgstr ""
+
+#: modules/registration/templates/step1.html:56
+msgid "Register"
+msgstr ""
+
+#: modules/registration/templates/step1.html:9
+msgid "Register quickly and start receiving benefits immediately."
+msgstr ""
+
+#: modules/login/login.html:68
+#: modules/registration/header.html:2
+#: modules/registration/templates/congratulationMsg.html:2
+msgid "Registration"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-4.html:28
+msgid "Reguest a test drive / online"
+msgstr ""
+
+#: modules/login/login.html:40
+#: modules/requestOTP/requestOTP.html:48
+msgid "Remember me"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-3.html:7
+#: modules/vehicles/templates/vehicles.html:141
+msgid "Remote"
+msgstr ""
+
+#: modules/offers/templates/offerInfo.html:49
+msgid "Remove from Favorites"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:168
+msgid "Remove this vehicle"
+msgstr ""
+
+#: modules/forgetPassword/step2.html:26
+msgid "Repeat New Password"
+msgstr ""
+
+#: modules/changePassword/changePassword.html:18
+msgid "Repeat new password"
+msgstr ""
+
+#: modules/registration/templates/step2.html:16
+msgid "Repeat password"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:166
+msgid "Replace Card"
+msgstr ""
+
+#: modules/registration/templates/step1.html:34
+msgid "Request Code"
+msgstr ""
+
+#: modules/forgetPassword/step1.html:36
+#: modules/myBankCard/template/bankCardMultiStep3.html:22
+#: modules/myBankCard/template/bankCardStep3.html:17
+#: modules/requestOTP/requestOTP.html:33
+#: modules/settings/forgetPaymentPassword/step3.html:13
+msgid "Request OTP"
+msgstr ""
+
+#: modules/dealers/templates/replaceCardStep1.html:4
+msgid "Request a new membership card"
+msgstr ""
+
+#: modules/dealers/templates/changePinStep1.html:19
+#: modules/dealers/templates/forgotPinStep1.html:20
+#: modules/dealers/templates/replaceCardStep1.html:15
+msgid "Resend Code"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardStep2.html:22
+msgid "Reserved Bank Mobile Number"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-1.html:17
+msgid "Roadside Assistance"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:35
+msgid "Roadside Assistant"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:34
+msgid "SHB"
+msgstr ""
+
+#: modules/dash/directives/centralCardLayer.js:43
+#: modules/dash/directives/centralCardLayer.js:73
+msgid "SILVER"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:28
+msgid "SPDB"
+msgstr ""
+
+#: modules/dash/dash.html:21
+#: modules/forgetPassword/step2.html:35
+msgid "Save"
+msgstr ""
+
+#: modules/vehicles/templates/addVehicleProofPartial.html:43
+msgid "Save a New Vehicle"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:78
+msgid "Save up to"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi-changenow.html:7
+msgid "Search Charging Station"
+msgstr ""
+
+#: modules/benefits/templates/levels.html:38
+msgid "See All"
+msgstr ""
+
+#: modules/points/points.html:18
+msgid "See More"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:65
+msgid "See all delearships in the group"
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:81
+msgid "See all offer for you"
+msgstr ""
+
+#: modules/benefits/templates/benefits.html:10
+#: modules/benefits/templates/benefits.html:18
+#: modules/benefits/templates/benefits.html:26
+#: modules/dash/memberDashboard.html:177
+#: modules/dash/memberDashboard.html:55
+#: modules/dealers/templates/dealerInfo.html:199
+#: modules/points/points.html:38
+#: modules/points/points.html:58
+msgid "See more"
+msgstr ""
+
+#: modules/benefits/templates/levels.html:30
+msgid "See point list"
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step1.html:4
+msgid "Select bank card"
+msgstr ""
+
+#: modules/myWallet/transactionHistory.html:6
+msgid "Select cards"
+msgstr ""
+
+#: modules/registration/templates/step5.html:2
+msgid "Select your dealership"
+msgstr ""
+
+#: modules/chats/templates/chat.html:97
+msgid "Send"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:118
+msgid "Send to ConnectDrive"
+msgstr ""
+
+#: modules/dealers/templates/dealers.html:69
+msgid "Service Booking"
+msgstr ""
+
+#: modules/api/run/apiSettingsRun.js:94
+msgid "Service unavailable"
+msgstr ""
+
+#: modules/api/run/apiSettingsRun.js:121
+msgid "Session timeout, please login again."
+msgstr ""
+
+#: modules/dealers/templates/forgotPinStep1.html:5
+#: modules/dealers/templates/forgotPinStep2.html:4
+#: modules/dealers/templates/forgotPinStep3.html:5
+msgid "Setup / Forgot PIN"
+msgstr ""
+
+#: modules/common/templates/tabs-power-press.html:39
+#: modules/sideMenu/side-menu-bmw-1.html:32
+msgid "Share Feedbacks"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:59
+#: modules/giftCards/templates/IDvalidity.html:9
+msgid "Short term"
+msgstr ""
+
+#: modules/mobilityServices/mobility-services.html:14
+msgid "Sixt Rental"
+msgstr ""
+
+#: modules/common/templates/steps-navigation.html:15
+#: modules/registration/templates/congratulationMsg.html:20
+#: modules/registration/templates/step2.html:28
+#: modules/registration/templates/step3.html:48
+#: modules/registration/templates/step5.html:13
+msgid "Skip"
+msgstr ""
+
+#: modules/activity/activity.html:43
+msgid "Sort by"
+msgstr ""
+
+#: modules/points/spendPoint.html:5
+msgid "Spend Points"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:82
+#: modules/dealers/templates/dealers.html:34
+msgid "Status"
+msgstr ""
+
+#: modules/dash/directives/dashRadialGauge.js:156
+msgid "Status Points"
+msgstr ""
+
+#: modules/benefits/templates/pointsRules.html:36
+#: modules/dealers/templates/dealerInfo.html:41
+msgid "Status points"
+msgstr ""
+
+#: modules/dealers/templates/addDealerPartial.html:67
+#: modules/giftCards/addCreditCard.html:105
+#: modules/settings/forgetPaymentPassword/step2.html:36
+msgid "Submit"
+msgstr ""
+
+#: modules/changePassword/ChangePasswordCtrl.js:38
+msgid "Success"
+msgstr ""
+
+#: modules/offers/services/OffersService.js:343
+msgid "Successfully added to My Coupons"
+msgstr ""
+
+#: modules/offers/services/OffersService.js:374
+msgid "Successfully added to My Favourites"
+msgstr ""
+
+#: modules/offers/services/OffersService.js:403
+msgid "Successfully deleted for My Favourites"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi-reachnow.html:15
+msgid "Support"
+msgstr ""
+
+#: modules/registration/templates/step3.html:10
+msgid "Tell us about your current owner status below. If you own a BMW, please enter your Vehicle Identification Number (VIN)."
+msgstr ""
+
+#: modules/registration/controllers/Step1Ctrl.js:172
+msgid "Terms & Conditions for customer consent"
+msgstr ""
+
+#: modules/sideMenu/side-menu-overview.html:59
+msgid "Terms of use"
+msgstr ""
+
+#: modules/benefits/templates/pointsRules.html:4
+msgid "The BMW Group Loyalty Programme makes it easier than ever to earn points:"
+msgstr ""
+
+#: modules/giftCards/AddCreditCardCtrl.js:166
+msgid "The valid period must be less than 21 years"
+msgstr ""
+
+#: modules/benefits/templates/benefits.html:25
+#: modules/points/points.html:51
+msgid "There are so many ways to earn points with Priority Plus Alliance. Discover our extensive network."
+msgstr ""
+
+#: modules/common/templates/comingSoon.html:10
+msgid "This feature is currently under construction"
+msgstr ""
+
+#: modules/dash/DashCtrl.js:237
+msgid "This feature is under construction. Please check back soon."
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:29
+msgid "Tier level"
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:6
+msgid "To apply for a credit card with the China Construction Bank, please check and fill in your profile information below."
+msgstr ""
+
+#: modules/dealers/templates/dealerPointsDetails.html:18
+msgid "Total of points"
+msgstr ""
+
+#: modules/myWallet/myWallet.html:23
+msgid "Transaction History"
+msgstr ""
+
+#: modules/activity/claimPoints.html:28
+msgid "Transaction Information"
+msgstr ""
+
+#: modules/activity/claimPoints.html:31
+msgid "Transaction date"
+msgstr ""
+
+#: modules/myWallet/transHistoryInfo.html:5
+msgid "Transaction history"
+msgstr ""
+
+#: modules/registration/templates/step1.html:28
+msgid "Type the number"
+msgstr ""
+
+#: modules/forgetPassword/step1.html:30
+msgid "Type the numbers"
+msgstr ""
+
+#: modules/changePassword/changePassword.html:24
+msgid "Type the two words"
+msgstr ""
+
+#: modules/requestOTP/requestOTP.html:27
+msgid "Type words from the verification image"
+msgstr ""
+
+#: modules/chats/templates/chat.html:93
+msgid "Type your message"
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:185
+msgid "UnFreeze your card!"
+msgstr ""
+
+#: modules/common/templates/fileUpload.html:4
+msgid "Upload a picture"
+msgstr ""
+
+#: modules/registration/templates/BMWOwnerCarList.html:22
+#: modules/registration/templates/step3.html:16
+#: modules/vehicles/templates/vehicles.html:124
+#: modules/vehicles/templates/vehicles.html:49
+#: modules/vehicles/templates/vehicles.html:98
+msgid "VIN Number"
+msgstr ""
+
+#: modules/dash/memberDashboard.html:162
+#: modules/dash/memberDashboard.html:201
+#: modules/dash/memberDashboard.html:235
+msgid "VIN number"
+msgstr ""
+
+#: modules/registration/controllers/Step3Ctrl.js:29
+#: modules/vehicles/controllers/AddVehicleCtrl.js:31
+#: modules/vehicles/controllers/AddVehicleProofCtrl.js:34
+msgid "VIN number should be extaclty 17 characters"
+msgstr ""
+
+#: modules/offers/templates/offerInfo.html:13
+#: modules/offers/templates/offerItem.html:12
+msgid "Valid Until"
+msgstr ""
+
+#: modules/vehicles/templates/addVehiclePartial.html:15
+#: modules/vehicles/templates/addVehicleProofPartial.html:15
+msgid "Vehicle Identification Number (VIN)"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:149
+msgid "Vehicle Position"
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:153
+msgid "Vehicle owners handbook"
+msgstr ""
+
+#: modules/vehicles/controllers/AddVehicleProofCtrl.js:75
+msgid "Vehicle sucessfully added, waiting for approval."
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep3.html:14
+msgid "Verification Code (OTP)"
+msgstr ""
+
+#: modules/settings/settings.html:11
+msgid "Version"
+msgstr ""
+
+#: modules/brandShops/templates/brandShopInfo.html:31
+msgid "Visit Now"
+msgstr ""
+
+#: modules/benefits/templates/pointsRules.html:12
+msgid "Visit an official dealership for maintenance and check-ups."
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:6
+msgid "Visit us to gain access to the full range of new BMW models, service and expertise."
+msgstr ""
+
+#: modules/dealers/templates/dealerGroupInfo.html:43
+#: modules/dealers/templates/dealerInfo.html:79
+#: modules/dealers/templates/dealerInfo.html:91
+msgid "Website"
+msgstr ""
+
+#: modules/myBankCard/template/paymentMethod.html:41
+msgid "Wechat"
+msgstr ""
+
+#: modules/registration/templates/step3.html:8
+msgid "Welcome Mr./Ms."
+msgstr ""
+
+#: modules/chats/services/ChatService.js:21
+msgid "Welcome to BMW, how can I help you?"
+msgstr ""
+
+#: modules/registration/templates/congratulationMsg.html:9
+msgid "Welcome to the BMW China Loyalty Programme"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:35
+msgid "XMB"
+msgstr ""
+
+#: modules/common/services/dialogService.js:131
+#: modules/common/services/dialogService.js:149
+#: modules/dealers/controllers/DealerInfoCtrl.js:102
+#: modules/vehicles/controllers/VehiclesCtrl.js:106
+msgid "YES"
+msgstr ""
+
+#: modules/dash/DashCtrl.js:264
+msgid "Yes"
+msgstr ""
+
+#: modules/common/services/dialogService.js:32
+msgid "You are about to be redirected to"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:5
+msgid "You can contact us via the following channels"
+msgstr ""
+
+#: modules/common/services/dialogService.js:30
+msgid "You can go back to BMWLoyalty anytime, by simply tapping on the back-button on your phone."
+msgstr ""
+
+#: modules/dealers/templates/dealerInfo.html:181
+msgid "You can temporarily suspend your card. Any new purchases or balance transfers will not be authorised."
+msgstr ""
+
+#: modules/registration/templates/congratulationMsg.html:12
+msgid "You have registered successfully."
+msgstr ""
+
+#: modules/myWallet/MyWalletCtrl.js:43
+msgid "You need to add a bank card first"
+msgstr ""
+
+#: modules/vehicles/templates/addVehicleProofPartial.html:5
+msgid "Your VIN is successfully confirmed."
+msgstr ""
+
+#: modules/common/IFrameContainer.html:4
+msgid "Your browser does not support iframes."
+msgstr ""
+
+#: modules/registration/templates/step4.html:2
+msgid "Your contact details"
+msgstr ""
+
+#: modules/registration/templates/BMWOwnerCarList.html:2
+#: modules/registration/templates/step3.html:2
+msgid "Your current vehicle"
+msgstr ""
+
+#: modules/registration/templates/step1.html:2
+msgid "Your information"
+msgstr ""
+
+#: modules/benefits/templates/pointsRules.html:44
+msgid "Your membership level gets upgraded to the next tier upon reaching a certain point total, which unlocks even more advantages that enrich your experience."
+msgstr ""
+
+#: modules/settings/forgetPaymentPassword/step6.html:7
+msgid "Your new payment password has been successfully set."
+msgstr ""
+
+#: modules/common/directives/validatePassword.js:23
+msgid "Your password must consist of a minimum of 8 characters, lower and upper case letters, at least 1 number, at least 1 special character (e.g.  #$_*)"
+msgstr ""
+
+#: modules/registration/templates/step2.html:7
+msgid "Your password must consist of a minimum of 8 characters, lower and upper case letters, at least 1 number, at least 1 special character (e.g.  #$_*)."
+msgstr ""
+
+#: modules/changePassword/changePassword.html:8
+msgid "Your password must consist of a minimum of 8 characters, lower and upper case letters, at least 1 number, at least 1 special character (i.e  #$_*)."
+msgstr ""
+
+#: modules/settings/changePaymentPassword/step4.html:8
+msgid "Your payment password has been successfully changed."
+msgstr ""
+
+#: modules/giftCards/addCreditCard.html:5
+msgid "Your profile information"
+msgstr ""
+
+#: modules/dealers/controllers/ReplaceCardCtrl.js:64
+msgid "Your request will be processed."
+msgstr ""
+
+#: modules/vehicles/templates/vehicles.html:26
+msgid "Your vehicles at a glance: view key information about your current vehicles."
+msgstr ""
+
+#: modules/home/HomeCtrl.js:53
+msgid "about-title-before-login"
+msgstr ""
+
+#: modules/myBankCard/PaymentMethodCtrl.js:69
+msgid "account info error"
+msgstr ""
+
+#: modules/vehicles/controllers/AddVehicleCtrl.js:63
+#: modules/vehicles/controllers/AddVehicleProofCtrl.js:92
+msgid "add vehicle title-explanation for uploading of multiple documents"
+msgstr ""
+
+#: modules/vehicles/controllers/AddVehicleCtrl.js:59
+#: modules/vehicles/controllers/AddVehicleProofCtrl.js:88
+msgid "add vehicle title-terms and conditions"
+msgstr ""
+
+#: modules/vehicles/templates/addVehicleProofPartial.html:37
+msgid "add vehicle-terms and conditions"
+msgstr ""
+
+#: modules/settings/settings.html:1
+#: modules/sideMenu/side-menu-overview.html:47
+msgid "app settings"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:44
+msgid "apply financial document"
+msgstr ""
+
+#: modules/offers/templates/offerInfo.html:28
+#: modules/offers/templates/offerItem.html:28
+msgid "are available"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:31
+msgid "balloon extension"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep2.html:21
+msgid "bank card multi mobile number"
+msgstr ""
+
+#: modules/myBankCard/BankCardService.js:15
+msgid "bankCardType-voucher"
+msgstr ""
+
+#: modules/myBankCard/template/bankCardMultiStep1.html:23
+#: modules/settings/forgetPaymentPassword/step2.html:20
+msgid "bankcard number has to be 16 or 19 digitals"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:8
+msgid "bmw financial service self-service"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-7.html:7
+msgid "bmw lifestyle shop"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/bmw.html:12
+msgid "brandshops-bmw buy accessories online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/bmw.html:4
+msgid "brandshops-bmw buy new vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/bmw.html:8
+msgid "brandshops-bmw buy used vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/bmw.html:16
+msgid "brandshops-bmw lifestyle products"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:16
+msgid "brandshops-mini-en buy accessories online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:4
+msgid "brandshops-mini-en buy new vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:10
+msgid "brandshops-mini-en buy used vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:22
+msgid "brandshops-mini-en lifestyle products"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:17
+msgid "brandshops-mini-zh-row-1 buy accessories online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:5
+msgid "brandshops-mini-zh-row-1 buy new vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:11
+msgid "brandshops-mini-zh-row-1 buy used vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:23
+msgid "brandshops-mini-zh-row-1 lifestyle products"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:18
+msgid "brandshops-mini-zh-row-2 buy accessories online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:6
+msgid "brandshops-mini-zh-row-2 buy new vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:12
+msgid "brandshops-mini-zh-row-2 buy used vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/mini.html:24
+msgid "brandshops-mini-zh-row-2 lifestyle products"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/motorrad.html:12
+msgid "brandshops-motorrad buy accessories online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/motorrad.html:4
+msgid "brandshops-motorrad buy new vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/motorrad.html:8
+msgid "brandshops-motorrad buy used vehicle online"
+msgstr ""
+
+#: modules/brandShops/templates/externalLinks/motorrad.html:16
+msgid "brandshops-motorrad lifestyle products"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-7.html:3
+#: modules/sideMenu/side-menu-bmw.html:32
+msgid "buy bmw clothes, bags and other lifestyle products online"
+msgstr ""
+
+#: modules/offers/services/OffersService.js:427
+msgid "call customer service"
+msgstr ""
+
+#: modules/giftCards/templates/cardType.html:1
+msgid "cardType"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:21
+msgid "change bank account"
+msgstr ""
+
+#: modules/dash/DashCtrl.js:238
+msgid "close"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-6.html:7
+msgid "connetedDrive store"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:35
+msgid "contract amendment"
+msgstr ""
+
+#: modules/benefits/templates/levels.html:34
+msgid "current offer"
+msgstr ""
+
+#: modules/benefits/templates/benefits.html:22
+#: modules/points/earnPoint.html:1
+#: modules/sideMenu/side-menu-lp.html:14
+msgid "earn status points"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:39
+msgid "email us"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-8.html:3
+#: modules/sideMenu/side-menu-bmw.html:36
+msgid "expore bmw event, media and news"
+msgstr ""
+
+#: modules/offers/services/OffersService.js:376
+msgid "favorite voucher"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:11
+msgid "feedback & suggestion"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:17
+msgid "financial service calculator"
+msgstr ""
+
+#: modules/offers/templates/previewLayer.html:13
+#: modules/sideMenu/side-menu-offers-news.html:19
+msgid "gift card"
+msgstr ""
+
+#: modules/offers/services/OffersService.js:345
+msgid "grab voucher"
+msgstr ""
+
+#: modules/sideMenu/side-menu-financial.html:26
+msgid "insurance claim"
+msgstr ""
+
+#: modules/sideMenu/side-menu-lp.html:3
+#: modules/sideMenu/side-menu-overview.html:4
+msgid "loyalty program"
+msgstr ""
+
+#: modules/offers/templates/offers.html:1
+msgid "loyalty vouchers"
+msgstr ""
+
+#: modules/points/points.html:1
+#: modules/sideMenu/side-menu-lp.html:9
+msgid "membership benefits"
+msgstr ""
+
+#: modules/me/brief.html:12
+#: modules/sideMenu/side-menu-me.html:20
+msgid "my activity log"
+msgstr ""
+
+#: modules/me/brief.html:20
+#: modules/sideMenu/side-menu-me.html:35
+msgid "my dealers"
+msgstr ""
+
+#: modules/dealers/templates/dealers.html:1
+msgid "my dealerships"
+msgstr ""
+
+#: modules/me/brief.html:10
+#: modules/offers/templates/favorites.html:1
+#: modules/sideMenu/side-menu-me.html:15
+msgid "my favorites"
+msgstr ""
+
+#: modules/me/brief.html:16
+#: modules/myProfile/myProfile.html:1
+#: modules/sideMenu/side-menu-me.html:25
+msgid "my profile"
+msgstr ""
+
+#: modules/me/brief.html:18
+#: modules/sideMenu/side-menu-me.html:30
+#: modules/vehicles/templates/vehicles.html:1
+msgid "my vehicles"
+msgstr ""
+
+#: modules/offers/templates/coupons.html:1
+msgid "my vouchers"
+msgstr ""
+
+#: modules/me/brief.html:8
+#: modules/sideMenu/side-menu-me.html:10
+msgid "my wallet"
+msgstr ""
+
+#: modules/chats/ChatCtrl.js:243
+msgid "no"
+msgstr ""
+
+#: modules/myWallet/changePaymentMethod.html:17
+msgid "no relative cards"
+msgstr ""
+
+#: modules/myWallet/transHistoryInfo.html:31
+msgid "no transaction history"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi-changenow.html:15
+msgid "others"
+msgstr ""
+
+#: modules/activity/activity.html:47
+msgid "partnerName_en"
+msgstr ""
+
+#: modules/offers/templates/previewLayer.html:11
+#: modules/sideMenu/side-menu-offers-news.html:14
+msgid "partners"
+msgstr ""
+
+#: modules/partners/partners.html:1
+msgid "partners benefits"
+msgstr ""
+
+#: modules/dealers/controllers/ChangePinCtrl.js:121
+#: modules/myBankCard/BankCardCtrl.js:262
+#: modules/settings/SettingsCtrl.js:320
+msgid "password does not match"
+msgstr ""
+
+#: modules/myWallet/QuickPaymentPasswordCtrl.js:21
+msgid "pay successfully"
+msgstr ""
+
+#: modules/giftCards/giftCardStep1.html:8
+msgid "payment password"
+msgstr ""
+
+#: modules/common/directives/validatePostCode.js:20
+msgid "post code number"
+msgstr ""
+
+#: modules/sideMenu/side-menu-mobi-reachnow.html:3
+#: modules/sideMenu/side-menu-mobi.html:8
+msgid "reachnow"
+msgstr ""
+
+#: modules/landingPages/templates/contact.html:15
+msgid "request your quotation"
+msgstr ""
+
+#: modules/customerServices/roadAssistance.html:1
+msgid "roadside assistance"
+msgstr ""
+
+#: modules/registration/templates/step3.html:8
+msgid "to Priority Plus Alliance."
+msgstr ""
+
+#: modules/activity/activity.html:48
+msgid "transactionDate"
+msgstr ""
+
+#: modules/activity/activity.html:46
+msgid "transactionType"
+msgstr ""
+
+#: modules/sideMenu/side-menu-lp.html:19
+msgid "tutorial"
+msgstr ""
+
+#: modules/common/templates/tutorial.html:13
+msgid "tutorial-done"
+msgstr ""
+
+#: modules/common/templates/tutorial.html:10
+msgid "tutorial-skip"
+msgstr ""
+
+#: modules/offers/services/OffersService.js:405
+msgid "unfavorite voucher"
+msgstr ""
+
+#: modules/sideMenu/side-menu-bmw-6.html:3
+#: modules/sideMenu/side-menu-bmw.html:28
+msgid "upgrade your bmw with digital features and accessories"
+msgstr ""
+
+#: modules/vehicles/controllers/AddVehicleProofCtrl.js:44
+msgid "upload file only support jpg,jpeg,pdf,png"
+msgstr ""
+
+#: modules/myBankCard/BankCardCtrl.js:50
+msgid "upload file only support jpg,jpeg,png"
+msgstr ""
+
+#: modules/offers/templates/coupons.html:8
+#: modules/offers/templates/favorites.html:7
+#: modules/offers/templates/offers.html:7
+msgid "value of current vouchers"
+msgstr ""
+
+#: modules/vehicles/templates/addVehicleProofPartial.html:23
+msgid "vehicle document upload description"
+msgstr ""
+
+#: modules/chats/ChatCtrl.js:240
+msgid "yes"
+msgstr ""
+
+#: modules/benefits/templates/levels.html:25
+msgid "your point list"
+msgstr ""
+
+#: modules/benefits/templates/programme.html:4
+msgid "your privileges and benefits at a glance"
+msgstr ""
+
+#: modules/offers/templates/coupons.html:11
+#: modules/offers/templates/favorites.html:10
+#: modules/offers/templates/offers.html:10
+msgid "¥"
+msgstr ""

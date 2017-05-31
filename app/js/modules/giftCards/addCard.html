@@ -1,0 +1,33 @@
+<ion-view view-title="">
+
+    <ion-content>
+
+        <div class="list">
+
+            <div class="item item-divider">
+                {{'Credit card application' | translate}}
+            </div>
+            <div class="item item-body">
+                <p>{{'Apply for a credit card with the China Construction Bank and enjoy even more benefits. Send in your application today: it is free!' | translate}}</p>
+                <div class="row responsive-sm row__list-info">
+                    <div class="col col-50">
+                        <img src="{{imageBaseURL}}img/ccb/card.png" class="card-responsive">
+                    </div>
+                    <div class="col col-5">
+                    </div>
+                    <div class="col col-50">
+                        <img ng-src="{{imageBaseURL}}img/ccb_card.png" class="card-responsive">
+                        <div class="col" ui-sref="dash.creditCard">
+                            <button class="button  button-positive card-responsive">
+                                {{'Apply now' | translate}}
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

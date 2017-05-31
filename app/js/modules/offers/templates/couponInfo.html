@@ -1,0 +1,47 @@
+<ion-view view-title="">
+    <ion-content class="has-header content--no-footer">
+
+        <div class="item item-body offer-item-container">
+
+
+            <div class="offer-item">
+                <div class="item-headline">
+                    <div class="item-logo">
+                        <img ng-src="{{ couponInfo.coupon.AEM_partnerLogo }}" fallback-src="'{{ imageBaseURL }}img/fallback/bmwpartner.png'" />
+                    </div>
+                    <div class="item-partner-name">
+                        {{ couponInfo.coupon.AEM_partnerName }}
+                    </div>
+                </div>
+                <div class="item-title">
+                    {{ couponInfo.coupon.AEM_name }}
+                </div>
+                <div class="item-short-desc">
+                    {{ couponInfo.coupon.AEM_shortDesc }}
+                </div>
+                <img class="item-image" ng-src="{{ couponInfo.coupon.AEM_image }}" image-loaded="imageLoaded" ng-show="imageLoaded"  />
+                <img class="item-image" src="img/loading/voucher.svg" ng-show="!imageLoaded" />
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="item-body">
+            <div class="voucher-count">
+                <span class="voucher-count__left">{{ couponInfo.coupon.totalUsed }}</span>
+                <span class="voucher-count__total">{{ couponInfo.coupon.totalUsed + couponInfo.coupon.totalUnUsed }}</span>
+            </div>
+
+            <div ng-bind-html="couponInfo.coupon.AEM_desc"></div>
+
+            <div class="qrcode-container text-center">
+                <qrcode data="{{ couponInfo.voucherCode }}" size="150"></qrcode>
+                <div>{{ couponInfo.voucherCode }}</div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

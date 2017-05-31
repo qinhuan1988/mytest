@@ -1,0 +1,29 @@
+<ion-view class="page--transaction-history" view-title="">
+    <pc-logo></pc-logo>
+    <ion-content class="content--no-footer">
+        <div class="list">
+            <div class="item-headline">
+                {{'Select cards' | translate}}
+            </div>
+            <ion-list>
+                <ion-item ng-repeat="card in transactionHistory.userCards"
+                          ng-click="transactionHistory.setCurrentCard(card.r_card,card.r_name)">
+
+                    <div class="item-icon-left item-icon-right" ui-sref="dash.transHistoryInfo">
+                        <img class="bank-card-image" ng-src="{{card.imgUrl}}" fallback-src="'{{imageBaseURL}}img/icons/common/card-default.svg'" /> {{card.r_name}}
+                        <span class="item-note">
+                            ****{{card.r_card | limitTo : -4}}
+                        </span>
+                        <i class="icon ion-ios-circle-outline transBtnClr" ng-if="transactionHistory.currentCard !== card.r_card"></i>
+                        <i class="icon ion-ios-circle-filled transBtnClr" ng-if="transactionHistory.currentCard === card.r_card"></i>
+                    </div>
+                </ion-item>
+                <div class="item">
+                    <div class="item-icon-left item-icon-right" ui-sref="dash.activity">
+                        <img ng-src="{{imageBaseURL}}img/icons/common/myactivitieslog.svg" class="bank-card-image"> {{'Loyalty Card' | translate}}
+                    </div>
+                </div>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

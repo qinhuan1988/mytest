@@ -1,0 +1,184 @@
+<ion-view view-title="{{ 'my vehicles' | translate }}">
+    <ion-content class="content--no-footer">
+        <div class="list">
+
+            <ion-refresher on-refresh="vehicles.init()"></ion-refresher>
+
+            <div ng-if="!vehicles.hasVehicles()">
+                <div class="item-body">
+                    {{'No Vehicles... Add Vehicle now?' | translate}}
+                </div>
+            </div>
+
+            <div ng-if="vehicles.hasVehicles()" class="myVehicle-slides" slides-dynamic-height>
+
+                <div class="slide__arrow-wrapper--left" ng-click="vehicles.slider.prev()" ng-show="vehicles.slider.activeIndex > 0">
+                    <span class="slide__arrow--left"></span>
+                </div>
+                <div class="slide__arrow-wrapper--right" ng-click="vehicles.slider.next()" ng-show="vehicles.slider.activeIndex < (vehicles.vehicleList.length - 1)">
+                    <span class="slide__arrow--right"></span>
+                </div>
+
+                <ion-slides options="vehicles.slider.options" slider="vehicles.slider.delegate">
+                    <ion-slide-page ng-repeat="car in vehicles.vehicleList">
+                        <div class="padding20">
+
+                            <p>{{'Your vehicles at a glance: view key information about your current vehicles.' | translate}}</p>
+
+                            <div class="divider"></div>
+                            
+                            <div ng-if="car.approved" class="vehicle__grid-info">
+                                <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'Car model' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value">{{car.modelDescription}}</span>
+                                    </div>
+                                </div>
+                                <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'Date of purchase' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value">{{car.purchaseDate}}</span>
+                                    </div>
+                                </div>
+                                <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'VIN Number' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value">{{car.vin}}</span>
+                                    </div>
+                                </div>
+                                <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'Insurance expiry date:' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value"></span>
+                                    </div>
+                                </div>
+                                <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'Latest inspection:' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value"></span>
+                                    </div>
+                                </div>
+                                <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'Estimate mileage:' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div ng-if="car.pending" class="vehicle__grid-info">
+                                  <div class="row">
+                                      <i class="icon-alert-pending"></i>
+                                  </div>
+                                  <div class="row">
+                                      <p class="msg-pending" >{{'For security reason, the information will be checked before the vehicle is added to your account.' | translate }}</p>
+                                  </div>
+                                  <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'Car model' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value">{{car.modelDescription}}</span>
+                                    </div>
+                                </div>
+                                <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'VIN Number' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value">{{car.vin}}</span>
+                                    </div>
+                                </div>
+                             </div>
+
+
+                             <div ng-if="car.rejected" class="vehicle__grid-info">
+                                  <div class="row">
+                                      <i class="icon-alert-rejected"></i>
+                                  </div>
+                                  <div class="row">
+                                      <p class="msg-rejected">{{ car.rejectionReason }}</p>
+                                  </div>
+                                  <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'Car model' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value">{{car.modelDescription}}</span>
+                                    </div>
+                                </div>
+                                <div class="row row__list-info">
+                                    <div class="col col-40">
+                                        <span class="list-label">{{'VIN Number' | translate}}</span>
+                                    </div>
+                                    <div class="col col-60 text-right">
+                                        <span class="list-value">{{car.vin}}</span>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </ion-slide-page>
+                </ion-slides>
+            </div>
+
+            <div class="item-headline gradient-headline clear-top-headline">{{ 'Connect Your Vehicle' | translate}}</div>
+
+            <div class="tiles-list vehicle-icon-container">
+                <div class="tile-block" ng-click="dash.openComingSoonView()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/vehicle/RemoteControl.svg">
+                    <span class="tile__label">{{ 'Remote' | translate }}</span>
+                </div>
+                <!-- <div class="tile-block" ng-click="dash.openComingSoonView()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/vehicle/POIsendtoCar.svg">
+                    <span class="tile__label">{{ 'POI send to car' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="dash.openComingSoonView()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/vehicle/VehiclePosition.svg">
+                    <span class="tile__label">{{ 'Vehicle Position' | translate }}</span>
+                </div> -->
+                <div class="tile-block"  ng-click="dash.openExternalLink(dash.vehicleOwnersHandbook)">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/vehicle/VehicleOwner’sHandbook.svg">
+                    <span class="tile__label">{{ 'Vehicle owners handbook' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="dash.openComingSoonView()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/vehicle/MyHistory.svg">
+                    <span class="tile__label">{{ 'My History' | translate }}</span>
+                </div>
+                <!-- <div class="tile-block"></div> -->
+            </div>
+
+            <div ng-if="vehicles.hasVehicles()">
+                <div class="page-divider"></div>
+
+                <div ng-click="vehicles.removeVehicle()">
+                    <a class="item item-icon-left">
+                        <i class="icon ion-ios-minus-outline"></i>
+                        {{'Remove this vehicle' | translate}}
+                   </a>
+                </div>
+            </div>
+
+            <div class="page-divider"></div>
+
+            <div ui-sref="dash.addVehicle">
+                <a class="item item-icon-left">
+                    <i class="icon ion-ios-plus-outline"></i>
+                    {{'Add a new Vehicle' | translate}}
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

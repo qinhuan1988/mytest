@@ -1,0 +1,323 @@
+$modal-header-title-color: #fff;
+$popup-alert-headline: #ffcc00;
+$popup-button-border-radius: 5px;
+$popup-call-color: #1173BE;
+$popup-email-color: #1aaf54;
+
+.modal {
+    background-color: $app-background-color;
+
+    ion-header-bar {
+        background-color: $app-background-color;
+    }
+
+    .padding {
+        @extend .padding20;
+    }
+
+    .card {
+        margin: 0;
+        background: none;
+        box-shadow: none;
+    }
+
+    .item-body {
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+}
+/*
+ * member card style (still displayed in a popup)
+ */
+.modal--member-card {
+    @extend .modal;
+
+    text-align: center;
+    background: transparent;
+
+    .pane {
+        @extend %page-has-background;
+    }
+
+    .modal__header {
+        height: 20%;
+
+        position: initial;
+
+        justify-content: center;
+
+        .col {
+            flex-grow: 0;
+            flex-basis: 40%;
+        }
+    }
+
+    .modal__main {
+        height: 40%;
+    }
+
+    #bmwCentralCard {
+        width: 100%;
+        margin: 0 auto;
+        svg {
+            width: 100%;
+        }
+    }
+
+    qrcode canvas {
+        border: white 6px solid;
+    }
+
+    .link__icon {
+        height: 40px;
+    }
+
+    .link__label {
+        @extend .link;
+    }
+
+    .modal__header .header__action {
+        top: 6.5%;
+    }
+}
+
+.modal__header {
+    position: absolute;
+    top: 35px;
+
+    .header__title {
+        color: $modal-header-title-color;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .header__action {
+        padding-left: 15px;
+
+        color: $modal-header-title-color;
+
+        position: absolute;
+        right: 0;
+        top: 8px;
+    }
+
+    .icon.icon-close {
+        height: 45px;
+
+        display: inline-block;
+
+        background-size: 21px;
+        background-position: top;
+    }
+}
+
+.close-icon {
+    font-size: 40px;
+    color: #888;
+    z-index: 999;
+    padding-right: 15px;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.icon-35 {
+    font-size: 35px;
+}
+
+.popup-about {
+    h3 {
+        line-height: 35px;
+    }
+}
+
+.popup-bottom-layer {
+    z-index: 15;
+}
+
+.preview-container {}
+
+.icon-item-container {
+    padding: 0;
+    text-align: center;
+}
+
+.icon-item-divider {
+    width: 1px;
+    max-width: 1px;
+    min-width: 1px;
+    padding: 0;
+    margin: 10px 0;
+
+    background: $secondary-color;
+    opacity: 0.2;
+}
+
+.icon-item-divider--invisible {
+    @extend .icon-item-divider;
+
+    background: none !important;
+}
+
+.layer-lightgray-background {
+    background-color: rgb(234,235,236);
+}
+
+.layer-row {
+    padding: 0;
+}
+
+.layer-divider {
+    padding: 0;
+}
+// globle error popup style
+
+.bmwPopup {
+    .popup-head {
+        display: none;
+    }
+
+    i {
+        font-size: 50px;
+    }
+
+    button {
+        text-align: center;
+    }
+
+    .button-stable {
+        background: #dadada;
+        color: #444;
+    }
+}
+
+.popup-container {
+    .popup {
+        background: $background-color-primary;
+
+        .popup-body {
+            .popup-body__icon {
+                height: 80px;
+                padding-top: 10px;
+
+                text-align: center;
+            }
+
+            .popup-body__icon--round {
+
+                background: $emphasis-color;
+                height: 60px;
+                text-align: center;
+
+                color: #fff;
+                border-radius: 30px;
+                width: 60px;
+                margin: 5px auto 10px;
+                padding: 2px 0 0 5px;
+            }
+
+            .popup-body__headline--alert {
+                color: $emphasis-color;
+                font-weight: bold;
+                padding-bottom: 10px;
+            }
+
+            .popup-body__headline {
+                color: $popup-alert-headline;
+                text-transform: uppercase;
+            }
+
+            .popup-body__body {
+                color: $secondary-color;
+            }
+        }
+
+        .popup-buttons {
+            display: block;
+
+            button {
+                margin: auto;
+                width: 100%;
+                margin-bottom: 10px;
+
+                border-radius: $popup-button-border-radius;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .popup:before {
+        content: "";
+        background: linear-gradient(to right, #AE2C17 0%,#C48310 15%, #FFFFFF 30%,#C48310 50%, #AE2C17 100%);
+        height: 3px;
+    }
+}
+
+// icons
+
+%icon-popup-notif {
+    @extend .icon;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+}
+
+.icon-alert-notif {
+    background-image: url("../img/icons/common/alertnotification.svg");
+    @extend %icon-popup-notif;
+}
+
+.icon-alert-comingsoon {
+    background-image: url("../img/icons/common/comingsoon.svg");
+    @extend %icon-popup-notif;
+}
+
+.icon-error-notif {
+    background-image: url("../img/icons/common/errornotification.svg");
+    @extend %icon-popup-notif;
+}
+
+.icon-success-notif {
+    background-image: url("../img/icons/common/successnotification.svg");
+    @extend %icon-popup-notif;
+}
+
+.icon-call-notif {
+    background-image: url("../img/icons/common/call.svg");
+    @extend %icon-popup-notif;
+
+    background-color: $popup-call-color;
+    background-position-y: 50%;
+    border-radius: 50px;
+}
+
+.icon-email-notif {
+    background-image: url("../img/icons/common/email.svg");
+    @extend %icon-popup-notif;
+
+    background-color: $popup-email-color;
+    background-position-y: 50%;
+    border-radius: 50px;
+}
+
+.popup-container .popup .popup-body .popup-body__headline--blue {
+    @extend .popup-body__headline;
+
+    color: $popup-call-color;
+}
+
+.popup-container .popup .popup-body .popup-body__headline--green {
+    @extend .popup-body__headline;
+
+    color: $popup-email-color;
+}

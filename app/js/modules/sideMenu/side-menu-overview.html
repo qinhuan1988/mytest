@@ -1,0 +1,61 @@
+<section>
+    <div class="items-group">
+        <div class="item item-icon-right white-space__normal" ng-click="dash.leaving = true;dash.toggleSideNav('LP')">
+            <i class="bmw-more-lp-logo"></i> {{'loyalty program' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </div>
+    </div>
+
+    <div class="items-group">
+        <div class="item item-icon-right white-space__normal" ng-click="dash.toggleSideNav('BMW')">
+            <i class="bmw-more-car-bmw"></i> {{'BMW' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </div>
+    </div>
+
+
+    <div class="items-group">
+        <div class="item item-icon-right white-space__normal" ng-click="dash.toggleSideNav('Mobi')">
+            <i class="bmw-more-mobi-service"></i> {{'BMW mobility service' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </div>
+    </div>
+
+    <div class="items-group">
+        <div class="item item-icon-right white-space__normal" ng-click="dash.toggleSideNav('Financial')">
+            <i class="bmw-more-financial-service"></i> {{'BMW financial service' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </div>
+    </div>
+
+    <div class="items-group">
+        <div class="item item-icon-right white-space__normal" ng-click="dash.toggleSideNav('OffersNews')">
+            <i class="icon-offers-news"></i> {{ 'OFFERS & NEWS' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </div>
+    </div>
+
+    <div class="items-group">
+        <div class="item item-icon-right white-space__normal" ng-click="dash.toggleSideNav('Me')">
+            <i class="icon-me"></i> {{ 'ME' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </div>
+    </div>
+
+    <div class="items-group">
+        <a class="item item-icon-right white-space__normal" ng-click="dash.closeSideBar(true)" ui-sref="dash.settings">
+            <i class="bmw-more-me-settings"></i> {{'app settings' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+<button class="button-block" ng-click="dash.logout()">
+    {{'LOGOUT' | translate}}
+</button>
+
+<div class="row bottom-bar">
+    <div class="col" ng-click="dash.openLegalDisclaimerLink()">{{'Legal Disclaimer' | translate}}</div>
+    <div class="col" ng-click="dash.showTCForCustomer()">{{'Terms of use' | translate}}</div>
+    <div class="col" ng-click="dash.showCustomerConsent()">{{'Customer Consent' | translate}}</div>
+</div>

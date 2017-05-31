@@ -1,0 +1,58 @@
+<ion-view>
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear" ui-sref="login">
+            <i class="icon ion-ios-arrow-back"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="form--login">
+
+        <div class="logo-portrait--white"></div>
+
+        <div class="padding20-side">
+            <h5 class="padding-vertical">{{'Log in with an OTP' | translate}}</h5>
+
+            <p class="padding-vertical">
+                {{'If you do not have a password, please enter the information below and log in with a verification code (OTP).' | translate }}
+            </p>
+
+           <form name="form1">
+                <label class="item-input">
+                    <span class="item-label">{{'Mobile phone' | translate}}</span>
+                    <input type="tel" ng-model-options="{allowInvalid: true}" ng-model="requestOTP.phoneNumber" ng-change="requestOTP.setLoginCache()" required>
+                    <span class="item-label--error" input-name="phoneNumber" ng-model="requestOTP.phoneNumber" validate-phone-number></span>
+                </label>
+
+                <label class="item-input">
+                    <span class="item-label">{{'Type words from the verification image' | translate}}</span>
+                    <input type="tel" ng-model="requestOTP.captchaValue" required>
+                </label>
+
+                <div class="captcha-box" set-captcha-id="requestOTP.setCaptchaId(id)" my-captcha="requestOTP.isCaptchaExpired"></div>
+
+                <button class="button" on-click="requestOTP.requestOTP()" is-disabled="form1.$invalid" is-sent="requestOTP.isOTPSent" count-down="requestOTP.countDown" label="{{'Request OTP' | translate}}">
+                </button>
+            </form>
+
+            <form name="form2">
+
+                <label class="item-input">
+                    <span class="item-label">{{'Enter OTP' | translate}}</span>
+                    <input type="tel" ng-disabled="!requestOTP.canValidateOTP" ng-model="requestOTP.smsCode" required>
+                </label>
+
+                <form-error error-msg="requestOTP.errorMsg"></form-error>
+
+                <label class="item item-checkbox-bmw col">
+                    <input type="checkbox" ng-model="requestOTP.rememberMe">
+                    <a>{{'Remember me' | translate}}</a>
+                </label>
+
+                <button class="button button-full button-positive" ng-disabled="form2.$invalid" ng-click="requestOTP.submit()">
+                    {{'Log in' | translate }}
+                </button>
+
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

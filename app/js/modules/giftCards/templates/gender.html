@@ -1,0 +1,14 @@
+<ion-view view-title="{{'Gender' | translate}}">
+    <ion-content class="content--no-footer">
+        <div class="list">
+            <div class="item item-icon-right" ng-click="genderInfo.setSex(0)">
+                {{'Male' | translate}}
+                <i class="icon ion-ios-checkmark-empty" ng-if='genderInfo.value === 0'></i>
+            </div>
+            <div class="item item-icon-right" ng-click="genderInfo.setSex(1)">
+                {{'Female' | translate}}
+                <i class="icon ion-ios-checkmark-empty" ng-if='genderInfo.value === 1'></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

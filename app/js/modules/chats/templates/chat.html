@@ -1,0 +1,102 @@
+<ion-view can-swipe-back="false" hide-back-button="true">
+    <ion-nav-title>{{ 'BMW Group Assistant Chat' | translate }}</ion-nav-title>
+    <div class="ws-connecting" ng-if="chat.wsLost">
+        <ion-spinner icon="ios-small"></ion-spinner>
+        <span>{{'Chat server connecting...' | translate}}</span>
+    </div>
+
+    <ion-content delegate-handle="activePushScroll" class="chat-container view-has-tabs view--has-top-bar">
+
+        <ion-refresher on-refresh="chat.refreshView()"></ion-refresher>
+
+        <div class="chat-inner" ng-class="{ 'has-top-bar': chat.wsLost }">
+            <div class="clearfix dialog-box chat-section" ng-class="{
+                    'chat-section__left': dialog.origin === 'bmw',
+                    'chat-section__right': dialog.origin === 'me'
+                }" ng-repeat="dialog in chat.dialogs track by $index">
+
+                <!-- chat msg-->
+                <div class="chat-info text-center clearfix" ng-if="dialog.markDownTime">
+                    <span class="chat-timestamp">{{dialog.markDownTime}}</span>
+                </div>
+                <img class="chat-img" ng-if="dialog.origin === 'bmw'" ng-src="{{imageBaseURL}}img/cic_profile_pic.png">
+                <img class="chat-img" ng-if="dialog.origin === 'me'" ng-src="{{imageBaseURL}}img/icons/footer/active/user_profile_icon.svg">
+
+
+
+                <div class="arrow-box__chat-view" ng-if="dialog.origin" ng-class="{
+                        'arrow_box--left': dialog.origin === 'bmw',
+                        'arrow_chatbox--right': dialog.origin === 'me',
+                        'dialog-onhold': dialog.onhold
+                    }" on-hold="chat.onDialogHold($event, dialog.content, dialog)">
+
+                    <chat-dialog-text ng-if="dialog.type === 'text' || dialog.chatType === 'text'" content="{{dialog.content}}"></chat-dialog-text>
+
+                    <chat-dialog-news ng-if="dialog.type === 'news' || dialog.chatType === 'news'" content="{{dialog.content}}"></chat-dialog-news>
+
+                    <chat-dialog-img ng-if="dialog.type === 'img' || dialog.chatType === 'img' || dialog.chatType === 'image' || dialog.chatType === 'voice'" content="{{dialog.content}}"></chat-dialog-img>
+
+                </div>
+
+                <ion-spinner class="chat-box-spinner" ng-if="dialog.isSending && dialog.origin === 'me'"></ion-spinner>
+
+                <!--active push: origin is not exist-->
+                <img class="chat-img" ng-if="!dialog.origin" ng-src="{{imageBaseURL}}img/cic_profile_pic.png">
+                <div class="arrow_box--left" ng-class="{
+                                'arrow-box__chat-view': !dialog.img,
+                                'dialog-onhold': dialog.onhold
+                            }" ng-if="!dialog.origin && !dialog.voucherId" ng-click="chat.openDialogLink(dialog.url)">
+                    <h5 ng-if="dialog.title">{{chat.getChatContentByLang(dialog.title)}}</h5>
+                    <p on-hold="chat.onDialogHold($event, chat.getChatContentByLang(dialog.content), dialog)">{{chat.getChatContentByLang(dialog.content)}}</p>
+                    <p ng-if="dialog.img">
+                        <img ng-src="{{dialog.img}}" class="offer-image">
+                    </p>
+                </div>
+
+
+                <!--active push voucher content by ##voucherid -->
+                <div class="arrow_box--left" ng-if="dialog.voucherId && !dialog.benefitItem">
+                    {{dialog.noVoucherContent}}
+                </div>
+                <div class="item item-body offer-item-container offer-item-container__active-push arrow_box--left" ng-if="dialog.voucherId && dialog.benefitItem">
+                    <div offer-item="dialog.benefitItem" ng-click="chat.showOfferInfo(dialog.benefitItem)">
+                    </div>
+                </div>
+
+
+                <!--active push options selection, not last dialog -->
+                <div class="chat-section__right clearfix" ng-if="!dialog.lastDialog && !dialog.origin">
+                    <img class="chat-img active-push-profile" ng-src="{{imageBaseURL}}img/icons/footer/active/user_profile_icon.svg">
+
+                    <div class="arrow_box_confirm-container">
+                        <div class="arrow_box_confirm arrow_box--right" ng-class="{'active': dialog.answer === 'yes' || dialog.isPrevious}" ng-click="chat.updateAnswer(dialog, 'yes')">
+                            {{chat.getChatOptionsByLang(dialog.left, 'yes')}}
+                        </div>
+                        <div class="arrow_box_confirm arrow_box--right" ng-class="{'active': dialog.answer === 'no'}" ng-click="chat.updateAnswer(dialog, 'no')">
+                            {{chat.getChatOptionsByLang(dialog.right, 'no')}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </ion-content>
+
+
+    <ion-footer-bar ios-keyboard-attach is-chat-mode="isChatMode" class="chat-bottom-bar" ng-class="{'chat-bottom-bar-close': !isChatMode}">
+        <div class="icon icon-home" ng-click="chat.switchPushActiveMode()"></div>
+
+        <form name="chatForm">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="{{'Type your message' | translate}}" ng-model="chat.msg">
+            </label>
+
+            <button class="button" ng-class="{'button-dark': chat.msg, 'button-clear': !chat.msg}" ng-click="chat.sendMsg()">
+                {{'Send' | translate}}
+            </button>
+        </form>
+    </ion-footer-bar>
+
+</ion-view>

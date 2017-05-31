@@ -1,0 +1,17 @@
+<ion-view view-title="{{ 'app settings' | translate }}">
+    <ion-content class="content--no-footer">
+        <div class="list">
+
+            <a class="item item-icon-left headline" ui-sref="dash.languages">
+                <i class="icon ion-earth"></i> {{'Language' | translate}}
+                <span class="item-note">{{settings.lang}}</span>
+            </a>
+
+            <div class="item headline" ng-if="settings.appVersion">
+                {{'Version' | translate}}
+                <span class="item-note">{{settings.appVersion}}</span>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

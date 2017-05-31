@@ -1,0 +1,206 @@
+<ion-view view-title="{{dealerInfo.dealer.partnerName}}">
+    <ion-content class="content--no-footer">
+
+        <div class="item-body dealer-detail-container">
+            <div class="dealer-summary">
+                {{ 'Visit us to gain access to the full range of new BMW models, service and expertise.' | translate }}
+            </div>
+        </div>
+
+        <div class="card-slider-container" ng-if="dealerInfo.hasCards">
+            <div class="slide__arrow-wrapper--left" ng-click="dealerInfo.slider.prev()" ng-show="dealerInfo.slider.activeIndex > 0">
+                <span class="slide__arrow--left"></span>
+            </div>
+            <div class="slide__arrow-wrapper--right" ng-click="dealerInfo.slider.next()" ng-show="dealerInfo.slider.activeIndex < (dealerInfo.dealer.memberCards.length - 1)">
+                <span class="slide__arrow--right"></span>
+            </div>
+            <ion-slides options="dealerInfo.slider.options" slider="dealerInfo.slider.delegate">
+                <ion-slide-page ng-repeat="card in dealerInfo.memberCards">
+                    <membership-card card-info="card">
+                    </membership-card>
+                </ion-slide-page>
+            </ion-slides>
+        </div>
+
+        <div class="item-body dealer-detail-container">
+            <div class="row item_divider">
+                <div class="col-75 row row-no-padding">
+                    <div class="col">
+                        <span class="list-label">{{ 'Tier level' | translate }}</span>
+                    </div>
+                    <div class="col text-right">
+                        <span class="list-value">{{ dealerInfo.dealer.status }}</span>
+                    </div>
+                </div>
+                <div class="col-25 text-right">
+                </div>
+            </div>
+            <div class="row item_divider">
+                <div class="col-75 row row-no-padding">
+                    <div class="col">
+                        <span class="list-label">{{ 'Status points' | translate }}</span>
+                    </div>
+                    <div class="col text-right">
+                        <span class="list-value">{{ dealerInfo.dealer.points | number }}</span>
+                    </div>
+                </div>
+                <div class="col-25 text-right">
+                    <span class="list-link" ng-click="dash.openComingSoonView()">{{ 'More' | translate }}</span>
+                </div>
+            </div>
+            <div class="row item_divider">
+                <div class="col-75 row row-no-padding">
+                    <div class="col-67">
+                        <span class="list-label">{{ 'Points to the next level' | translate }}</span>
+                    </div>
+                    <div class="col-33 text-right">
+                        <span class="list-value">{{dealerInfo.dealer.pointsForNextStatus | number}}</span>
+                    </div>
+                </div>
+                <!-- <div class="col-25 text-right">
+                    <span class="list-link" ui-sref="dash.points">{{ 'How to earn?' | translate }}</span>
+                </div> -->
+            </div>
+            <div class="row item_divider">
+                <div class="col-75 row row-no-padding">
+                    <div class="col">
+                        <span class="list-label">{{ 'Deposit' | translate }}</span>
+                    </div>
+                    <div class="col text-right">
+                        <span class="list-value">{{ dealerInfo.dealer.depositBalance | number }}</span>
+                    </div>
+                </div>
+                <div class="col-25 text-right">
+                </div>
+            </div>
+            <div class="row item_divider">
+                <div class="col-50 row row-no-padding">
+                    <div class="col">
+                        <span class="list-label">{{ 'Website' | translate }}</span>
+                    </div>
+                </div>
+                <div class="col-50 text-right">
+                    <span class="list-link">{{ dealerInfo.dealer.diaFileURL }}</span>
+                </div>
+            </div>
+
+
+            <div class="row item_divider">
+                <div class="col-50 row row-no-padding">
+                    <div class="col">
+                        <span class="list-label">{{ 'Website' | translate }}</span>
+                    </div>
+                </div>
+                <div class="col-50 text-right">
+                    <span class="list-link">{{ dealerInfo.dealer.diaFileURL }}</span>
+                </div>
+            </div>
+
+
+            <div class="row row__list-info" ng-click="dash.openComingSoonView()">
+                <div class="col">
+                    <i class="icon ion-ios-location"></i>
+                </div>
+                <div class="col col-75">
+                    {{ 'Address & Map' | translate }}
+                </div>
+                <div class="col text-right">
+                    <i class="icon ion-ios-arrow-right"></i>
+                </div>
+            </div>
+
+
+            <div class="row row__list-info" ng-click="dash.openComingSoonView()">
+                <div class="col">
+                    <i class="icon ion-paper-airplane"></i>
+                </div>
+                <div class="col col-75">
+                     {{ 'Send to ConnectDrive' | translate }}
+                </div>
+                <div class="col text-right">
+                    <i class="icon ion-ios-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="row row__list-info" ng-if="dealerInfo.hasCards" ui-sref="dash.changePinStep1">
+                <div class="col">
+                    <i class="icon ion-locked"></i>
+                </div>
+                <div class="col col-75">
+                    {{'Change PIN' | translate}}
+                </div>
+                <div class="col text-right">
+                    <i class="icon ion-ios-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="row row__list-info" ng-if="dealerInfo.hasCards" ui-sref="dash.forgotPinStep1">
+                <div class="col">
+                    <i class="icon ion-locked"></i>
+                </div>
+                <div class="col col-75">
+                    {{'Forget Pin' | translate}}
+                </div>
+                <div class="col text-right">
+                    <i class="icon ion-ios-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="row row__list-info" ng-click="dash.openComingSoonView()">
+                <div class="col">
+                    <i class="icon ion-chatbubbles"></i>
+                </div>
+                <div class="col col-75">
+                     {{'Chat with Dealer' | translate}}
+                </div>
+                <div class="col text-right">
+                    <i class="icon ion-ios-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="row row__list-info" ng-if="dealerInfo.hasCards" ng-click="dealerInfo.replaceCardPopup()">
+                <div class="col">
+                    <i class="icon ion-card"></i>
+                </div>
+                <div class="col col-75">
+                    {{'Replace Card' | translate}}
+                </div>
+                <div class="col text-right">
+                    <i class="icon ion-ios-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-headline gradient-headline" ng-if="dealerInfo.hasCards">
+            {{dealerInfo.dealer.partnerName}}
+        </div>
+
+        <div class="item item-body dealer-no-border" ng-if="dealerInfo.hasCards">
+            <div class="dealer-description">
+                <h4>{{'Have you misplaced your membership card?' | translate}}</h4>
+                <p>{{'You can temporarily suspend your card. Any new purchases or balance transfers will not be authorised.' | translate}}</p>
+            </div>
+            <div class="row row-no-padding">
+                <button class="button button-block button-positive" ng-show="dealerInfo.custom" ng-click="dealerInfo.getCardStatus()">{{'Freeze your card!' | translate}}</button>
+                <button class="button button-block button-positive" ng-hide="dealerInfo.custom" ng-click="dealerInfo.getCardStatus()">{{'UnFreeze your card!' | translate}}</button>
+            </div>
+        </div>
+        <div class="item-headline gradient-headline">
+            {{dealerInfo.dealer.partnerGroupName}}
+        </div>
+        <div class="item item-body dealer-no-border dealer-partner-container">
+            <div class="row" ui-sref="dash.dealerGroupInfo">
+                <div class="col col-50">
+                    <img ng-src="{{dealerInfo.dealerGroupImgSrc}}" fallback-src="'{{imageBaseURL}}img/fallback/dealergroupcode.png'" />
+                </div>
+                <div class="col col-50">
+                    <p>{{dealerInfo.dealer.partnerGroupDescription}}</p>
+                    <div class="text-right">
+                        <span class="list-link">{{'See more' | translate}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

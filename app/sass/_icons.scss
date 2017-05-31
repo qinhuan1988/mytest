@@ -1,0 +1,575 @@
+/*
+ * side menu icons
+ *
+ */
+
+%icon-side-menu {
+    @extend .icon;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 36px;
+    width: 45px;
+}
+
+.menu i {
+    @extend %icon-side-menu;
+}
+
+
+
+
+
+/*
+ * all icons
+ *
+ */
+
+.icon-benefits {
+    background-image: url("../img/icons/common/benefits.svg");
+}
+
+.icon-tutorial {
+    background-image: url("../img/icons/common/tutorial.svg");
+}
+
+.icon-earnpoints {
+    background-image: url("../img/icons/common/earnpoints.svg");
+}
+
+.icon-bmw-faq {
+    background-image: url("../img/icons/sidebar/lp/faq.svg");
+}
+
+.bmw-more-lp-logo {
+    background-image: url("../img/icons/sidebar/BMWCHINALoyaltyProgramme.svg");
+}
+
+.bmw-more-car-bmw {
+    background-image: url("../img/icons/sidebar/bmw.svg");
+}
+
+.bmw-more-financial-service {
+    background-image: url("../img/icons/sidebar/bmw-financial-service.svg");
+}
+
+.bmw-more-mobi-service {
+    background-image: url("../img/icons/sidebar/bmw-mobi-service.svg");
+}
+
+.bmw-more-me-settings {
+    background-image: url("../img/icons/common/mysettings.svg");
+}
+
+.icon-my-wallet {
+    background-image: url("../img/icons/common/mywallet.svg");
+}
+
+.icon-favorites {
+    background-image: url("../img/icons/common/myfavourites.svg");
+}
+
+.icon-activity-log {
+    background-image: url("../img/icons/common/myactivitieslog.svg");
+}
+
+.icon-my-profile {
+    background-image: url("../img/icons/common/myprofile.svg");
+}
+
+.icon-my-vehicles {
+    background-image: url("../img/icons/common/myvehicles.svg");
+}
+
+.icon-my-dealers {
+    background-image: url("../img/icons/common/mydealers.svg");
+}
+
+.icon-vouchers {
+    background-image: url("../img/icons/common/loyaltyvouchers.svg");
+}
+
+.icon-partners {
+    background-image: url("../img/icons/common/partners.svg");
+}
+
+.icon-gift {
+    background-image: url("../img/icons/common/giftcard.svg");
+}
+
+.icon-bmw-shop {
+    background-image: url("../img/icons/common/bmwshop.svg");
+}
+
+.icon-mini-shop {
+    background-image: url("../img/icons/common/minishop.svg");
+}
+
+.icon-motorrad-shop {
+    background-image: url("../img/icons/common/Motorradshop.svg");
+}
+
+.icon-bmw-club {
+    background-image: url("../img/icons/common/mybmwclub.svg");
+}
+
+.icon-newsfeed {
+    background-image: url("../img/icons/common/newsfeed.svg");
+}
+
+.icon-tv {
+    background-image: url("../img/icons/common/tv.svg");
+}
+
+.icon-financial-Apply_Financial_Document {
+    background-image: url("../img/icons/sidebar/Financial_Service/Apply_Financial_Document.svg");
+}
+
+.icon-financial-Balloon_extension {
+    background-image: url("../img/icons/sidebar/Financial_Service/Balloon_extension.svg");
+}
+
+.icon-financial-BMW_Financial_Service_Self-Service {
+    background-image: url("../img/icons/sidebar/Financial_Service/BMW_Financial_Service_Self-Service.svg");
+}
+
+.icon-financial-Change_Bank_Account {
+    background-image: url("../img/icons/sidebar/Financial_Service/Change_Bank_Account.svg");
+}
+
+.icon-financial-Contract_Amendment {
+    background-image: url("../img/icons/sidebar/Financial_Service/Contract_Amendment.svg");
+}
+
+.icon-financial-Financial_Service_Calculator {
+    background-image: url("../img/icons/sidebar/Financial_Service/Financial_Service_Calculator.svg");
+}
+
+.icon-financial-How_to_use_Self-Service {
+    background-image: url("../img/icons/sidebar/Financial_Service/How_to_use_Self-Service.svg");
+}
+
+.icon-financial-Insurance_Claim {
+    background-image: url("../img/icons/sidebar/Financial_Service/Insurance_Claim.svg");
+}
+
+.icon-financial-RepayInstallment {
+    background-image: url("../img/icons/sidebar/Financial_Service/RepayInstallment.svg");
+}
+
+.icon-bmw-bmtv {
+    background-image: url("../img/icons/sidebar/bmw/09/bmtv.svg");
+}
+
+.icon-bmw-BMWOfficialOwnerClub {
+    background-image: url("../img/icons/sidebar/bmw/09/BMWOfficialOwnerClub.svg");
+}
+
+.icon-bmw-bmwapp {
+    background-image: url("../img/icons/sidebar/bmw/09/bmwapp.svg");
+}
+
+.icon-bmw-bmwgifsticker {
+    background-image: url("../img/icons/sidebar/bmw/09/bmwgifsticker.svg");
+}
+
+.icon-bmw-bmwmagazine {
+    background-image: url("../img/icons/sidebar/bmw/09/bmwmagazine.svg");
+}
+
+.icon-bmw-bmwringtone {
+    background-image: url("../img/icons/sidebar/bmw/09/bmwringtone.svg");
+}
+
+.icon-bmw-bmwwallpaper {
+    background-image: url("../img/icons/sidebar/bmw/09/bmwwallpaper.svg");
+}
+
+.icon-bmw-bmwweb {
+    background-image: url("../img/icons/sidebar/bmw/09/bmwweb.svg");
+}
+
+.icon-bmw-mediagallery {
+    background-image: url("../img/icons/sidebar/bmw/09/mediagallery.svg");
+}
+
+.icon-mobi-Others {
+    background-image: url("../img/icons/sidebar/Mobilty_Service/01/Others.svg");
+}
+
+.icon-mobi-MyTrips {
+    background-image: url("../img/icons/sidebar/Mobilty_Service/01/MyTrips.svg");
+}
+
+.icon-mobi-Support {
+    background-image: url("../img/icons/sidebar/Mobilty_Service/01/SUPPORT.svg");
+}
+
+.icon-mobi-More{
+    background-image: url("../img/icons/sidebar/Mobilty_Service/01/more.svg");
+}
+
+.icon-mobi-bookacar {
+    background-image: url("../img/icons/sidebar/Mobilty_Service/01/bookacar.svg");
+}
+
+.icon-mobi-AboutChargingService {
+    background-image: url("../img/icons/sidebar/Mobilty_Service/02/AboutChargingService.svg");
+}
+
+.icon-mobi-SearchCharginStation {
+    background-image: url("../img/icons/sidebar/Mobilty_Service/02/SearchCharginStation.svg");
+}
+
+.icon-bmw-customer-interactive {
+    background-image: url("../img/icons/sidebar/bmw/01/CustomerInteractiveCenter.svg");
+}
+
+.icon-bmw-persional-assistant {
+    background-image: url("../img/icons/sidebar/bmw/01/PersonalAssistant.svg");
+}
+
+.icon-bmw-roadside-assistance {
+    background-image: url("../img/icons/sidebar/bmw/01/RoadsideAssistance.svg");
+}
+
+.icon-bmw-service-overview {
+    background-image: url("../img/icons/sidebar/bmw/01/BMWCustomerServicesOverview.svg");
+}
+
+.icon-bmw-join-events {
+    background-image: url("../img/icons/sidebar/bmw/01/joinevent.svg");
+}
+
+.icon-bmw-share-feedback {
+    background-image: url("../img/icons/sidebar/bmw/01/Sharefeedback.svg");
+}
+
+.icon-bmw-DealerLocator {
+    background-image: url("../img/icons/sidebar/bmw/02/DealerLocator.svg");
+}
+
+.icon-bmw-ServiceBooking {
+    background-image: url("../img/icons/sidebar/bmw/02/ServiceBooking.svg");
+}
+
+.icon-bmw-Destination {
+    background-image: url("../img/icons/sidebar/bmw/03/Destination.svg");
+}
+
+.icon-bmw-NextTrips {
+    background-image: url("../img/icons/sidebar/bmw/03/NextTrips.svg");
+}
+
+.icon-bmw-Remote {
+    background-image: url("../img/icons/sidebar/bmw/03/Remote.svg");
+}
+
+.icon-findcar-negociete {
+    background-image: url("../img/icons/sidebar/bmw/05/find_a_car_and_Negociete.svg");
+}
+
+.icon-bmw-CompareModels {
+    background-image: url("../img/icons/sidebar/bmw/05/CompareModels.svg");
+}
+
+.icon-bmw-ConfigureModels {
+    background-image: url("../img/icons/sidebar/bmw/05/ConfigureModels.svg");
+}
+
+.icon-bmw-Findoutwhatsuitsyou {
+    background-image: url("../img/icons/sidebar/bmw/05/Findoutwhatsuitsyou.svg");
+}
+
+.icon-bmw-testdrive {
+    background-image: url("../img/icons/sidebar/bmw/05/testdrive.svg");
+}
+
+.icon-bmw-DiscoverBMWCertifiedUsedCar {
+    background-image: url("../img/icons/sidebar/bmw/06/DiscoverBMWCertifiedUsedCar.svg");
+}
+
+.icon-bmw-BuyAccessoriesOnline {
+    background-image: url("../img/icons/sidebar/bmw/07/BuyAccessoriesOnline.svg");
+}
+
+.icon-bmw-ConnectedDrive {
+    background-image: url("../img/icons/sidebar/bmw/07/ConnectedDrive.svg");
+}
+
+.icon-bmw-lifestyle {
+    background-image: url("../img/icons/sidebar/bmw/08/lifestyle.svg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * icons filters
+ */
+%icon-filters {
+    @extend .icon;
+    height: 22px;
+    margin-top: 7px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 30px;
+}
+
+.tab-item {
+    .icon-offers {
+        background-image: url("../img/icons/common/alloffers.svg");
+        @extend %icon-filters;
+    }
+
+    .icon-favorites {
+        @extend %icon-filters;
+    }
+
+    .icon-expirydate {
+        background-image: url("../img/icons/common/expirydate.svg");
+        @extend %icon-filters;
+    }
+}
+
+.tab-item.selected {
+    .icon-offers {
+        background-image: url("../img/icons/common/allvouchers-active.svg");
+    }
+
+    .icon-favorites {
+        background-image: url("../img/icons/common/myfavourites-active.svg");
+    }
+
+    .icon-expirydate {
+        background-image: url("../img/icons/common/expirydateascending-active.svg");
+    }
+}
+/*
+ * arrows icons
+ */
+%arrow {
+    width: 50px;
+    height: 50px;
+}
+
+%arrow:after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: '';
+    position: relative;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-size: 20px;
+}
+
+.arrow--left,
+.arrow--right {
+    @extend %arrow;
+}
+
+.arrow--left:after {
+    background-image: url("../img/icons/common/arrow-left.svg");
+    background-position-x: 20%;
+}
+
+.arrow--right:after {
+    background-image: url("../img/icons/common/arrow-right-2.svg");
+    background-position-x: 80%;
+}
+
+button.icon-payment {
+    background: url("../img/icons/common/p&c.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    width: 73px !important;
+}
+
+.page-header-bmw-chat-icon {
+    background-image: url("../img/icons/footer/contact/chat.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 28px;
+}
+
+.page-header-bmw-contact-icon {
+    background-image: url("../img/icons/footer/contact/contact.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 28px;
+}
+
+.icon.icon-close {
+    background-image: url("../img/icons/common/closeicon.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 36px;
+    left: 0;
+    height: 100%;
+    margin: auto;
+    width: 45px;
+}
+
+.icon-add-vehicle {
+    @extend .icon;
+    width: 20px;
+    height: 20px;
+    margin-top: -2;
+    margin-right: 5px;
+    display: inline-block;
+    background-image: url("../img/icons/common/addvehicle.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 30px;
+}
+
+/* footer icons*/
+%icon--footer-tabs {
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 70%;
+    background-size: 32px;
+}
+
+.bmw-keyboard-icon {
+    background-image: url("../img/icons/common/keyboard.svg");
+    @extend %icon--footer-tabs;
+}
+
+.icon-offers-news {
+    background-image: url("../img/icons/common/offers-news.svg");
+}
+
+.tab-item-active .icon-offers-news {
+    background-image: url("../img/icons/common/offers-news-active.png");
+}
+
+.tab-item .icon-offers-news,
+.tab-item-active .icon-offers-news {
+    @extend %icon--footer-tabs;
+}
+
+.icon-me {
+    background-image: url("../img/icons/common/me.svg");
+}
+
+.tab-item-active .icon-me {
+    background-image: url("../img/icons/common/me-active.png");
+}
+
+.tab-item .icon-me,
+.tab-item-active .icon-me {
+    @extend %icon--footer-tabs;
+}
+
+.bmw-more-icon {
+    background-image: url("../img/icons/common/more.svg");
+    @extend %icon--footer-tabs;
+}
+/* Chat icon */
+.icon-home {
+    @extend %icon--footer-tabs;
+    width: 40px;
+    margin: 4px 4px 5px;
+    background-image: url("../img/icons/common/home.svg");
+    background-size: 50px;
+}
+/* card icons*/
+%icon-card {
+    height: 30px;
+    width: 37px;
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: -4px 0;
+}
+
+.bmw-card-icon-silver {
+    background-image: url("../img/icons/common/card-silver.svg");
+    @extend %icon-card;
+}
+
+.bmw-card-icon-gold {
+    background-image: url("../img/icons/common/card-gold.svg");
+    @extend %icon-card;
+}
+
+.bmw-card-icon-platinium {
+    background-image: url("../img/icons/common/card-platinium.svg");
+    @extend %icon-card;
+}
+
+.bmw-card-icon-blue {
+    background-image: url("../img/icons/common/card-bluediamound.svg");
+    @extend %icon-card;
+}
+
+.bmw-card-icon-pure {
+    background-image: url("../img/icons/common/card-purediamound.svg");
+    @extend %icon-card;
+}
+
+.icon-tooltip {
+    background-image: url("../img/icons/common/tooltip.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 25px;
+}
+
+.tabs {
+    padding-top: 0;
+}
+
+icon-item {
+    @extend %font--condensed;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5px;
+    display: block;
+
+    .icon-img {
+        width: 70%;
+        height: auto;
+        max-width: 110px;
+        max-height: 90px;
+    }
+
+    .icon-label {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 9px;
+        line-height: 11px;
+        text-transform: uppercase;
+    }
+}
+
+.success-rounded-icon {
+    height: 25px;
+    width: 25px;
+    content: '';
+    display: inline-block;
+    background: url(../img/icons/vehicle/tips/success.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.fail-alert-icon {
+    height: 20px;
+    width: 20px;
+    content: '';
+    display: inline-block;
+    background: url(../img/icons/vehicle/tips/fail.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+

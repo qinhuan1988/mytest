@@ -1,0 +1,65 @@
+.power-press-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $backdrop-background-color;
+    transition: 0.4s opacity linear;
+    z-index: 9999;
+
+    .option {
+        transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        background-color: #333;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        background-size: 100%;
+        background-position: 0;
+    }
+
+    .option--selected {
+        background-color: $emphasis-color;
+    }
+}
+
+.item--powerpressactive {
+    transform: scale(1.05);
+}
+
+.power-press__title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+    width: 100%;
+    padding: 16px;
+
+    position: absolute;
+}
+
+.powerpress__grab {
+    background-image: url("../img/icons/common/ppgrab.svg");
+}
+
+.powerpress__fav {
+    background-image: url("../img/icons/common/ppaddfav.svg");
+}
+
+.powerpress__unfav {
+    background-image: url("../img/icons/common/ppunfav.svg");
+}
+
+.powerpress__remove {
+    background-image: url("../img/icons/common/ppremove.svg");
+}
+
+.powerpress__call {
+    background-image: url("../img/icons/common/ppcall.svg");
+}
+
+.powerpress__chat {
+    background-image: url("../img/icons/common/ppchat.svg");
+}

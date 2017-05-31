@@ -1,0 +1,47 @@
+<!-- generic vounchers -->
+
+<div class="offer-item" ng-if="!partnerItem" power-press on-hold="showMenu($event)" on-release="hideMenu($event)">
+    <div class="item-headline">
+        <div class="item-logo">
+            <img ng-src="{{ item.AEM_partnerLogo }}" fallback-src="'{{ imageBaseURL }}img/fallback/bmwpartner.png'" />
+        </div>
+        <div class="item-partner-name">
+            {{ item.AEM_partnerName }}
+        </div>
+        <div class="item-date" ng-if="item.expiryDate && item.expiryDate !== ''">
+            {{ 'Valid Until' | translate }}
+            <br> {{ item.expiryDate }}
+        </div>
+    </div>
+    <div class="item-title">
+        {{ item.AEM_name }}
+    </div>
+    <div class="item-short-desc">
+        {{ item.AEM_shortDesc }}
+    </div>
+    <img class="item-favtag" ng-if="item.isFavorite === 'Y'" src="img/icons/voucher/favtag.svg">
+    <img class="item-image" ng-src="{{ item.AEM_image }}" image-loaded="imageLoaded" ng-show="imageLoaded"  />
+    <img class="item-image" src="img/loading/voucher.svg" ng-show="!imageLoaded" />
+    <div class="voucher-count" ng-if="item.totalLimit !== 0" >
+        <span class="voucher-count__left">{{ item.limitLeft }}</span>
+        <span class="voucher-count__total">{{ item.totalLimit }}</span>
+        <span class="voucher-count__label">{{ 'are available' | translate }}</span>
+    </div>
+</div>
+
+<!-- dealer voucher -->
+
+<div class="offer-item" ng-if="partnerItem">
+    <div class="item-headline">
+        <div class="item-headline__left">
+            {{ item.itemName }} {{ item.benefitPublishDate }}
+        </div>
+
+        <div class="item-headline__right" ng-if="item.expiryDate && item.expiryDate !== ''">
+            {{ 'Expires at' | translate }}
+            <br> {{ item.expiryDate }}
+        </div>
+    </div>
+
+    <img class="item-image" ng-src="{{ item.AEM_image }}" fallback-src="'{{ imageBaseURL }}img/fallback/offer.jpg'" />
+</div>

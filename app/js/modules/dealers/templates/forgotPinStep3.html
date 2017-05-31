@@ -1,0 +1,19 @@
+<ion-view can-swipe-back="false">
+
+    <ion-content class="has-header">
+        <div class="item item-divider">
+            {{'Setup / Forgot PIN' | translate}}
+            <div steps-navigation label="'3/3' | translate" prev="dash.forgotPinStep2"></div>
+        </div>
+        <div class="padding20">
+                <p>{{'Please enter your password' | translate}}</p>
+                <div class="list">
+                    <security-password
+                        widget-id="setupPin"
+                        key="forgotPinStep3.key"
+                        random-factor="forgotPinStep3.randomFactor"
+                        callback="forgotPinStep3.submit(paypassword)"></security-password>
+                </div>
+        </div>
+    </ion-content>
+</ion-view>

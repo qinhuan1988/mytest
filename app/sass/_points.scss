@@ -1,0 +1,181 @@
+.programme-header {
+    text-align: center;
+    font-size: 12px;
+    border-top: none;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: 0;
+    color: #fff;
+    .level__img {
+        width: 90%;
+        max-width: 250px;
+        padding: 10px 5px 0;
+        transform: rotate(-21deg);
+    }
+    .level__name {
+        font-size: 0.7em;
+        text-transform:uppercase;
+        font-weight: bolder;
+        margin: 10px 0 0;
+    }
+    .level__points {
+        font-size: .7em;
+        font-weight: bolder;
+    }
+}
+.programme-header-fixed {
+    top: 65px;
+    .item-headline {
+        position: relative;
+        z-index: 9999;
+    }
+}
+.view-has-small-header+.view-container ion-content.programme-container {
+    top: 207px;
+}
+
+.platform-ios.platform-cordova {
+    &:not(.fullscreen) {
+        .programme-header-fixed {
+            top: 55px;
+        }
+        .view-has-small-header+.view-container ion-content.programme-container {
+            top: 202px;
+        }
+    }
+}
+
+.programme-benefit:nth-child(odd) {
+    background: $background-color-primary;
+}
+
+.programme-benefit {
+    padding-top: 0;
+
+    .benefit__desc {
+        border-bottom: $border-color 1px solid;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .benefit__level {
+        padding: 5px;
+    }
+
+    .benefit__level--in {
+        background: $inactive-color;
+        height: 15px;
+        width: 15px;
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    .benefit__level--out {
+        background: transparent;
+    }
+}
+
+.level-container {
+    .level__img {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 20px;
+    }
+
+    .level__name {
+        font-size: 17px;
+        text-transform: capitalize;
+        margin: 4px 0;
+    }
+
+    .level__text {
+        padding-left: 20px;
+    }
+}
+
+.see-more {
+    color: white;
+    text-align: right;
+    margin-right: 18px;
+}
+
+.see-more:after {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    content: '';
+    display: inline-block;
+    background: url("../img/icons/common/arrow-right-2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.padding-cen {
+    padding-right: 10px;
+}
+
+.padding-left {
+    padding-left: 10px;
+}
+
+#activity-file-container {
+    background: url("../img/upload_document.png") no-repeat;
+}
+
+#activity-file-container input {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    height: 60px;
+    cursor: pointer;
+}
+
+
+.points-rule {
+    color: #fff;
+    .col {
+        padding: 0;
+    }
+}
+.point-rule-icon {
+    height: 20px;
+    width: 20px;
+    content: '';
+    display: inline-block;
+    background: url("../img/benefits/points/Greencheckbox.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.point-item-rule {
+    font-size: .8em;
+    opacity: 0.7;
+}
+p.points-rule {
+    color:#fff;
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
+.point-horizontal-divider {
+    border: none;
+    border-top: 1px solid #444;
+}
+.points-item-body {
+    background-color: #222;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+.points-label {
+    display: block;
+    opacity: 0.7;
+    text-align: left;
+    font-size: 0.8em;
+}
+.scroll-content {
+    div.points-item-body {
+       background-color: transparent;
+       margin-top: 20px;
+   }
+}

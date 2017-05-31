@@ -1,0 +1,40 @@
+<div class="modal qr-code-modal">
+    <ion-pane class="transparent">
+        <div class="row">
+            <div class="col text-right">
+                <div class="button button-clear close-button" ng-click="myWallet.closeQuickPayQR()"><span class="icon ion-close"></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="list">
+                    <div class="item qr-code">
+                        <h2>{{'QRCode' | translate}}</h2>
+                    </div>
+                    <div class="item qr-code" ng-if="myWallet.hasDefaultCardName">
+                        <qrcode data="{{ myWallet.QRCode }}" size="150" error-correction-level="H" version="6"></qrcode>
+                    </div>
+                    <div class="item" ng-if="myWallet.errorMsg">
+                        <p>{{myWallet.errorMsg}}</p>
+                        <p ui-sref="dash.paymentMethod" ng-click="myWallet.closeQuickPayQR()">
+                            <a class="item item-icon-left">
+                              <span class="add-card-emphasis"> <i class="icon ion-ios-plus-outline"></i> {{'Add a bank card' | translate}} </span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <div class="row" ng-if="myWallet.hasDefaultCardName">
+                          <span> {{'Pay with' | translate}} {{myWallet.hasDefaultCardName}} </span>
+                        </div>
+                        <div class="row errorLabel" ng-if="!myWallet.hasDefaultCardName">
+                            <span>  {{'Please select payment' | translate}} </span>
+                        </div>
+                        <div class="row">
+                            <span class="link" ui-sref="dash.changePaymentMethod" ng-click="myWallet.closeQuickPayQR()">{{'Change payment method' | translate}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-pane>
+</div>

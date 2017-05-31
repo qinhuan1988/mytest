@@ -1,0 +1,42 @@
+<ion-view>
+
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear" ui-sref="forgetPasswordStep1">
+            <i class="icon ion-ios-arrow-back"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="form">
+        <div class="logo-portrait"></div>
+
+        <div class="padding20">
+            <h5 class="padding-vertical">{{'Create a new password' | translate}}</h5>
+            <p class="padding-vertical">
+                {{'Input the OTP and create a new password' | translate }}
+            </p>
+            <form name="newpasswordCreationForm">
+
+                <label class="item-input">
+                    <span class="item-label">{{'New password' | translate}}</span>
+                    <input type="password" ng-pattern="/^\S{8,}$/" ng-model-options="{allowInvalid: true}" ng-model="newpasswordCreation.newPassword" required>
+                    <span class="item-label--error" input-name="newPassword" ng-model="newpasswordCreation.newPassword" validate-password></span>
+                </label>
+
+                <label class="item-input">
+                    <span class="item-label">{{'Repeat New Password' | translate}}</span>
+                    <input type="password" ng-pattern="/^\S{8,}$/" ng-model-options="{allowInvalid: true}" ng-model="newpasswordCreation.confirmNewPassword" required>
+                    <span class="item-label--error" iinput-name="confirmNewPassword" ng-model="newpasswordCreation.confirmNewPassword" repeat-password="{{newpasswordCreation.newPassword}}"></span>
+                </label>
+
+                <form-error error-msg="newpasswordCreation.errorMsg"></form-error>
+
+                <div class="row row-no-padding padding-vertical">
+                    <button class="button button-full button-positive" ng-disabled="newpasswordCreationForm.$invalid" ng-click="newpasswordCreation.changePassword()">
+                        {{'Save' | translate}}
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </ion-content>
+</ion-view>

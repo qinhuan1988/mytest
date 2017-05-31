@@ -1,0 +1,111 @@
+$slide-arrows-color: #afafaf;
+
+/*
+	<div class="slide__arrow-wrapper--left">
+	    <span class="slide__arrow--left"></span>
+	</div>
+	<div class="slide__arrow-wrapper--right">
+	    <span class="slide__arrow--right"></span>
+	</div>
+*/
+
+%slide__arrow-wrapper {
+	height: 100%;
+    width: 44px;
+
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+
+    z-index: 100;
+
+    cursor: none;
+}
+
+.slide__arrow-wrapper--left, .slide__arrow-wrapper--right {
+	@extend %slide__arrow-wrapper;
+}
+
+.slide__arrow-wrapper--left {
+	left: 0;
+}
+
+.slide__arrow-wrapper--right {
+	right: 0;
+}
+
+.slide__arrow--left {
+	@extend .arrow--left;
+}
+
+.slide__arrow--right {
+	@extend .arrow--right;
+}
+
+.slide__arrow--left, .slide__arrow--right {
+	color: $slide-arrows-color;
+}
+
+
+
+/* brand shops sliders */
+
+.slider-container {
+	position: relative;
+
+	.slider-slides {
+		width: auto;
+	}
+}
+
+%slide__arrow {
+	font-size: 25px;
+	color: #2c70e2;
+}
+.slide__arrow-wrapper--left i{
+	padding-left: 8px;
+	@extend %slide__arrow;
+}
+.slide__arrow-wrapper--right i{
+	padding-left: 26px;
+	@extend %slide__arrow;
+}
+
+.slide--no-data {
+	@extend .row;
+
+	height: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	.col-100 {
+		margin-top: -13px; // element is center to its parent, parent overflow of 13px
+
+		align-self: center;
+	}
+}
+ion-slide img {
+    width: 100%;
+	vertical-align: middle;
+}
+.slider-pager {
+    height: 10px;
+}
+.slider-pager .slider-pager-page {
+    display: inline-block;
+    margin: 0 3px;
+    width: 10px;
+    color: #fff;
+    opacity: 1;
+    .icon {
+        font-size: 9px;
+    }
+}
+.slider-pager .slider-pager-page.active {
+  color: #2c70e2;
+}
+
+.swiper-wrapper {
+ 	position: relative;
+}

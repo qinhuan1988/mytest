@@ -1,0 +1,45 @@
+<ion-view view-title="{{ 'my vouchers' | translate }}">
+    <ion-content class="has-header content--no-footer">
+        <ion-refresher on-refresh="coupons.refreshView()"></ion-refresher>
+
+        <ion-list>
+            <div class="item item-divider offers-header">
+                <div class="page-header">
+                    {{ 'value of current vouchers' | translate }}
+                </div>
+                <div class="vouchers-value">
+                    {{ '¥'| translate }}&nbsp;{{ coupons.totalCommunicatedValue | number }}
+                </div>
+            </div>
+
+            <div class="item item-body offer-item-container" ng-repeat="coupon in coupons.displayedList track by $index">
+                <div class="offer-item" ng-click="coupons.showCouponInfo(coupon)">
+                    <div class="item-headline">
+                        <div class="item-logo">
+                            <img ng-src="{{ coupon.AEM_partnerLogo }}" fallback-src="'{{ imageBaseURL }}img/fallback/bmwpartner.png'" />
+                        </div>
+                        <div class="item-partner-name">
+                            {{ coupon.AEM_partnerName }}
+                        </div>
+                    </div>
+                    <div class="item-title">
+                        {{ coupon.AEM_name }}
+                    </div>
+                    <div class="item-short-desc">
+                        {{ coupon.AEM_shortDesc }}
+                    </div>
+                    <img class="item-image" ng-src="{{ coupon.AEM_image }}" image-loaded="imageLoaded" ng-show="imageLoaded"  />
+                    <img class="item-image" src="img/loading/voucher.svg" ng-show="!imageLoaded" />
+                    <div class="voucher-count">
+                        <span class="voucher-count__left">{{ coupon.totalUsed }}</span>
+                        <span class="voucher-count__total">{{ coupon.totalUsed + coupon.totalUnUsed }}</span>
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+
+        <h5 ng-if="coupons.isEmpty" class="text-center">{{ 'No result found' | translate }}</h5>
+
+        <ion-infinite-scroll on-infinite="coupons.loadMoreCoupons()" ng-if="coupons.canLoadMore" ></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

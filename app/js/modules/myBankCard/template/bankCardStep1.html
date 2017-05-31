@@ -1,0 +1,78 @@
+<ion-view class="page--wallet" view-title="">
+    <pc-logo></pc-logo>
+    <ion-content class="has-header securityFieldContainer--android content--no-footer">
+
+        <div class="item-body">
+            {{'Add a bank card' | translate}}
+            <div steps-navigation label="'1/5' | translate"></div>
+        </div>
+
+        <form name="step1Form">
+            <div class="padding20 form--bank">
+
+                <div class="item-input" ng-if="!bcStep1.isRealnameValidate">
+                    <span class="item-label">{{'Cardholder name' | translate}}</span>
+                    <input type="text" ng-model="bcStep1.cardHolder" required>
+                </div>
+
+                <label class="item-input" ng-hide="bcStep1.isRealnameValidate">
+                    <security-field
+                    widget-id="bcStep1.widgetId"
+                    widget-value="bcStep1.idnumber"
+                    key="bcStep1.key"
+                    random-factor="bcStep1.randomFactor"
+                    is-invalid="bcStep1.isInvalid"
+                    title="{{'Cardholder ID Number' | translate}}"
+                    error-msg="{{'ID number has to be 18 characters' | translate}}"
+                    regex="^[0-9]{18}$|^[0-9]{17}([0-9]|X|x)$"
+                    is-submited="bcStep1.isSubmited"
+                    maxlength="18"
+                    android-page-top="-1"></security-field>
+                </label>
+
+                <label class="item-input">
+                    <security-field
+                        widget-id="bcStep1.widgetId2"
+                        widget-value="bcStep1.cardNumber"
+                        key="bcStep1.key"
+                        random-factor="bcStep1.randomFactor"
+                        is-invalid="bcStep1.isInvalid2"
+                        number-pad="1"
+                        maxlength="19"
+                        regex="^(?=[0-9]*$)(?:.{16}|.{19})$"
+                        is-submited="bcStep1.isSubmited"
+                        title="{{'Card Number' | translate}}"
+                        error-msg="{{'Card Number has to be 16 or 19 digitals' | translate}}"
+                        android-page-top="bcStep1.isRealnameValidate? '-1': '-100'"></security-field>
+                </label>
+                <div class="item-input" ng-hide="bcStep1.isRealnameValidate">
+                    <span class="item-label">{{'ID Card Positive Image' | translate}}</span>
+                    <div file-upload
+                        file-save="bcStep1.saveCardPositive(file, extension)"
+                        file-options="bcStep1.uploadOptions"
+                        file-error-msg="bcStep1.errorMsg"
+                        file-valid="bcStep1.isCardPositiveValid"></div>
+                </div>
+
+                <div class="item-input" ng-hide="bcStep1.isRealnameValidate">
+                    <span class="item-label">{{'ID Card Opposite Image' | translate}}</span>
+                    <div file-upload
+                        file-save="bcStep1.saveCardOpposite(file, extension)"
+                        file-options="bcStep1.uploadOptions"
+                        file-error-msg="bcStep1.errorMsg"
+                        file-valid="bcStep1.isCardOppositeValid"></div>
+                </div>
+
+                <form-error error-msg="bcStep1.errorMsg"></form-error>
+
+                <button class="button button-full button-positive"
+                    ng-disabled="step1Form.$invalid || bcStep1.isSubmitDisable()"
+                    ng-click="bcStep1.submit()">
+                    {{'Next' | translate }}
+                </button>
+
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>

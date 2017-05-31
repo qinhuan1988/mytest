@@ -1,0 +1,316 @@
+$voucher-border-color: $secondary-color;
+$voucher-background-color: $background-color-secondary;
+$voucher-text-color: #cdcdcd;
+$voucher-title-color: $default-color;
+$voucher-headline-height: 40px;
+
+.offers-header {
+    /* temporary */
+    display: none;
+    @extend .item;
+    @extend .item-divider;
+
+    .offers-headline {
+        @extend %font--bold;
+        position: absolute;
+        top: 40%;
+        font-size: 15px;
+        text-transform: uppercase;
+
+        span {
+            @extend %font--regular;
+            text-transform: initial;
+            color: $border-color;
+        }
+    }
+
+    .page-header {
+        @extend %font--bold;
+        color: $secondary-color;
+        text-transform: capitalize;
+    }
+
+    .vouchers-value {
+        @extend %font--bold;
+        color: $default-color;
+        font-size: 22px;
+        text-align: right;
+    }
+}
+/***
+    <div class="offer-item-container">
+        <div class="offer-item">
+            <div class="item-headline">
+                <div class="item-logo">
+                    <img />
+                </div>
+                <div class="item-partner-name">BMW</div>
+                <div class="item-date">2016-01-01</div>
+            </div>
+            <div class="item-title"></div>
+            <div class="item-short-desc"></div>
+            <img class="item-image" />
+        </div>
+    </div>
+***/
+.offer-item-container {
+    margin: 14px;
+    color: $voucher-text-color;
+    background-color: $voucher-background-color;
+    border-color: $voucher-border-color;
+
+    .col {
+        padding: 0;
+    }
+
+    .item-headline {
+        width: 100%;
+        min-height: $voucher-headline-height;
+        padding: 0;
+        margin-bottom: 10px;
+        display: table;
+        color: $voucher-text-color;
+        border-bottom: none;
+    }
+
+    .item-date,
+    .item-logo,
+    .item-partner-name {
+        display: table-cell;
+    }
+
+    .item-date {
+        width: 21%;
+        padding-left: 5px;
+        font-size: 9px;
+        line-height: 11px;
+        text-align: right;
+        vertical-align: top;
+    }
+
+    .item-logo {
+        width: $voucher-headline-height;
+        height: $voucher-headline-height;
+        vertical-align: middle;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .item-partner-name {
+        padding-left: 10px;
+        vertical-align: middle;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .item-title {
+        color: $voucher-title-color;
+        text-transform: uppercase;
+    }
+
+    .item-short-desc {
+        font-size: 14px;
+    }
+
+    .item-image {
+        @extend .offer-image;
+        margin-top: 5px;
+    }
+
+    .item-favtag {
+        position: absolute;
+        right: 7%;
+        margin-top: 3px;
+        width: 25px;
+    }
+
+    .item-favtag.ng-enter,
+    .item-favtag.ng-leave {
+        transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    }
+
+    .item-favtag.ng-enter,
+    .item-favtag.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+
+    .item-favtag.ng-enter.ng-enter-active,
+    .item-favtag.ng-leave {
+        opacity: 1;
+    }
+}
+
+
+.offer-item-container.ng-enter {
+    transition: all 0.5s ease-in;
+}
+
+.offer-item-container.ng-enter,
+.offer-item-container.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.offer-item-container.ng-enter.ng-enter-active,
+.offer-item-container.ng-leave {
+    opacity: 1;
+}
+
+.offer-item {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.offer-info {
+    .offer-title {
+        font-size: 18px;
+        padding: 5px 0;
+        text-transform: uppercase;
+        color: #444;
+    }
+
+    .offer-short-desc {
+        padding: 0 0 15px;
+        font-size: 16px;
+        color: #888;
+    }
+
+    .offer-expiration-date {
+        float: right;
+        padding: 5px 0;
+        color: #888;
+    }
+}
+
+.partner-info {
+    .partner-title {
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        margin: 0;
+        color: $voucher-text-color;
+    }
+
+    .partner-image {
+        width: 35px;
+    }
+}
+
+.qrcode-container {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.offer-image {
+    width: 100%;
+    max-width: 700px;
+}
+
+.static-menu-icons {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    .menu-icon-wrapper {
+        height: 46px;
+        padding-top: 5px;
+    }
+
+    .menu-icon {
+        height: 40px;
+    }
+
+    .animated-icons {
+        min-width: 40px;
+    }
+
+    .menu-label {
+        @extend %font--condensed;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        white-space: nowrap;
+        font-size: 10px;
+    }
+
+    .disabled {
+        opacity: 0.5;
+    }
+}
+
+.item__details {
+    p {
+        color: $voucher-text-color;
+    }
+}
+
+.offers-filter .tabs {
+    position: initial;
+    box-shadow: none;
+}
+/*
+    <div class="voucher-count">
+        <span class="voucher-count__left">66</span>
+        <span class="voucher-count__total">999</span>
+        <span class="voucher-count__label">are available</span>
+    </div>
+ */
+.voucher-count {
+    height: 40px;
+    width: 80px;
+    margin-top: 5px;
+    margin-left: -5px;
+    background-image: url("../img/icons/common/vouchernumber.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+%voucher-count {
+    color: $default-color;
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+}
+
+.voucher-count__left,
+.voucher-count__total {
+    @extend %voucher-count;
+}
+
+.voucher-count__left {
+    top: 5px;
+    right: 35px;
+}
+
+.voucher-count__left:after {
+    height: 20px;
+    width: 1px;
+    content: ' ';
+    display: block;
+    background: $default-color;
+    position: absolute;
+    top: 5px;
+    right: -3px;
+    transform: rotateZ(44deg);
+}
+
+.voucher-count__total {
+    bottom: 4px;
+    left: 51px;
+}
+
+.voucher-count__label {
+    min-width: 100px;
+    position: absolute;
+    top: 39%;
+    left: 100%;
+    font-size: 12px;
+    line-height: 12px;
+    display: inline-block;
+}

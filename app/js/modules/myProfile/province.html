@@ -1,0 +1,20 @@
+<ion-view view-title="">
+    <ion-content class="content--no-footer">
+
+        <div class="list">
+
+
+            <div class="item item-icon-right"
+                ng-repeat="province in myProvince.provinceList"
+                ng-click="myProvince.setProvince(province)"
+            >
+                {{province.provinceName}}
+                <i class="icon ion-ios-checkmark-empty" ng-if='myProvince.userInfo.province === province.provinceName'></i>
+            </div>
+
+            <br>
+            <br>
+        </div>
+
+    </ion-content>
+</ion-view>

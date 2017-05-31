@@ -1,0 +1,23 @@
+<ion-view can-swipe-back="false" view-title="">
+
+    <ion-content class="has-header content--no-footer">
+
+        <div class="item item-divider">
+            {{'Forgot password' | translate}}
+        </div>
+
+        <div class="padding20 form">
+
+            <p>{{'Re-enter your new payment password.' | translate}}</p>
+            <div class="list">
+                <security-password
+                    widget-id="paypasswordSetupConfirm"
+                    key="forgetPaymentPasswordStep5.key"
+                    random-factor="forgetPaymentPasswordStep5.randomFactor"
+                    callback="forgetPaymentPasswordStep5.submit(paypassword)"></security-password>
+
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

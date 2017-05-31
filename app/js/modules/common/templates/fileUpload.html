@@ -1,0 +1,7 @@
+<div class="file-upload-container">
+    <img class="file-upload__preview" ng-show="isPreviewShown" />
+    <img class="file-upload__icon" ng-show="!isPreviewShown" ng-src="{{ options.iconLink }}" />
+    <div class="file-upload__label" ng-show="!isPreviewShown">{{ 'Upload a picture' | translate | uppercase }}</div>
+    <!-- Accept attr reconized by IOS; Choose existing picture or take picture -->
+    <input class="file-upload__input" type="file" accept="image/*;capture=camera" required />
+</div>

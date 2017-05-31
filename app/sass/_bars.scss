@@ -1,0 +1,58 @@
+$top-bar-border-color: $border-color;
+$top-bar-height: 120px;
+/***
+ 	<ion-view>
+		<div class="sub-header-bar">Title</div>
+
+	    <ion-content class="view--has-top-bar"></ion-content>
+ 	</ion-view>
+***/
+%header {
+	text-align: center;
+	font-size: 14px;
+	color: $default-color;
+	border-bottom: 1px solid $top-bar-border-color;
+	background: linear-gradient($background-color-primary, $tab-background-color-highlight);
+}
+
+.bar-header {
+	@extend %header;
+
+	h1 {
+		color: inherit;
+	}
+}
+
+.sub-header-bar {
+	@extend %header;
+	@extend .item-divider;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.view--has-top-bar {
+	top: 50px;
+}
+
+.bar {
+	height: 52px;
+}
+
+.bar .title,
+.bar button.back-button {
+	margin-top: 8px;
+}
+
+.bar .button-small {
+	@extend .button-small;
+	border: none;
+	min-height: 20px;
+	height: 28px;
+	margin-top: 5px;
+	padding: 0 10px;
+}
+
+.nav-bar--colored {
+	background-color: $app-background-color;
+	border-bottom: 1px solid $color-tertiary;
+}

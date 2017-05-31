@@ -1,0 +1,10 @@
+<ion-view view-title="{{'ID Number' | translate}}">
+    <ion-content class="content--no-footer">
+        <div class="padding20 form">
+            <label class="item-input">
+                <input type="text" ng-model="myIdnumber.value">
+                <span class="item-label--error" input-name="idNumber" ng-model="myIdnumber.value" validate-id-number></span>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

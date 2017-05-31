@@ -1,0 +1,10 @@
+<ion-view view-title="{{ 'Mobile Phone' | translate }}">
+    <ion-content class="content--no-footer">
+        <div class="padding20 form">
+            <label class="item-input">
+                <input type="text" ng-model="phone.value" required>
+                <span class="item-label--error" ng-model="phone.value" validate-phone-number></span>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

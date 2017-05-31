@@ -1,0 +1,23 @@
+<ion-view can-swipe-back="false" view-title="">
+    <ion-content class="has-header content--no-footer">
+        <div class="item-headline">
+            {{'Select bank card' | translate}}
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="card in forgetPaymentPasswordStep1.userCards" ng-click="forgetPaymentPasswordStep1.setCurrentCard(card)">
+                <div class="item-icon-left item-icon-right">
+                    <img class="bank-card-image" ng-src="{{card.imgUrl}}"
+                    fallback-src="'{{imageBaseURL}}img/fallback/{{card.iconId}}.png'"/>
+                    <span class="item-note">{{card.r_name | limitTo : 100 : 9}}</span>
+                    <i class="icon ion-ios-circle-outline" ng-if="forgetPaymentPasswordStep1.currentCard.r_card !== card.r_card"></i>
+                    <i class="icon ion-ios-circle-filled" ng-if="forgetPaymentPasswordStep1.currentCard.r_card === card.r_card"></i>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div class="row padding10">
+            <button class="button button-full button-positive" ng-click="forgetPaymentPasswordStep1.submit()">
+                {{'Next' | translate}}
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

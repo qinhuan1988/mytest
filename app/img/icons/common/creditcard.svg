@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="107.354px" height="84.559px" viewBox="0 0 107.354 84.559" enable-background="new 0 0 107.354 84.559"
+	 xml:space="preserve">
+<g>
+	<g>
+		<rect x="24.588" y="13.786" fill="#777266" width="70.289" height="10.698"/>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="23.5876" y1="19.1355" x2="95.8767" y2="19.1355">
+			<stop  offset="0" style="stop-color:#E6E6E6"/>
+			<stop  offset="0.5398" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#C8C8C8"/>
+		</linearGradient>
+		<path fill="url(#SVGID_1_)" d="M95.877,25.485H23.588V12.786h72.289V25.485z M24.588,24.485h70.289V13.786H24.588V24.485z"/>
+	</g>
+	<g>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="23.5876" y1="46.925" x2="95.8767" y2="46.925">
+			<stop  offset="0" style="stop-color:#E6E6E6"/>
+			<stop  offset="0.5398" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#C8C8C8"/>
+		</linearGradient>
+		<path fill="url(#SVGID_2_)" d="M95.877,60.505H23.588v-27.16h72.289V60.505z M24.588,59.505h70.289v-25.16H24.588V59.505z"/>
+		<rect x="24.588" y="34.345" fill="#777266" width="70.289" height="25.16"/>
+	</g>
+	<g>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="13.0808" y1="45.7102" x2="90.2478" y2="45.7102">
+			<stop  offset="0" style="stop-color:#E6E6E6"/>
+			<stop  offset="0.5398" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#C8C8C8"/>
+		</linearGradient>
+		<path fill="url(#SVGID_3_)" d="M90.248,70.886H13.081V20.534h7.002v43.348h70.165V70.886z M14.081,69.886h75.167v-5.004H19.083
+			V21.534h-5.002V69.886z"/>
+		<polygon fill="#777266" points="14.081,21.534 14.081,69.886 89.248,69.886 89.248,64.882 19.083,64.882 19.083,21.534 		"/>
+	</g>
+</g>
+<polygon opacity="0.6" fill="#C1BAAC" points="24.588,13.786 24.588,24.485 79.614,24.485 94.877,19.172 94.877,13.786 "/>
+<polygon opacity="0.6" fill="#C1BAAC" points="24.588,34.345 24.588,43.638 51.285,34.345 "/>
+<polygon opacity="0.6" fill="#C1BAAC" points="14.081,21.534 14.081,47.295 19.083,45.554 19.083,21.534 "/>
+</svg>

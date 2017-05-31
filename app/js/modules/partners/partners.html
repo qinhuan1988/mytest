@@ -1,0 +1,18 @@
+<ion-view view-title="{{ 'partners benefits' | translate }}">
+    <ion-content class="content--no-footer page--partner">
+
+            <div class="item-body">
+                <p class="title">{{'BMW ALLIANCE partners are being updated frequently, so be sure to check in for new offers!' | translate}}</p>
+            </div>
+
+            <div class="card" ng-click="dash.openExternalLink(dash.merchant())">
+                <div class="item item-body item-text-wrap">
+                    <h4>{{'Merchant offer' | translate}}</h4>
+                    <p>{{'Exploring surprising discount exclusive for BMW Loyalty Member.' | translate}}</p>
+
+                    <p class="pull-right"><a ng-click="dash.openExternalLink(dash.merchant())">{{'Explore Now' | translate}}</a></p>
+                </div>
+            </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,10 @@
+<ion-view view-title="">
+    <ion-content class="content--no-footer">
+        <div class="list">
+            <div class="item item-icon-right" ng-repeat="type in myIDType.IDTypes" ng-click="myIDType.setIDType(type)">
+                {{type.name | translate}}
+                <i class="icon ion-ios-checkmark-empty" ng-if='myIDType.userInfo.udf27 === type.id'></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

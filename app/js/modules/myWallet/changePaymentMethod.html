@@ -1,0 +1,24 @@
+<ion-view class="page--wallet" view-title="">
+    <pc-logo></pc-logo>
+    <ion-content class="has-header">
+        <div class="item-headline">
+            {{'Change payment method' | translate}}
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="card in changePaymentMethod.userCards" ng-click="changePaymentMethod.setCurrentCard(card.r_card,card.r_name)">
+                <div class="item-icon-left item-icon-right">
+                    <img class="bank-card-image" ng-src="{{card.imgUrl}}" fallback-src="'{{imageBaseURL}}img/fallback/{{card.iconId}}.png'"/>
+                     {{card.r_name | limitTo : 100 : 12}}
+                    <i class="icon ion-ios-circle-outline" ng-if="changePaymentMethod.currentCard !== card.r_card"></i>
+                    <i class="icon ion-ios-circle-filled" ng-if="changePaymentMethod.currentCard === card.r_card"></i>
+                </div>
+            </ion-item>
+        </ion-list>
+        <h4 ng-if="changePaymentMethod.userCardsIsEmptyArray" class="text-center">{{'no relative cards' | translate}}</h4>
+        <div class="row padding10" ng-if="!changePaymentMethod.userCardsIsEmptyArray" >
+            <button class="button button-full button-positive" ng-click="changePaymentMethod.submit()">
+                {{'Confirm' | translate}}
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

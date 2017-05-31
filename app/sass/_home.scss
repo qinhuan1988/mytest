@@ -1,0 +1,76 @@
+$footer-headline-font-size: 30px;
+$footer-subline-font-size: 15px;
+$footer-menu-font-size: 12px;
+$footer-link-color: #fff;
+$footer-link-highlight-color: $emphasis-color;
+
+
+
+.scroll-content-home {
+    background: url("../img/login_background.jpg") transparent;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.scroll-content-home.scroll-content {
+    margin-top: 0;
+}
+
+.home__footer {
+    position: fixed;
+    bottom: 30px;
+
+    width: 100%;
+    padding-left: 17px;
+
+    a {
+    	color: $footer-link-color;
+    	text-decoration: none;
+	    text-transform: uppercase;
+    }
+
+    .ion-chevron-right:before {
+    	padding-left: 15px;
+    }
+}
+
+.footer__headline {
+	@extend .row;
+
+	padding-bottom: 17px;
+
+	a {
+	    font-size: $footer-headline-font-size; 
+	}
+
+	.ion-chevron-right:before {
+    	font-size: 20px;
+    	
+		vertical-align: top;
+    }
+}
+
+.footer__subline {
+	@extend .row;
+
+	padding-bottom: 43px; 
+
+	a {
+	    font-size: $footer-subline-font-size;
+	}
+}
+
+.footer__menu {
+	@extend .row;
+
+	.col {
+		padding: 0;
+    	margin-right: 15px;
+
+    	border-bottom: 2px solid $footer-link-highlight-color;
+	}
+
+	a {
+		font-size: $footer-menu-font-size;
+	}
+}

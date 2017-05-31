@@ -1,0 +1,23 @@
+<ion-view class="page--wallet" view-title="">
+   <pc-logo></pc-logo>
+    <ion-content class="has-header content--no-footer">
+        <div class="item item-divider">
+            {{'Payment Password' | translate}}
+            <div steps-navigation label="'4/5' | translate" prev="dash.bankCardStep3"></div>
+        </div>
+        <div class="padding20 form">
+
+            <p>{{'Please create  a payment password' | translate}}</p>
+            <div class="list">
+                <security-password
+                    widget-id="firstBind"
+                    key="bcStep4.key"
+                    random-factor="bcStep4.randomFactor"
+                    callback="bcStep4.submit(paypassword)"></security-password>
+
+            </div>
+
+
+        </div>
+    </ion-content>
+</ion-view>

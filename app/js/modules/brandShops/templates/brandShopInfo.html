@@ -1,0 +1,37 @@
+<ion-view>
+    <ion-nav-title> {{ brandShopInfo.data.title }} </ion-nav-title>
+    <ion-content class="has-header content--no-footer page--brand-shop-details">
+        <div class="slider-container">
+            <div class="slide__arrow-wrapper--left"
+                    ng-show="brandShopInfo.showSliderPrev()"
+                    ng-click="brandShopInfo.goPrevSlider()">
+                <i class="ion-chevron-left"></i>
+            </div>
+            <div class="slide__arrow-wrapper--right"
+                    ng-show="brandShopInfo.showSliderNext()"
+                    ng-click="brandShopInfo.goNextslider()">
+                <i class="ion-chevron-right"></i>
+            </div>
+            <ion-slide-box delegate-handle="brandShopHandler">
+                <ion-slide ng-repeat="item in brandShopInfo.sliderImages" ng-click="dash.openExternalLink(item.link)">
+                    <img ng-src="{{item.img}}" />
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+
+            <div class="links-wrapper" ng-include="brandShopInfo.externalLinksTemplate"></div>
+
+            <div class="item inner-page-divider" ng-if="brandShopInfo.items.length"></div>
+
+            <div class="brandshops-list" ng-if="brandShopInfo.items.length">
+                <div class="brandshops-block" ng-repeat="item in brandShopInfo.items">
+                    <div class="brandshops-block-inner" ng-click="dash.openExternalLink(item.externalLink)">
+                        <img class="brandshops__image" ng-src="{{ item.imageLink }}">
+                        <div class="brandshops__desc">{{item.smallDesc}}</div>
+                        <div class="brandshops__link">{{'Visit Now' | translate}}</div>
+                    </div>
+                </div>
+            </div>
+
+    </ion-content>
+</ion-view>

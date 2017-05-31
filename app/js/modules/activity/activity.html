@@ -1,0 +1,90 @@
+<ion-view view-title="">
+    <ion-content class="page--activity content--no-footer">
+        <ion-refresher on-refresh="activity.refreshView()">
+        </ion-refresher>
+
+        <div>
+            <!-- <div class="item item-divider">
+                {{ 'My activity log' | translate }}
+            </div> -->
+            <div class="item-body">
+                {{ 'An overview of the most recent transactions on your account.' | translate }}
+            </div>
+
+            <div class="item-headline">
+                {{ 'Filter' | translate }}
+            </div>
+
+            <div class="padding10 form">
+                <form name="myActivity">
+                    <div class="row row-no-padding">
+                        <div class="col">
+                            <div class="item-select">
+                                <span class="item-label">{{ 'Dealer' | translate }}</span>
+                                <select ng-model="activity.dealers" ng-options="item.partnerCode as item.partnerName_en for item in activity.dealerList" ng-change="activity.getActivity(activity.dealers)" ng-disabled="activity.partners">
+                                    <option value="">{{ 'Please select' | translate }}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                        </div>
+                        <div class="col">
+                            <div class="item-select">
+                                <span class="item-label">{{ 'Partner' | translate }}</span>
+                                <select ng-model="activity.partners" ng-options="item.partnerCode as item.partnerName_en for item in activity.partnersList" ng-change="activity.getActivity(activity.partners)" ng-disabled="activity.dealers">
+                                    <option value="">{{ 'Please select' | translate }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-no-padding">
+                        <div class="col">
+                            <label class="item-select">
+                                <span class="item-label">{{ 'Sort by' | translate }}</span>
+                                <select ng-model="activity.sortDirection" ng-change="activity.getActivity(activity.dealers,activity.partners,activity.sortDirection)">
+                                    <option value="">{{ 'Please select' | translate }}</option>
+                                    <option value="transactionType">{{ 'transactionType' | translate }}</option>
+                                    <option value="partnerName_en">{{ 'partnerName_en' | translate }}</option>
+                                    <option value="transactionDate">{{ 'transactionDate' | translate }}</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="page-divider"></div>
+
+            <div class="list" ng-repeat="item in activity.partnerActivityList">
+                <div class="item">
+                    <div class="col-100 row row-no-padding text-right post_date">
+                        <div class="col">
+                            <span class="">{{ item.transactionDate }}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-100 row row-no-padding padding-left">
+                            <div class="col-50 text-left">
+                                <span class="">
+                                    <h4>{{ item.partnerName_en }}</h4>
+                                 </span>
+                            </div>
+                            <div class="col-50 text-right padding-cen">
+                                <span>
+                                    <h4 ng-class="{link: item.link==='true'}">{{ item.rewardPoints | number }}</h4>
+                                 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-100 row row-no-padding act_info">
+                        <div class="col">
+                            <span class="">
+                                <p>{{ item.transactionType }}</p>
+                              </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

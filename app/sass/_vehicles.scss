@@ -1,0 +1,121 @@
+.text_font {
+	font-size: 12px;
+}
+
+.veh_vin_info {
+	padding: 11px 10px;
+}
+
+.claimPoints-form .item-icon-right .icon {
+	top: 0;
+	font-size: 22px;
+	right: 1px;
+}
+
+.leftBtn {
+	float: left;
+}
+
+.myVehicle-slides {
+	
+
+	position: relative;
+
+	.swiper-pagination {
+		display: none;
+	}
+
+	.padding20 {
+		background: $background-color-tertiary;
+	}
+
+	.slide__arrow-wrapper--left, .slide__arrow-wrapper--right {
+		height: 253px;
+	}
+}
+
+.tiles-list.vehicle-icon-container {
+	background: #222;
+	border: none;
+	.tile-block {
+		border-left: 1px solid #444;
+		border-bottom: 1px solid #444;
+		border-top: none;
+	}
+	.tile__image {
+		width: 60%;
+		height: auto;
+		margin-top: 9px;
+	}
+}
+
+.horizontal--separator {
+   height: 0;
+   border:none;
+   border-top: 1px solid #444;
+}
+.vehicle-label-tip {
+   color: #fff;
+   opacity: .8;
+}
+p.vehicle-label-tip {
+	font-size: 95%;
+	margin-top: 0;
+	padding-bottom: 10px;
+    line-height: 1.5;
+}
+
+.vehicle-vin-container {
+	.vehicle-vin-number {
+         font-size: .8em;
+		 padding-left: 10px;
+	}
+}
+.vehicle-camera-container {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 25px;
+}
+span.vehicle-vin-label {
+	color: $default-color;
+	font-size: 14px;
+}
+
+%icon-alert-inspection {
+	background-repeat: no-repeat;
+    background-size: 60px;
+    width: 60px;
+    height: 60px;
+    margin-left: 40%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.icon-alert-pending {
+    background-image: url("../img/icons/common/comingsoon.svg");
+	@extend %icon-alert-inspection;
+}
+
+.icon-alert-rejected {
+	 background-image: url("../img/icons/vehicle/tips/fail.svg");
+	@extend %icon-alert-inspection;
+}
+%msg-inspection {
+     font-size: 90%;
+	line-height: 1.2;
+	margin-bottom: 0;
+} 
+.msg-pending {
+	color: #a3ae23;
+	@extend %msg-inspection;
+	
+}
+.msg-rejected {
+	color: $form-error-color;
+	@extend %msg-inspection;
+}
+.gradient-headline.clear-top-headline {
+	margin-top: -20px;
+}
+

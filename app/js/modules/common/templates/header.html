@@ -1,0 +1,11 @@
+<header class="small-header dashboard--animated" ng-class="{ 'dashboard--opened' : dash.dashboardOpen }">
+    <div class="row row-no-padding">
+        <div class="col col-75">
+            <div member-info="dash.memberInfo" name-display="dash.nameDisplay" bmw-central-card></div>
+        </div>
+        <div class="col col-25" ng-click="dash.openActivePushView()">
+            <logo-horizontal></logo-horizontal>
+        </div>
+    </div>
+</header>
+<div member-info="dash.memberInfo" name-display="dash.nameDisplay" dashboard-open="dash.dashboardOpen" member-dashboard></div>

@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <ion-content class="padding20">
+
+        <div class="logo-portrait--white_{{getCurrentLanguage()}}"></div>
+
+        <div class="clearfix padding-vertical popup-about">
+            <h3 class="pull-left">
+                {{ title }}
+            </h3>
+
+            <i class="ion-ios-close-empty pull-right icon-35" ng-click="modal.remove()"></i>
+        </div>
+
+        <div ng-include="contentURL" class="aem-about"></div>
+
+    </ion-content>
+</ion-modal-view>

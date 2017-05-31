@@ -1,0 +1,26 @@
+.aem-about, .aem-model-content {
+    padding: 0;
+    div.item-body {
+        padding: 0;
+        border: none;
+    }
+    div.image .dealer-info img{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    p {
+        padding: 0 16px 20px;
+    }
+}
+
+.faq-list {
+    padding: 0;
+    div.item-divider {
+        background-color: $side-menu-item-background-color;
+    }
+    p.faq-question {
+        color: #fff;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+}

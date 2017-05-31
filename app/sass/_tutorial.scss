@@ -1,0 +1,30 @@
+.tutorial {
+    background-color: transparent;
+    height: 100%;
+
+    .skip {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: $default-color;
+        padding: 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: $font-bold;
+        z-index: 99;
+    }
+
+    .swiper-pagination {
+        bottom: 15px;
+
+        .swiper-pagination-bullet {
+            opacity: 0.8;
+            margin: 0 5px;
+            background: white;
+        }
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background: $emphasis-color;
+        }
+    }
+}

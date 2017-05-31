@@ -1,0 +1,28 @@
+.congratulation-msg {
+   color: #fff;
+   .animatated-msg {
+       padding-top: 35px;
+       padding-bottom: 20px;
+       background: url("../img/congratulation/registration-proccess-bg.jpg");
+       background-repeat: no-repeat;
+       text-align: center;
+       p {
+          font-size: 90%;
+       }
+   }
+   
+   .middle-msg {
+       opacity: 0.9;
+       padding-bottom: 0;
+       p {
+           margin-bottom: 0;
+       }
+   }
+   .padding20 {
+      button:nth-child(2) {  
+      background: linear-gradient(#888, #444);
+     }
+   }
+    
+   
+}

@@ -1,0 +1,38 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content drag-content="false">
+        <div ng-include="'js/modules/common/templates/header.html'"></div>
+
+        <div class="popup-bottom-layer backdrop" ng-class="{'visible active': dash.isLayerOpen() || dash.dashboardOpen}" ng-click="dash.clearLayer()"></div>
+
+        <div ng-class="{
+              'popup--enter': dash.isOfferShown,
+              'popup--exit': !dash.isOfferShown
+          }" class="bmw-popup" ng-include="'js/modules/offers/templates/previewLayer.html'"></div>
+
+        <div ng-class="{
+              'popup--enter': dash.isMeShown,
+              'popup--exit': !dash.isMeShown
+          }" class="bmw-popup" ng-include="'js/modules/me/brief.html'"></div>
+
+        <ion-nav-bar class="has-dashboard">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="secondary">
+                <button ng-hide="dash.hideRightBtn" class="button button-small button-positive" ng-disabled="dash.rightBtnDisabled" ng-click="dash.onRightBtnClick()">
+                    {{'Save' | translate}}
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <div class="view-has-small-header"></div>
+        <ion-nav-view name="dash"></ion-nav-view>
+
+        <div ng-include="'js/modules/common/templates/tabs.html'"></div>
+        <div ng-include="'js/modules/sideMenu/side-menu-backdrop.html'"></div>
+    </ion-side-menu-content>
+
+    <ion-side-menu delegate-handle="sideMenu" side="right" width="dash.sideMenuWidth">
+
+        <div ng-include="'js/modules/sideMenu/side-menu.html'"></div>
+
+    </ion-side-menu>
+
+</ion-side-menus>

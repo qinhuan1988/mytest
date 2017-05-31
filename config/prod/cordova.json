@@ -1,0 +1,28 @@
+{
+    "projectName": "BMWLP",
+    "projectId": "com.mcongroup.bmw.memberapp.prod",
+    "plugins": {
+        "all": [
+            "cordova-plugin-dialogs",
+            "cordova-plugin-inappbrowser",
+            "cordova-plugin-network-information",
+            "cordova-plugin-statusbar",
+            "cordova-plugin-geolocation",
+            "cordova-plugin-whitelist",
+            "cordova-plugin-file",
+            "cordova-plugin-app-version",
+            "cordova-universal-links-plugin",
+            "ionic-plugin-keyboard",
+            "../config/prod/plugins/cordova-bmwlp-passguard",
+            "https://github.com/VersoSolutions/CordovaClipboard"
+        ],
+        "ios": [
+            "../cordova/plugins/ios/cordova-bmwlp-config",
+            "https://github.com/escapedcat/cordova-plugin-localization-ios"
+        ],
+        "android": [
+            "cordova-plugin-x-toast",
+            "cordova.plugins.diagnostic"
+        ]
+    }
+}

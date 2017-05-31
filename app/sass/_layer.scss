@@ -1,0 +1,76 @@
+$backdrop-background-color: rgba(0, 0, 0, 0.85);
+
+/*
+ * full page backdrop, popups backdrops
+ */
+
+.backdrop {
+    background-color: $backdrop-background-color;
+}
+
+
+/*
+ * content part backdrop (used by idrive power press button)
+ */
+
+.main-content-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $backdrop-background-color;
+
+    z-index: 9999;
+
+    .arrow-button {
+        width: 35px;
+        height: 35px;
+
+        background: url("../img/icons/common/sidenavarrow.svg");
+        background-size: 35px 35px;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 42%;
+        right: 6px;
+    }
+}
+
+
+/*
+ * full page backdrop on API requests
+ */
+
+.waiting-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $backdrop-background-color;
+    
+    z-index: 9999;
+    
+    .img {
+        background: url("../img/loading.svg");
+        background-size: 70px 70px;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 40%;
+        right: 50%;
+        margin-right: -35px;
+    }
+}
+
+
+/*
+ * modal backdrop
+ */
+
+.modal-backdrop-bg {
+    background: $backdrop-background-color;
+}

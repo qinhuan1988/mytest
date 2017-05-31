@@ -1,0 +1,75 @@
+<ion-view>
+    <ion-nav-title>{{ 'Your contact details' | translate }}</ion-nav-title>
+
+
+    <ion-content class="has-header form--registration">
+        <div class="padding20">
+            <p class="item--page-description">{{ 'Please complete your profile information. You can edit your information anytime.' | translate }}</p>
+
+            <form name="step4Form">
+                <label class="item-select">
+                    <span class="item-label">{{ 'Country' | translate }}<i ng-show="step4Form.country.$error.required" class="error-star">*</i></span>
+                    <select name="country" required ng-model="registrationStep4.formData.country" ng-options="item.regionCode as item.regionName for item in registrationStep4.countryList" ng-change="registrationStep4.getProvinceByCountryId(registrationStep4.formData.country)">
+                        <option value=""></option>
+                    </select>
+                </label>
+                <label class="item-select">
+                    <span class="item-label">{{ 'Province' | translate }}<i ng-show="step4Form.province.$error.required" class="error-star">*</i></span>
+                    <select name="province" required ng-model="registrationStep4.formData.province" ng-options="item.provinceCode as item.provinceName for item in registrationStep4.provinceList"  ng-change="registrationStep4.getCityListByProvinceId(registrationStep4.formData.province)">
+                        <option value=""></option>
+                    </select>
+                </label>
+                <label class="item-select">
+                    <span class="item-label">{{ 'City' | translate }}<i ng-show="step4Form.city.$error.required" class="error-star">*</i></span>
+                    <select name="city" required ng-model="registrationStep4.formData.city" ng-options="item.cityCode as item.cityName for item in registrationStep4.cityList">
+                        <option value=""></option>
+                    </select>
+                </label>
+                <label class="item-input">
+                    <span class="item-label">{{ 'Address' | translate }}<i ng-show="step4Form.address.$error.required" class="error-star">*</i></span>
+                    <textarea name="address" required type="text" ng-model="registrationStep4.formData.address"></textarea>
+                </label>
+                <label class="item-input">
+                    <span class="item-label">{{ 'Postcode' | translate }}</span>
+                    <input type="text" ng-model="registrationStep4.formData.zipcode">
+                    <span class="item-label--error" input-name="postCode" ng-model="registrationStep4.formData.zipcode" validate-post-code></span>
+                </label>
+                <label class="item-input">
+                    <span class="item-label">{{ 'E-mail address' | translate }}</span>
+                    <input type="text" ng-model="registrationStep4.formData.email" ng-class="{ 'errorInput': registrationStep4.formData.preferredContactChannel==='E' && !registrationStep4.formData.email }" ng-required="registrationStep4.formData.preferredContactChannel==='E' ">
+                    <span class="item-label--error" input-name="email" ng-model="registrationStep4.formData.email" validate-email></span>
+                </label>
+                <label class="item-select">
+                   <span class="item-label">{{ 'Preferred means of contact' | translate }}</span>
+                   <select ng-model="registrationStep4.formData.preferredContactChannel" ng-options="item.id as item.name for item in registrationStep4.contractTypesArray">
+                        <option value=""></option>
+                    </select>
+                </label>
+                <label class="item-select">
+                    <span class="item-label">{{ 'ID Type' | translate }}</span>
+                    <select ng-model="registrationStep4.formData.idType">
+                        <option value=""></option>
+                        <option value="1">{{ 'ID Card' | translate }}</option>
+                        <option value="2">{{ 'Passport' | translate }}</option>
+                    </select>
+                </label>
+                <label ng-if="registrationStep4.formData.idType==='1'" class="item-input">
+                    <span class="item-label">{{ 'ID number' | translate }}</span>
+                    <input type="text" ng-model="registrationStep4.formData.idNumber">
+                    <span class="item-label--error" input-name="idNumber" ng-model="registrationStep4.formData.idNumber" validate-id-number></span>
+                </label>
+                <label ng-if="registrationStep4.formData.idType==='2'" class="item-input">
+                    <span class="item-label">{{ 'Passport number' | translate }}</span>
+                    <input type="text" ng-model="registrationStep4.formData.passportNumber">
+                    <span class="item-label--error" input-name="passportNumber" ng-model="registrationStep4.formData.passportNumber" validate-passport-number></span>
+                </label>
+
+                <form-error error-msg="registrationStep4.errorMsg"></form-error>
+
+                <button class="button button-full button-positive" ng-disabled="step4Form.$invalid || step4Form.$pristine " ng-click="registrationStep4.updateProfileInfo() ">
+                    {{ 'Continue' | translate }}
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

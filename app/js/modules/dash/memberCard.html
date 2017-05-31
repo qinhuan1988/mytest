@@ -1,0 +1,35 @@
+<div class="modal--member-card">
+    <ion-pane>
+
+        <div class="row modal__header">
+            <div class="col" ng-click="goToQuickpayQR()">
+                <img class="link__icon" ng-src="{{imageBaseURL}}img/icons/common/bmwpay-link.svg">
+                <div class="header__title link__label">
+                    {{ 'BMW PAY' | translate }}
+                </div>
+            </div>
+
+            <div class="col" ng-click="goToMyVouchers()">
+                <img class="link__icon" ng-src="{{imageBaseURL}}img/icons/common/mycoupons-link.svg">
+                <div class="header__title link__label">
+                    {{ 'My Vouchers' | translate }}
+                </div>
+            </div>
+
+            <span class="header__action" ng-click="hideCard()">
+                <span class="icon icon-close"></span>
+            </span>
+        </div>
+
+        <div class="row modal__main">
+            <div id="bmwCentralCard"></div>
+        </div>
+
+        <div class="row modal__main">
+            <div class="col dash-qrcode-container">
+                <qrcode data="{{ memberInfo.membershipId }}" size="160"></qrcode>
+            </div>
+        </div>
+
+    </ion-pane>
+</div>

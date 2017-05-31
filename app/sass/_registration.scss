@@ -1,0 +1,90 @@
+
+
+.progressbar {
+    margin-bottom: 20px;
+    margin-left: -5.5%;
+    margin-right: -5.5%;
+    overflow: hidden;
+    text-align: center;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+.progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 16.66%;
+    float: left;
+    position: relative;
+}
+
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 15px;
+    color: #333;
+    background: white;
+    border-radius: 15px;
+    @include box-shadow(0px 0px 2px 1px rgba(204, 204, 204, 1));
+    margin: 5px auto 5px auto;
+    position: relative;
+    z-index: 2;
+}
+
+.current-step-box {
+    float: right;
+}
+
+.current-step-box span {
+    padding: 8px;
+}
+
+.current-step-box .disabled {
+    opacity: .5;
+}
+
+
+/*progressbar connectors*/
+
+.progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: #E0E3E8;
+    border: 1px solid #D5D6DA;
+    position: absolute;
+    left: -50%;
+    top: 15px;
+    z-index: 1;
+    /*put it behind the numbers*/
+}
+
+.progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+
+/*marking active/completed steps green*/
+
+
+/*The number of the step and the connector before it = green*/
+
+.progressbar li.active:before,
+.progressbar li.active:after {
+    background: #0166B5;
+    color: white;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+.car-model-cell{
+  line-height:50px;
+}

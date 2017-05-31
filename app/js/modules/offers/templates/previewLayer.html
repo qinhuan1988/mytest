@@ -1,0 +1,45 @@
+<div class="preview-container tabs-menu">
+    <div class="preview-header">
+        <div class="text-right close-icon" ng-click="dash.toggleOffersLayer()">
+            <i class="ion-ios-close-empty"></i>
+        </div>
+    </div>
+
+    <div class="row row-no-padding">
+        <tabs-menu-item icon-path="img/icons/common/myvouchers.svg" label="'My Vouchers' | translate" ng-click="dash.redirectToMyVouchers()" ></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/partners.svg" label="'partners' | translate" ui-sref="dash.partners"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/giftcard.svg" label="'gift card' | translate" ng-click="dash.openComingSoonView()"></tabs-menu-item>
+    </div>
+
+    <div class="divider layer-divider"></div>
+    <div class="row row-no-padding">
+        <tabs-menu-item icon-path="img/icons/common/bmwshop.svg" label="'BMW shop' | translate" ng-click="dash.redirectToBrandShopPage('bmw')"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/minishop.svg" label="'MINI shop' | translate" ng-click="dash.redirectToBrandShopPage('mini')"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/Motorradshop.svg" label="'Motorrad Shop' | translate" ng-click="dash.redirectToBrandShopPage('motorrad')"></tabs-menu-item>
+    </div>
+
+    <div class="divider layer-divider"></div>
+    <div class="row row-no-padding">
+        <!-- <tabs-menu-item icon-path="img/icons/common/Mobilty_Services.svg" label="'Mobility Services' | translate" ui-sref="dash.mobilityServices"></tabs-menu-item>
+        <div class="col icon-item-divider"></div> -->
+        <tabs-menu-item icon-path="img/icons/common/mybmwclub.svg" label="'BMW club forum' | translate" ng-click="dash.openExternalLink(dash.bmwOfficialOwnerClub())"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/newsfeed.svg" label="'BMW newsletter' | translate" ng-click="dash.openNewsletterLink()"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/tv.svg" label="'BMW TV' | translate" ng-click="dash.openExternalLink(dash.tv())"></tabs-menu-item>
+
+    </div>
+
+    <!-- <div class="divider layer-divider"></div>
+    <div class="row row-no-padding">
+        <tabs-menu-item icon-path="img/icons/common/Hotels.svg" label="'Hotels' | translate" ng-click="dash.openComingSoonView()"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item></tabs-menu-item>
+        <div class="col icon-item-divider--invisible"></div>
+        <tabs-menu-item></tabs-menu-item>
+    </div> -->
+</div>

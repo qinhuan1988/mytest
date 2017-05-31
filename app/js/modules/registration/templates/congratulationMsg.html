@@ -1,0 +1,24 @@
+<ion-view view-title>
+     <ion-nav-title>{{ 'Registration' | translate }}</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+        <div steps-navigation current="2" total="2"></div>
+    </ion-nav-buttons>
+    <ion-content class="has-header content--no-footer congratulation-msg">
+           <div class="animatated-msg">
+                <h3>{{'Congratulations!' | translate }}</h3>
+                <p>{{'Welcome to the BMW China Loyalty Programme' | translate }}</p>
+                </div>
+                <div class="padding20 middle-msg">
+                    <p>{{'You have registered successfully.' | translate }} </p>
+                    <p>{{'Complete your personal information?' | translate }}</p>
+                </div>
+            <div class="padding20">
+                <button class="button button-full button-positive" ui-sref="registration.step2">
+                    {{ 'Continue' | translate }}
+                </button>
+                <button class="button button-full" ui-sref="dash.chat">
+                    {{ 'Skip' | translate }}
+                </button>
+             </div>       
+    </ion-content>
+</ion-view>

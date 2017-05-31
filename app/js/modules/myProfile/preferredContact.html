@@ -1,0 +1,21 @@
+<ion-view view-title="">
+    <ion-content class="content--no-footer">
+
+        <div class="item-headline">
+            {{'Preferred Communication Channel' | translate}}
+        </div>
+
+        <div class="list">
+
+            <div class="item item-icon-right"
+                ng-repeat="type in myPreferredContact.communicationTypes"
+                ng-click="myPreferredContact.setCommunicationType(type)">
+                {{type.name | translate}}
+                <i class="icon ion-ios-checkmark-empty"
+                ng-if='myPreferredContact.userInfo.preferredModeOfCommunication === type.id'></i>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

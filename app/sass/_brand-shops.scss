@@ -1,0 +1,97 @@
+$brandshops-per-block: 2;
+$brandshops-border-color: #333;
+$brandshops-font-size: 17px;
+$brandshops-image-size: 90px;
+$brandshops-size: calc(100% / #{$brandshops-per-block});
+
+.brandshops-list {
+    @extend .row;
+    flex-wrap: wrap;
+}
+
+.brandshops-block {
+    @extend .col;
+    flex: 0 0 $brandshops-size;
+    padding: 0;
+    text-decoration: none;
+    max-width: $brandshops-size;
+}
+
+.brandshops-block-inner {
+    margin: 5px;
+    border: 1px solid $brandshops-border-color;
+    min-height: 160px;
+    background: $background-color-tertiary;
+}
+
+.brandshops__image {
+    height: $brandshops-image-size;
+    width: auto;
+    max-width: 100%;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.brandshops__label {
+    color: $default-color;
+    font-size: $brandshops-font-size;
+    margin: 0 10px 2px;
+}
+
+.brandshops__desc {
+    @extend %ellipsis;
+    font-size: 13px;
+    margin: 2px 10px 10px;
+}
+
+.brandshops__link {
+    text-align: right;
+    margin: 2px 10px 10px;
+    width: initial;
+    color: $emphasis-color;
+}
+
+.page--brand-shop-details {
+    .brandshops-list {
+        background: $background-color-tertiary;
+    }
+
+    .brandshops-block-inner {
+        border: none;
+        background: transparent;
+        margin: 10px;
+    }
+
+    .brandshops__image {
+        height: auto;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .brandshops__desc,
+    .brandshops__link {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .links-wrapper {
+        background: $background-color-tertiary;
+    }
+}
+
+.brandshop__tiles-list {
+    @extend .tiles-list;
+
+    .tile-block {
+        flex: 0 0 25%;
+        padding: 0 10px;
+        line-height: 13px;
+    }
+    .tile__label {
+        display: block;
+        padding-top: 3px;
+        text-transform: capitalize;
+    }
+}

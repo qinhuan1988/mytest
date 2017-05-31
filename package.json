@@ -1,0 +1,99 @@
+{
+  "name": "bmw-lp",
+  "version": "0.0.76",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "angular-gettext": "2.3.8",
+    "angular-qrcode": "6.2.1",
+    "browserify-shim": "3.8.12",
+    "crypto-js": "3.1.8",
+    "d3": "3.5.17",
+    "ionic-angular": "1.3.2",
+    "jquery": "2.2.4",
+    "jshint-stylish": "2.2.1",
+    "lodash": "4.17.2",
+    "qrcode-generator": "1.0.7",
+    "restangular": "1.5.2"
+  },
+  "devDependencies": {
+    "angular-dynamic-locale": "0.1.32",
+    "angular-mocks": "1.6.2",
+    "bestzip": "1.1.3",
+    "browser-sync": "2.18.5",
+    "browserify": "10.2.6",
+    "cordova": "6.5.0",
+    "fastlane-tasks": "git+ssh://git@gitlab.mcon-group.com:cloud-team/fastlane-tasks.git#0.1.1",
+    "gulp": "3.9.1",
+    "gulp-angular-gettext": "2.2.0",
+    "gulp-angular-templatecache": "1.9.1",
+    "gulp-autoprefixer": "1.0.1",
+    "gulp-browserify": "0.5.1",
+    "gulp-bump": "2.5.1",
+    "gulp-clean": "0.3.2",
+    "gulp-concat": "2.6.1",
+    "gulp-filter": "5.0.0",
+    "gulp-git": "1.12.0",
+    "gulp-help": "1.6.1",
+    "gulp-if": "2.0.2",
+    "gulp-jshint": "1.12.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-preprocess": "2.0.0",
+    "gulp-ruby-sass": "1.4.0",
+    "gulp-shell": "0.2.11",
+    "gulp-tag-version": "1.3.0",
+    "gulp-tasks": "git+ssh://git@gitlab.mcon-group.com:cloud-team/gulp-tasks.git#0.1.0",
+    "gulp-uglify": "1.5.4",
+    "jasmine-core": "2.5.2",
+    "karma": "^1.5.0",
+    "karma-browserify": "5.1.1",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-coverage": "1.1.1",
+    "karma-jasmine": "1.1.0",
+    "karma-mocha-reporter": "2.2.2",
+    "karma-phantomjs-launcher": "1.0.2",
+    "merge-stream": "1.0.1",
+    "mkdirp": "0.5.1",
+    "moment": "2.17.1",
+    "pre-commit": "1.2.2",
+    "rimraf": "2.5.4",
+    "run-sequence": "1.2.2",
+    "sonarqube-scanner": "1.0.0",
+    "temporary": "0.0.8",
+    "watchify": "3.9.0",
+    "yargs": "6.5.0"
+  },
+  "scripts": {
+    "build:prod": "gulp build --env prod",
+    "build:qa": "gulp build --env qa",
+    "build:dev": "gulp build --env dev",
+    "predist": "rimraf build/ && mkdirp build/",
+    "dist": "npm run build:qa",
+    "postdist": "cd dist/ && bestzip ../build/out.zip .",
+    "pretest": "rm -rf ./coverage",
+    "test": "gulp test",
+    "jshint": "gulp jshint",
+    "posttest": "node npm-scripts/patchlcov.js 'coverage/lcov.info'"
+  },
+  "browser": {
+    "ionic": "./node_modules/ionic-angular/release/js/ionic.bundle.js",
+    "d3": "./node_modules/d3/d3.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "ionic": "ionic",
+    "d3": "d3"
+  },
+  "pre-commit": [
+    "jshint",
+    "test"
+  ],
+  "repository": "",
+  "author": "",
+  "license": "",
+  "readmeFilename": ""
+}

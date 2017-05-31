@@ -1,0 +1,35 @@
+<ion-view view-title="">
+   <ion-content>
+      <div class="list">
+         <div class="item-headline">
+            {{ 'Transaction history' | translate }}
+         </div>
+         <div class="list" ng-repeat="item in transHistoryInfo.TransactionList">
+            <div class="row">
+               <div class="col-100 row row-no-padding padding-left">
+                  <div class="col-50 text-left">
+                     <span class="">
+                        <h4>{{ item.market_name }}</h4>
+                     </span>
+                  </div>
+                  <div class="col-50 text-right padding-cen">
+                     <span>
+                        <h4 ng-class="{link: item.link==='true'}">{{ item.swap_name }} {{ item.amount | number }}</h4>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="col-100 row row-no-padding act_info">
+               <div class="col">
+                  <span class="">
+                     <p>{{item.swap_time}}</p>
+                  </span>
+               </div>
+            </div>
+            <div class="divider"></div>
+         </div>
+         <h4 ng-if="transHistoryInfo.noTransHistory" class="text-center">{{ 'no transaction history' | translate }}</h4>
+
+      </div>
+   </ion-content>
+</ion-view>

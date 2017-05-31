@@ -1,0 +1,14 @@
+<ion-view can-swipe-back="false">
+    <ion-content class="has-header">
+        <div class="item item-divider">
+            {{'Change PIN' |translate}}
+            <div steps-navigation label="'2/4' | translate" prev="dash.changePinStep1"></div>
+        </div>
+        <div class="padding20 form">
+            <p>{{'Enter old PIN.' | translate}}</p>
+            <div class="list">
+                <security-password widget-id="oldpw" key="changePinStep2.key" random-factor="changePinStep2.randomFactor" callback="changePinStep2.submit(paypassword)"></security-password>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

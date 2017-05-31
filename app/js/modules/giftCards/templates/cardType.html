@@ -1,0 +1,8 @@
+<ion-view view-title="{{'cardType' | translate}}">
+    <ion-content class="content--no-footer">
+        <div class="item item-icon-right white-space__normal" ng-repeat="card in cardType.list" ng-click="cardType.setCardType(card)">
+            {{card.cardType}}
+            <i class="icon ion-ios-checkmark-empty" ng-if='cardType.value === card.cardTypeCode'></i>
+        </div>
+    </ion-content>
+</ion-view>

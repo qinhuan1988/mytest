@@ -1,0 +1,21 @@
+/* tabs for list filtering */
+
+.tabs-top.tabs-striped {
+
+    .tabs {
+        border-color: $border-color;
+        background: $background-color-primary;
+    }
+
+    .tab-item {
+        @extend %font--condensed;
+        
+        opacity: 0.9;
+        color: $secondary-color;
+    }
+
+    .tab-item.selected {
+        opacity: 1;
+        color: $default-color;
+    }
+}

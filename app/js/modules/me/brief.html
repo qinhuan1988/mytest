@@ -1,0 +1,22 @@
+<div class="preview-container tabs-menu">
+    <div class="preview-header">
+        <div class="text-right close-icon" ng-click="dash.toggleMeLayer()">
+            <i class="ion-ios-close-empty"></i>
+        </div>
+    </div>
+    <div class="row row-no-padding">
+        <tabs-menu-item icon-path="img/icons/common/mywallet.svg" label="'my wallet' | translate" ui-sref="dash.myWallet"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/myfavourites.svg" label="'my favorites' | translate" ui-sref="dash.favorites"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/myactivitieslog.svg" label="'my activity log' | translate" ng-click="dash.openComingSoonView()"></tabs-menu-item>
+    </div>
+    <div class="divider layer-divider"></div>
+    <div class="row row-no-padding">
+        <tabs-menu-item icon-path="img/icons/common/myprofile.svg" label="'my profile' | translate" ui-sref="dash.myProfile"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/myvehicles.svg" label="'my vehicles' | translate" ui-sref="dash.vehicles"></tabs-menu-item>
+        <div class="col icon-item-divider"></div>
+        <tabs-menu-item icon-path="img/icons/common/mydealers.svg" label="'my dealers' | translate" ui-sref="dash.dealers"></tabs-menu-item>
+    </div>
+</div>

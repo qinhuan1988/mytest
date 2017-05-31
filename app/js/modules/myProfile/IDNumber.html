@@ -1,0 +1,23 @@
+<ion-view view-title="">
+    <ion-content class="content--no-footer">
+
+        <!-- <div class="item item-divider">
+            {{'ID Number' | translate}}
+        </div> -->
+
+        <div class="padding10">
+
+            <p class="assertive" ng-class="{'invisible': !dash.rightBtnDisabled || !myIdNumber.userInfo.IDNumberValue}">
+                {{'ID number is incorrect' | translate}}
+            </p>
+
+            <label class="item-input">
+                <span class="item-label">{{'ID Number' | translate}}</span>
+                <textarea type="text"
+                    ng-change="myIdNumber.checkIDNumber()"
+                    ng-model="myIdNumber.userInfo.IDNumberValue"></textarea>
+            </label>
+        </div>
+
+    </ion-content>
+</ion-view>

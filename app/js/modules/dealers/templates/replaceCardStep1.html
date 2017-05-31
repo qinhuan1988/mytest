@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-content class="has-header">
+        <div class="item-headline">
+            {{'Request a new membership card' | translate}}
+        </div>
+        <div class="padding20 form">
+            <form name="step1Form">
+                <p>{{'One time password is sent to number:' | translate}} {{replaceCardStep1.phoneNumber}}</p>
+
+                <label class="item-input">
+                    <span class="item-label">{{'OTP' | translate}}</span>
+                    <input type="tel" ng-model="replaceCardStep1.formData.smsCode" required>
+                </label>
+
+                <button class="button" on-click="replaceCardStep1.requestOTP()" is-sent="replaceCardStep1.isOTPSent" count-down="replaceCardStep1.countDown" label="{{'Resend Code' | translate}}">
+                </button>
+
+                <button class="button button-full button-positive" ng-disabled="step1Form.$invalid" ng-click="replaceCardStep1.submit()">
+                    {{'Next' | translate }}
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

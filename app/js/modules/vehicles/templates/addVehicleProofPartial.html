@@ -1,0 +1,47 @@
+<div class="list">
+
+    <div class="item-body">
+        <p class="vehicle-label-tip">
+          {{'Your VIN is successfully confirmed.' | translate}}
+        </p>
+
+        <hr class="horizontal--separator" />
+       
+
+        <form name="addVehicleForm" class="add-vehicle-form">
+
+            <div class="input-wrapper--tooltip vehicle-vin-container">
+                <label class="item-input">
+                    <span class="item-label">{{ 'Vehicle Identification Number (VIN)' | translate }}</span>
+                    <i class="success-rounded-icon"> </i><span class="vehicle-vin-number">{{ addVehicleProof.vinNo }}</span>
+                </label>
+            </div>
+            <hr class="horizontal--separator" />
+
+            <div class="add-vehicle-pic-container">
+                <p class="description-container">
+                    {{'vehicle document upload description' | translate}}
+                    <a class="item__tooltip" ng-click="addVehicleProof.showDocumentDescription()"></a>
+                </p>
+
+               
+                
+                <div class="item-input">
+                    <div file-upload file-save="addVehicleProof.saveFile(file,extension)" file-options="addVehicleProof.uploadOptions" file-error-msg="addVehicleProof.errorMsg" file-valid="addVehicleProof.isFileValid"></div>
+                </div>
+
+                <form-error error-msg="addVehicleProof.errorMsg"></form-error>
+            </div>
+        </form>
+        <div>
+           <a ng-click="addVehicleProof.showAgreement()">{{'add vehicle-terms and conditions' | translate}}</a>
+        </div>
+    </div>
+
+    <div class="padding20">
+        <button class="button button-full button-positive" ng-disabled="!addVehicleProof.isFileValid" ng-click="addVehicleProof.submit()">
+            {{'Save a New Vehicle' | translate}}
+        </button>
+    </div>
+
+</div>

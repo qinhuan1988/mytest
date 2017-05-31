@@ -1,0 +1,39 @@
+<ion-view view-title="{{ 'loyalty vouchers' | translate }}">
+    <ion-content class="has-header content--no-footer" delegate-handle="vouchers">
+        <ion-refresher on-refresh="offers.refreshView()"></ion-refresher>
+        <ion-list>
+            <div class="offers-header">
+                <div class="page-header">
+                    {{ 'value of current vouchers' | translate }}
+                </div>
+                <div class="vouchers-value">
+                    {{ '¥' | translate }}&nbsp;{{ offers.totalCommunicatedValue | number }}
+                </div>
+            </div>
+            <div class="tabs-striped tabs-top offers-filter">
+                <div class="tabs tabs-icon-top">
+                    <div class="tab-item" ng-click="offers.showList('all')" ng-class="{'selected': offers.allShown}">
+                        <i class="icon-offers"></i> {{'All Offers' | translate}}
+                    </div>
+                    <div class="tab-item" ng-click="offers.showList('fav')" ng-class="{'selected': offers.favoritesShown}">
+                        <i class="icon-favorites"></i> {{'My Favorites' | translate}}
+                    </div>
+                    <div class="tab-item" ng-click="offers.showList('date')" ng-class="{'selected': offers.byDateShown}">
+                        <i class="icon-expirydate"></i> {{'Expiry Date Ascending' | translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="item item-body offer-item-container"
+                ng-repeat="benefitItem in offers.displayedList track by $index"
+                ng-if="!offers.favoritesShown || (offers.favoritesShown && benefitItem.isFavorite === 'Y')">
+                <div offer-item="benefitItem" ng-click="offers.showOfferInfo(benefitItem)"></div>
+            </div>
+        </ion-list>
+
+        <h5 ng-if="offers.isEmpty" class="text-center">
+            {{ 'No result found' | translate }}
+        </h5>
+
+        <ion-infinite-scroll on-infinite="offers.loadMoreOffers()" ng-if="offers.canLoadMore"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

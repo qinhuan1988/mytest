@@ -1,0 +1,34 @@
+<ion-view>
+    <ion-nav-title>{{ 'Create your password' | translate }}</ion-nav-title>
+    
+
+    <ion-content class="has-header form--registration">
+        <div class="padding20">
+            <p class="item--page-description">{{ 'Your password must consist of a minimum of 8 characters, lower and upper case letters, at least 1 number, at least 1 special character (e.g.  #$_*).' | translate }}</p>
+
+            <form name="step2Form">
+                <label class="item-input">
+                    <span class="item-label">{{ 'Password' | translate }}</span>
+                    <input type="password" ng-model="registrationStep2.formData.password" required>
+                    <span class="item-label--error"  input-name="password" ng-model="registrationStep2.formData.password" validate-password></span>
+                </label>
+                <label class="item-input">
+                    <span class="item-label">{{ 'Repeat password' | translate }}</span>
+                    <input type="password" ng-model="registrationStep2.formData.repeatPassword" required>
+                    <span class="item-label--error" input-name="repeatPassword" ng-model="registrationStep2.formData.repeatPassword" repeat-password="{{registrationStep2.formData.password}}"></span>
+                </label>
+
+                <form-error error-msg="registrationStep2.errorMsg"></form-error>
+
+                <!-- <div class="row row-no-padding"> -->
+                    <button class="button button-full button-positive" ng-click="registrationStep2.setPassword()" ng-disabled="step2Form.$invalid">
+                        {{ 'Continue' | translate }}
+                    </button>
+                    <button class="button button-full" ui-sref="registration.step3">
+                        {{ 'Skip' | translate }}
+                    </button>
+                <!-- </div> -->
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

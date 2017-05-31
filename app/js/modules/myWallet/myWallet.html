@@ -1,0 +1,53 @@
+<ion-view class="page--wallet" view-title="{{ 'My Wallet' | translate }}">
+    <ion-nav-bar class="inner-nav-bar has-dashboard">
+        <ion-nav-back-button class="button-clear" ui-sref="dash.chat">
+            <i class="icon ion-ios-arrow-back"></i>
+        </ion-nav-back-button>
+        <h1 class="title"></h1>
+    </ion-nav-bar>
+
+    <ion-content class="content--no-footer">
+        <div class="list">
+
+            <div class="tiles-list">
+                <div class="tile-block" ng-click="myWallet.showQuickPayQR()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/bmwpay.svg">
+                    <span class="tile__label">{{ 'BMW Pay' | translate }}</span>
+                </div>
+                <div class="tile-block" ui-sref="dash.paymentMethod">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/addcard.svg">
+                    <span class="tile__label">{{ 'Add Card' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="dash.openComingSoonView()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/transactionhistory.svg">
+                    <span class="tile__label">{{ 'Transaction History' | translate }}</span>
+                </div>
+                <div class="tile-block" ui-sref="dash.coupons">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/mycoupons.svg">
+                    <span class="tile__label">{{ 'My Vouchers' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="dash.openExternalLink(dash.financeSelfService())">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/financialserviceselfservice.svg">
+                    <span class="tile__label">{{'Financial Services Selfservice' | translate}}</span>
+                </div>
+                <div class="tile-block" ui-sref="dash.creditCard" ng-if="myWallet.canEnrollCreditCard">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/enrollcreditcard.svg">
+                    <span class="tile__label">{{ 'Enroll Credit Card' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-if="!myWallet.canEnrollCreditCard">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="buttons-wrapper">
+                <button class="button-block setting-btn" ui-sref="dash.changePaymentPasswordStep1">
+                    {{ 'Change my payment password' | translate }}
+                </button>
+                <button class="button-block setting-btn" ui-sref="dash.forgetPaymentPasswordStep1">
+                    {{ 'Forgot my payment password' | translate }}
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

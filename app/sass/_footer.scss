@@ -1,0 +1,173 @@
+$footer-chat-input-color: #333;
+$footer-chat-input-border-color: #5a5a5a;
+$footer-chat-input-text-color: #6e6e6e;
+
+$tabs-index: 18;
+$tabs-color: #a3a3a3;
+$tab-separator-color: #a3a3a3;
+$tab-background-color-highlight: #333;
+$tab-menu-padding: 20px;
+
+/* footer using ionic tabs */
+
+.tabs-bottom {
+    .tabs {
+        z-index: $tabs-index;
+
+        border: none;
+        border-top: 2px solid black;
+        background: linear-gradient($background-color-primary, $tab-background-color-highlight);
+
+        transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 800ms;
+    }
+
+    .tab-item {
+        @extend %font--condensed;
+
+        color: $tabs-color;
+        text-transform: uppercase;
+        opacity: 1;
+
+        z-index: $tabs-index;
+
+        .badge {
+            background-color: $assertive;
+        }
+    }
+
+    .tab-item-active {
+        color: $default-color;
+    }
+
+    .tab-item--animate:before {
+        height: 3px;
+        width: 1px;
+
+        content: '';
+
+        display: block;
+
+        position: absolute;
+        top: -3px;
+    }
+
+    .tab-item--animate.tab-item-active:before {
+        width: 50%;
+        transition: 0.8s;
+    }
+
+    .tab-item.animate--right:before {
+        right: 50%;
+        background: linear-gradient(90deg, $background-color-primary 10%, $emphasis-color 100%);
+    }
+
+    .tab-item.animate--left:before {
+        left: 50%;
+        background: linear-gradient(90deg, $emphasis-color 0%, $background-color-primary 90%);
+    }
+}
+
+.tabs-close .tabs{
+    bottom: -81px;
+}
+
+/* menu displayed when clicking tabs */
+
+.bmw-popup {
+    width: 100%;
+
+    background: $background-color-tertiary;
+
+    z-index: 17;
+    overflow: hidden;
+
+    position: absolute;
+    bottom: -150%;
+
+    pointer-events: auto;
+
+    .preview-header {
+    	height: $tab-menu-padding;
+    }
+
+    .divider {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.bmw-popup.popup--exit {
+    transition: 0.1s;
+}
+
+.bmw-popup.popup--enter {
+    bottom: 50px;
+
+    border-bottom: 2px solid $background-color-primary;
+    padding-bottom: $tab-menu-padding;
+
+    transition: all ease-in-out 0.4s;
+}
+
+/***
+	<div class="tabs-menu"></div>
+	...
+	<div class="tabs-menu-separator"></div>
+	...
+	<div class="tabs-menu"></div>
+***/
+
+.tabs-menu {
+    @extend %font--condensed;
+
+    color: $tabs-color;
+
+    .icon-item-divider {
+        height: 86%;
+        margin: 0;
+
+        align-self: flex-start;
+
+        background: $tab-separator-color;
+    }
+
+    .row {
+        height: 85px;
+        margin-top: 15px;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+}
+
+/***
+	<div class="tabs-menu">
+	 	<div class="row">
+			<tabs-menu-item iconPath="" label=""></tabs-menu-item>
+			...
+	 	</div>
+	 </div>
+***/
+
+tabs-menu-item {
+    @extend .col;
+    @extend .icon-item-container;
+
+    max-width: 100px;
+
+    font-size: 0.6em;
+    line-height: 10px;
+    text-transform: uppercase;
+
+    display: block;
+}
+
+.tabs-menu-item__icon {
+    width: 60%;
+}
+
+.tabs-menu-item__label {
+    text-transform: capitalize;
+    color: $default-color;
+    font-size: 11px;
+}

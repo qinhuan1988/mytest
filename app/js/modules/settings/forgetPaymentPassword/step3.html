@@ -1,0 +1,22 @@
+<ion-view can-swipe-back="false" view-title="">
+    <ion-content class="has-header content--no-footer">
+        <div class="item item-divider">
+            {{'Forgot password' | translate}}
+        </div>
+        <div class="padding20 form">
+            <form name="step3Form">
+                <p>{{'One time password is sent to number:' | translate}}{{forgetPaymentPasswordStep3.phoneNumber}}</p>
+                <label class="item-input">
+                    <span class="item-label">{{'OTP' | translate}}</span>
+                    <input type="tel" ng-model="forgetPaymentPasswordStep3.smsCode" required>
+                </label>
+                <button class="button" on-click="forgetPaymentPasswordStep3.requestOTP()" is-sent="forgetPaymentPasswordStep3.isOTPSent" count-down="forgetPaymentPasswordStep3.countDown" label="{{'Request OTP' | translate}}">
+                </button>
+                <form-error error-msg="forgetPaymentPasswordStep3.errorMsg"></form-error>
+                <button class="button button-full button-positive" ng-disabled="step3Form.$invalid" ng-click="forgetPaymentPasswordStep3.submit()">
+                    {{'Next' | translate }}
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

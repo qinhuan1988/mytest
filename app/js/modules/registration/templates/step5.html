@@ -1,0 +1,19 @@
+<ion-view>
+    <ion-nav-title>{{ 'Select your dealership' | translate }}</ion-nav-title>
+    
+    <ion-content class="has-header form--registration">
+
+        <div class="padding20">
+            <p class="item--page-description">{{ 'Enjoy exclusive special offers from your favorite dealership. Simply select from the list below. You can add more dealerships anytime.' | translate }}</p>
+
+            <form name="step5Form">
+                <div ng-include="'js/modules/dealers/templates/addDealerPartial.html'" ng-controller="AddDealerPartialCtrl"></div>
+
+                <button class="button button-full" ui-sref="dash.chat">
+                    {{ 'Skip' | translate }}
+                </button>
+            </form>
+        </div>
+
+    </ion-content>
+</ion-view>

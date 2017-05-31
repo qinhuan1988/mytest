@@ -1,0 +1,31 @@
+<ion-content class="scroll-content-home" scroll="false">
+
+    <div class="logo-portrait_{{getCurrentLanguage()}}"></div>
+
+    <div class="home__footer">
+        <div class="footer__headline">
+            <div class="col">
+                <a ui-sref="login">
+                    {{ 'LOG IN' | translate }} <i class="ion-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__subline">
+            <div class="col">
+                <a ui-sref="registration.step1" ui-sref-opts="{ reload: true }">
+                    {{ 'REGISTER NOW' | translate }} <i class="ion-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__menu">
+            <div class="col" ng-click="home.showAbout()">
+                <a>{{ 'ABOUT-in-homepage' | translate }} </a>
+            </div>
+            <div class="col" ng-click="home.showEarnPoints()">
+                <a>{{ 'EARN POINTS' | translate }}  </a>
+            </div>
+        </div>
+    </div>
+</ion-content>

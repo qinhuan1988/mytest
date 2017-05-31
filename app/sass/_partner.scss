@@ -1,0 +1,31 @@
+.page--partner {
+	.title {
+		font-size: 16px;
+	}
+}
+
+.partner_text {
+    margin: 0 auto;
+
+    color: $default-color;
+}
+
+.partners_component {
+    width: 33.3%;
+    height: 135px;
+    margin: -1px;
+    padding: 16px;
+
+    font-size: 11px;
+    border: 1px solid $border-color;
+    background-color: $background-color-primary;
+
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    .image {
+	    margin-bottom: 0;
+	}
+}

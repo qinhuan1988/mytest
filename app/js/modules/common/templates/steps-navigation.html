@@ -1,0 +1,19 @@
+<div class="steps-nav">
+	<span class="steps-nav__prev" ng-class="{ 'disabled' : !prev }" ng-click="goPrev(prev)"></span>
+
+	<span ng-if="label">
+		{{ label }}
+	</span>
+	
+	<span ng-if="!label && current && total" class="steps-nav__position">
+		<span class="steps-nav__current">{{ current }}</span>
+		<span>/</span>
+		<span class="steps-nav__total">{{ total }}</span>
+	</span>
+	
+	<span ng-if="!label && !current && !total" ng-class="{ 'disabled' : !next }" ng-click="goNext(next)" class="steps-nav__skip">
+		{{ 'Skip' | translate }}	
+	</span>
+
+	<span class="steps-nav__next" ng-class="{ 'disabled' : !next }" ng-click="goNext(next)"></span>
+</div>

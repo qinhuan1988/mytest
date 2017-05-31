@@ -1,0 +1,54 @@
+<ion-view>
+    <ion-nav-title>{{ 'Your current vehicle' | translate }}</ion-nav-title>
+
+    <ion-content class="has-header form--registration">
+        <div class="padding20">
+
+            <p class="item--page-description">
+                {{ 'Welcome Mr./Ms.' | translate }} {{ registrationStep3.memberInfo.lastName }} {{ 'to Priority Plus Alliance.' | translate }}
+                <br>
+                {{ 'Tell us about your current owner status below. If you own a BMW, please enter your Vehicle Identification Number (VIN).' | translate }}
+            </p>
+
+            <form name="registrationStep3.step3Form">
+                <div class="input-wrapper--tooltip">
+                    <label class="item-input">
+                        <span class="item-label">{{ 'VIN Number' | translate }}</span>
+
+                        <input type="text"
+                                ng-model="registrationStep3.formdata.vinNumber"
+                                validate-length="17"
+                                input-name="vinNo"
+                                error="registrationStep3.errorMsg"
+                                error-message="registrationStep3.defaultVinErrorMsg"
+                                required
+                        >
+                    </label>
+                    <a class="item__tooltip" ng-click="registrationStep3.showVINInfo()"></a>
+                </div>
+
+                <form-error error-msg="registrationStep3.errorMsg"></form-error>
+
+                <button class="button button-full button-positive"
+                        ng-click="registrationStep3.confirm()"
+                        ng-disabled="registrationStep3.step3Form.$invalid">
+
+                    {{ 'Continue' | translate }}
+                </button>
+
+                <!--
+                    submit from keyboard triggers the first button
+                    in case, continue button is disabled, submit triggers skip button
+                    that is not the intended behavior, added type="button" to avoid this situation
+                -->
+                <button type="button"
+                        class="button button-full"
+                        ng-click="registrationStep3.skip()">
+
+                    {{ 'Skip' | translate }}
+                </button>
+            </form>
+
+        </div>
+    </ion-content>
+</ion-view>

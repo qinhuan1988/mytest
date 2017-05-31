@@ -1,0 +1,192 @@
+$tiles-per-block: 3;
+$tile-border-color: $background-color-tertiary;
+$tile-font-size: 9px;
+$tile-image-size: 40px;
+$tile-size: calc(100% / #{$tiles-per-block});
+
+/*
+ * tiles list (block of 3 tiles)
+
+   <div class="tiles-list">
+		<div class="tile-block">
+			<div class="tile">
+				<img class="tile__image" src="" />
+				<span class="tile__label">Label</span>
+			</div>
+		</div>
+		...
+   </div>
+ *
+ */
+
+.tiles-list {
+    @extend .row;
+    height: auto;
+    background: $background-color-primary;
+
+    flex-wrap: wrap;
+
+    padding: 0;
+
+    border-bottom: 1px solid $tile-border-color;
+    border-right: 1px solid $tile-border-color;
+}
+
+.tile-block {
+    @extend .col;
+
+    flex: 0 0 $tile-size;
+
+    min-height: 100px;
+    padding: 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    border-left: 1px solid $tile-border-color;
+    border-top: 1px solid $tile-border-color;
+}
+
+.tile__image {
+    height: $tile-image-size;
+    width: auto;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: block;
+}
+
+.tile__label {
+    @extend %font--condensed;
+
+    color: $default-color;
+    font-size: $tile-font-size;
+}
+
+
+/*
+ * normal list key / value
+
+    <div class="list__item">
+        <div class="item__label">Label</div>
+        <div class="item__value">Value</div>
+    </div>
+ *
+ */
+
+.list__item {
+    @extend .row;
+    @extend .row-no-padding;
+    @extend .item_divider;
+    @extend .text-left;
+
+    margin-bottom: 12px
+}
+
+.list__item:last-child {
+    border-bottom: none;
+}
+
+.item__value {
+    @extend .col;
+    @extend %font--bold;
+
+    white-space: nowrap;
+
+    font-size: 12px;
+    text-align: right;
+    color: $default-color;
+}
+
+.item__label {
+    @extend .col;
+    @extend %font--bold;
+
+    flex-shrink: 1;
+
+    font-size: 12px;
+    // set smaller on iPhone 5
+    @media (max-width:320px) {
+        font-size: 11px;
+    }
+}
+
+/* should be removed everywhere */
+
+.list-label {
+    @extend %font--bold;
+
+    font-size: 12px;
+}
+
+.list-value {
+    @extend %font--bold;
+
+    font-size: 12px;
+    color: $default-color;
+}
+
+.list-link {
+    margin: 5px;
+
+    font-size: 10px;
+    color: $emphasis-color;
+    text-decoration: none;
+
+    .icon {
+        font-size: 14px;
+    }
+}
+
+.page--activity .list {
+    background: $background-color-primary;
+}
+
+.item.item-complex .item-content {
+    background: inherit;
+}
+
+.item-headline {
+    padding: 10px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+
+    color: $emphasis-color;
+    border-bottom: 1px solid $emphasis-color;
+    background: transparent;
+
+    display: block;
+}
+
+.gradient-headline {
+    margin-bottom: 1px;
+    padding: 20px 10px 10px;
+    text-transform: none;
+    position: relative;
+    border-bottom: none;
+    &:before {
+        content: "";
+        background: linear-gradient(90deg, $emphasis-color 0%, #111 90%);
+        height: 1px;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        z-index: 9999;
+        left: 0;
+    }
+}
+
+.item-note {
+    color: $default-color;
+}
+
+.row__list-info{
+
+    &.row {
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    line-height: 28px;
+    border-bottom: 1px solid #444;
+}

@@ -1,0 +1,321 @@
+$items-height: 220px;
+$item-highlight-jump: 50px;
+$tabs-menu-button-index: 19;
+$tab-menu-power-press-width: 63;
+
+/*
+ *
+    <div class="tab-power-press>
+        <div class="tab-power-press__button"></div>
+        <div class="tab-power-press__items">
+            <div class="tab-power-press__item">
+                <div class="item__label">Label</div>
+                <img class="item__icon" src="" />
+            </div>
+        </div>
+    </div>
+    <div class="main-content-backdrop"></div>
+ *
+ */
+
+.tab-power-press--visible {
+    .tab-power-press__items  {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s;
+    }
+
+    .tab-power-press-background {
+        opacity: 0.5;
+        visibility: visible;
+    }
+
+    .tab-power-press__item {
+        opacity: 0.7;
+        transform: translate3d(0, $item-highlight-jump, 0);
+
+        .icon {
+            width: 35px;
+            height: 35px;
+
+            display: block;
+        }
+        .icon--highlight {
+            width: 70px;
+            height: 70px;
+
+            display: none;
+        }
+    }
+    .tab-power-press__item.selected {
+        position: relative;
+
+        opacity: 1;
+
+        .item__label {
+            padding-bottom: 0;
+
+            font-size: 23px;
+            color: $default-color;
+        }
+        .icon {
+            display: none;
+        }
+        .icon--highlight {
+            display: block;
+        }
+    }
+
+    .tab-power-press__button {
+        background-image: url('../img/footer-tab-menu-active.svg');
+    }
+}
+
+.tab-power-press__items {
+    @extend .row;
+
+    width: 100%;
+    height: $items-height;
+    padding: 0 20px;
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+    perspective: 100px;
+
+    position: absolute;
+    left: 0;
+    bottom: 47px;
+}
+
+.tab-power-press-background {
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../img/footer-tab-menu-background.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+
+    position: absolute;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.tab-power-press__item {
+    flex: 1 0;
+
+    transition: 0.3s;
+    transform: translate3d(0, 1000px, -1000px);
+
+    .item__label {
+        @extend %font--condensed;
+        
+        padding: 0;
+        padding-bottom: 10px;
+
+        line-height: initial;
+
+        transition: 0.3s;
+    }
+    .icon, .icon--highlight {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto
+    }
+    .icon--highlight {
+        transition: 0.3s;
+    }
+}
+
+
+.tab-power-press__button {
+    width: $tab-menu-power-press-width + px;
+    height: $tab-menu-power-press-width + px;
+    margin-left: -($tab-menu-power-press-width / 2) + px;
+
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    z-index: $tabs-menu-button-index;
+
+    background-image: url('../img/footer-tab-menu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-content-backdrop.main-content-backdrop--has-footer {
+    display: block !important;
+    z-index: 3;
+
+    transition: 0.4s;
+
+    .arrow-button {
+        display: none;
+    }
+}
+
+/*
+ * power press for vouchers
+ *
+   <div class="power-press">
+        <div class="power-press-menu-option1" id="menuOption1">
+            <img class="menu-icon" src="" />
+            <div class="menu-label">Label</div>
+        </div>
+        <div class="power-press-menu-option2" id="menuOption2">
+            <img class="menu-icon" src="" />
+            <div class="menu-label">Label</div>
+        </div>
+        <div class="power-press-menu-option3" id="menuOption3">
+            <img class="menu-icon" src="" />
+            <div class="menu-label">Label</div>
+        </div>
+
+        <div class="backdrop backdrop-powerpress"></div>
+   </div>
+ *
+ */
+
+.power-press {
+    position: relative;
+}
+
+.backdrop-powerpress {
+    z-index: 7;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.power-press-menu-option1,
+.power-press-menu-option2,
+.power-press-menu-option3 {
+    height: 0;
+    width: 0;
+
+    position: absolute;
+
+    z-index: -1;
+    display: none;
+
+    /* animate position change */
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 800ms;
+
+    .menu-label, .menu-icon {
+        /* animate size change */
+        transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 800ms;
+    }
+
+    .menu-label {
+        height: 50px;
+
+        font-size: 10px;
+        text-align: left;
+        vertical-align: middle;
+
+        display: inline-block;
+    }
+
+    .menu-icon {
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+
+        display: inline-block;
+
+        border-radius: 50px;
+        box-shadow: 0px 0px 5px 1px black;
+        background: $background-color-tertiary;
+    }
+}
+
+.menu-shown {
+    .power-press-menu-option1,
+    .power-press-menu-option2,
+    .power-press-menu-option3 {
+        display: block;
+    }
+}
+
+/*
+ * when switching left/right sides
+ * left/right properties should be ignored
+ */
+.show-from-left {
+    right: inherit !important;
+}
+.show-from-right {
+    left: inherit !important;
+}
+
+.show-from-left, .show-from-right {
+    height: 40px;
+    width: auto;
+
+    z-index: 100;
+}
+
+.power-press-menu-option1.show-from-left {
+    transform: translate3d(10px, -60px, 0);
+}
+
+.power-press-menu-option2.show-from-left {
+    transform: translate3d(40px, 0px, 0);
+}
+
+.power-press-menu-option3.show-from-left {
+    transform: translate3d(10px, 60px, 0);
+}
+
+.power-press-menu-option1.show-from-right {
+    transform: translate3d(-10px, -60px, 0);
+}
+
+.power-press-menu-option2.show-from-right {
+    transform: translate3d(-40px, 0px, 0);
+}
+
+.power-press-menu-option3.show-from-right {
+    transform: translate3d(-10px, 60px, 0);
+}
+
+.show-from-left.selected,
+.show-from-right.selected {
+    .menu-icon {
+        zoom: 1.1;
+
+        background: $emphasis-color;
+    }
+    .menu-label {
+        color: $default-color;
+        font-size: 14px;
+    }
+}
+
+.power-press-menu-option1.show-from-left.selected {
+    transform: translate3d(20px, -75px, 0);
+}
+
+.power-press-menu-option2.show-from-left.selected {
+    transform: translate3d(50px, 0px, 0);
+}
+
+.power-press-menu-option3.show-from-left.selected {
+    transform: translate3d(20px, 75px, 0);
+}
+
+.power-press-menu-option1.show-from-right.selected {
+    transform: translate3d(-10px, -75px, 0);
+}
+
+.power-press-menu-option2.show-from-right.selected {
+    transform: translate3d(-40px, 0px, 0);
+}
+
+.power-press-menu-option3.show-from-right.selected {
+    transform: translate3d(-10px, 75px, 0);
+}

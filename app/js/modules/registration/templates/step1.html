@@ -1,0 +1,60 @@
+<ion-view>
+    <ion-nav-title>{{ 'Your information' | translate }}</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+        <div steps-navigation current="1" total="2"></div>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header form--registration">
+        <div class="padding20">
+            <p><b>{{ 'Register quickly and start receiving benefits immediately.' | translate }}</b></p>
+            <p>{{ 'Please enter your real contact information in order to retrieve your information and create your account.' | translate }}</p>
+            <form name="step1Form1">
+                <label class="item-input">
+                    <span class="item-label">{{ 'Family name' | translate }}</span>
+                    <input type="text" name="lastName" ng-model="registrationStep1.formData.lastName" required>
+                </label>
+                <label class="item-input">
+                    <span class="item-label">{{ 'Given name' | translate }}</span>
+                    <input type="text" ng-model="registrationStep1.formData.firstName" required>
+                </label>
+
+                <label class="item-input">
+                    <span class="item-label">{{ 'Mobile phone' | translate }}</span>
+                    <input type="tel" ng-model="registrationStep1.formData.phoneNumber" ng-change="registrationStep1.checkIfPhoneValidated()" ng-disabled="registrationStep1.isOTPSent" required>
+                    <span class="item-label--error" input-name="phoneNumber" ng-model="registrationStep1.formData.phoneNumber" validate-phone-number></span>
+                </label>
+
+                <label class="item-input">
+                    <span class="item-label" ng-model="registrationStep1.formData.captchaText">{{ 'Type the number' | translate }}</span>
+                    <input name="captchaText" type="tel" ng-model="registrationStep1.formData.captchaText" required>
+                </label>
+
+                <div class="captcha-box" my-captcha="registrationStep1.isCaptchaExpired" set-captcha-id="registrationStep1.setCaptchaId(id)"></div>
+
+                <button class="button" on-click="registrationStep1.requestOTP()" is-disabled="step1Form1.$invalid" is-sent="registrationStep1.isOTPSent" count-down="registrationStep1.countDown" label="{{ 'Request Code' | translate }}"></button>
+            </form>
+
+            <form name="step1Form2">
+                <label class="item-input">
+                    <span class="item-label" ng-model="registrationStep1.formData.OTP">{{ 'Enter Code' | translate }}</span>
+                    <input type="tel" name="OTPCode" ng-model="registrationStep1.formData.OTP" ng-disabled="!registrationStep1.canValidateOTP" required>
+                    <span class="item-label--error" validator="registrationStep1.errors.otpErrorMessage"></span>
+                </label>
+
+                <div class="item-checkbox-bmw">
+                    <input type="checkbox" ng-model="registrationStep1.formData.isAgreed1" required>
+                    <a ng-click="registrationStep1.showTCForBMW()">{{ 'BMW Terms and Conditions' | translate }}</a>
+                </div>
+
+                <div class="item-checkbox-bmw">
+                    <input type="checkbox" ng-model="registrationStep1.formData.isAgreed2" required>
+                    <a ng-click="registrationStep1.showTCForCustomer()">{{ 'Customer consent Terms and Conditions' | translate }}</a>
+                </div>
+
+                <form-error error-msg="registrationStep1.errorMsg"></form-error>
+
+                <button class="button-full button-positive" ng-click="registrationStep1.enroll()" ng-disabled="step1Form2.$invalid">{{ 'Register' | translate }}</button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

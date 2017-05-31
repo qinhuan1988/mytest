@@ -1,0 +1,39 @@
+<ion-view view-title="{{ 'Mobility Services' | translate }}">
+    <ion-content class="has-header content--no-footer">
+
+        <div class="tiles-list">
+            <div class="tile-block" ng-click="vm.openLink(vm.getReachNowLink())">
+                <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/reachnow.svg">
+                <span class="tile__label">
+                    {{ 'ReachNow' | translate }}
+                </span>
+            </div>
+            <div class="tile-block" ng-click="dash.openComingSoonView()">
+                <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/Sixt.svg">
+                <span class="tile__label">
+                    {{ 'Sixt Rental' | translate }}
+                </span>
+            </div>
+            <div class="tile-block" ng-click="dash.openComingSoonView()">
+                <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/DriveNow.svg">
+                <span class="tile__label">
+                    {{ 'DriveNow' | translate }}
+                </span>
+            </div>
+            <div class="tile-block" ng-click="dash.openComingSoonView()">
+                <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/ParkNow.svg">
+                <span class="tile__label">
+                    {{ 'ParkNow' | translate }}
+                </span>
+            </div>
+            <div class="tile-block" ng-click="dash.openComingSoonView()">
+                <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/ChargeNow.svg">
+                <span class="tile__label">
+                    {{ 'ChargeNow' | translate}}
+                </span>
+            </div>
+            <div class="tile-block"></div>
+        </div>
+
+    </ion-content>
+</ion-view>

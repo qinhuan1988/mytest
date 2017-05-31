@@ -1,0 +1,104 @@
+/*
+    <div  class="animated-icons menu-icon">
+        <img class="menu-icon" src="">
+        <img class="menu-icon-shadow" src="">
+        <img class="menu-icon-part--appear" src="">
+        <img class="menu-icon-part--disappear" src="">        
+        <div class="menu-label"></div>
+    </div>
+ */
+
+
+.animated-icons {
+    height: 100%;
+    width: 100%;
+
+    perspective: 100px;
+}
+
+
+
+
+
+/* icon part */
+
+.menu-icon {
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+}
+
+.menu-icon-main {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu-icon-shadow {
+    @extend .menu-icon-main;
+
+    opacity: 0;
+    transform: scale(0);
+}
+
+%menu-icon-part {
+    height:  40%;
+
+    position: absolute;
+    left: 52%;
+    top: 43%;
+
+    transition: 1s;
+}
+
+.menu-icon-part--appear {
+    @extend %menu-icon-part;
+
+    opacity: 0;
+    transform: translate3d(20%, 20%, -74px);
+    transition-delay: 0.5s;
+}
+
+.menu-icon-part--disappear {
+    @extend %menu-icon-part;
+
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+
+/* animation */
+
+.animate {
+    .menu-icon-shadow  {
+        animation: pulse 0.5s;
+        animation-iteration-count: 2;
+    } 
+
+    .menu-icon-part--appear {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .menu-icon-part--disappear {
+        opacity: 0;
+        transform: translate3d(20%, 20%, -74px);
+    }
+}
+
+@keyframes pulse {
+    50% { 
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}

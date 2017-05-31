@@ -1,0 +1,15 @@
+<ion-tabs delegate-handle="footer-navigation" class="tabs-icon-top tabs-standard" ng-class="{'tabs-item-hide': hideTabs, 'tabs-close': isChatMode}">
+    <ion-tab icon="" hidden="true"></ion-tab>
+
+    <ion-tab title="{{'CHAT' | translate}}" icon="bmw-keyboard-icon" ng-click="dash.switchChatMode()"></ion-tab>
+
+    <ion-tab title="{{'OFFERS & NEWS' | translate}}" icon="icon-offers-news" class="tab-item--animate animate--right" ng-click="dash.toggleOffersLayer()"></ion-tab>
+
+    <ion-tab class="tab--inactive"></ion-tab>
+
+    <div class="tab-power-press" dial-func="dash.callPhone()" redirect-func="dash.goTo(state, params, externalLinkCbName)" hide-tabs-func="dash.clearLayer()"></div>
+
+    <ion-tab title="{{'ME' | translate}}" icon="icon-me" ng-click="dash.toggleMeLayer()" class="tab-item--animate animate--left"></ion-tab>
+
+    <ion-tab title="{{'MORE' | translate}}" icon="bmw-more-icon" ng-click="dash.openSideBar()"></ion-tab>
+</ion-tabs>

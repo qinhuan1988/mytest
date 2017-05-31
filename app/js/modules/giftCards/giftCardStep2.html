@@ -1,0 +1,36 @@
+<ion-view>
+
+    <ion-content class="has-header">
+        <div class="item item-divider">
+            {{'Add a Gift card' | translate}}
+        </div>
+        <div class="padding10">
+
+            <form name="step1Form" class="bankCard-form">
+                <div class="list">
+                  <label class="item item-input">
+                    <span class="input-label">{{'Card No.' | translate}}</span>
+                    <input type="tel">
+                  </label>
+                  <label class="item item-input">
+                    <span class="input-label">{{'Card Back No.' | translate}}</span>
+                    <input type="tel">
+                  </label>
+                  <div class="row row-no-padding padding-vertical">
+                      <div class="col col-67">
+
+                          <button class="button button-block button-positive" ng-disabled="step1Form.$invalid" ng-click="gfStep2.submit()">
+                            {{'Next' | translate }}
+                          </button>
+
+                      </div>
+                      <div class="col">
+
+                      </div>
+                 </div>
+                </div>
+            </form>
+
+        </div>
+    </ion-content>
+</ion-view>

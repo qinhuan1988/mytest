@@ -1,0 +1,22 @@
+<ion-view class="page--wallet" view-title="">
+    <pc-logo></pc-logo>
+    <ion-content class="has-header content--no-footer">
+        <div class="item item-divider">
+            {{'Payment password confirmation' | translate}}
+            <div steps-navigation label="'5/5' | translate" prev="dash.bankCardStep4"></div>
+        </div>
+        <div class="padding20 form">
+
+            <p>{{'Please enter again your payment password' | translate}}</p>
+            <div class="list">
+                <security-password
+                    widget-id="firstBindConfirm"
+                    key="bcStep5.key"
+                    random-factor="bcStep5.randomFactor"
+                    callback="bcStep5.submit(paypassword)"></security-password>
+
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

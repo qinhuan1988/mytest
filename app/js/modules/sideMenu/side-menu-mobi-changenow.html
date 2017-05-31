@@ -1,0 +1,19 @@
+<div class="items-group">
+    <div class="item item-no-icon bottom-linear-gradient white-space__normal">
+         {{'ChangeNow' | translate}}
+    </div>
+    <div class="sub-item">
+        <a side-menu-item="Search Charging Station" class="item item-icon-right" ng-click="dash.openExternalLinkWithLocationPermission(dash.searchChargingStation())">
+            <i class="icon-mobi-SearchCharginStation"></i> {{'Search Charging Station' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        <a side-menu-item="About Charging Service" class="item item-icon-right linear-gradient" ng-click="dash.openExternalLink(dash.aboutChargingService())">
+            <i class="icon-mobi-AboutChargingService"></i> {{'About Charging Service' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        <a side-menu-item="others" class="item item-icon-right linear-gradient" ng-click="dash.openExternalLink(dash.chargeNowOthers())">
+            <i class="icon-mobi-Others"></i> {{'others' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+    </div>
+</div>

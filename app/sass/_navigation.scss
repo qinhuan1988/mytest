@@ -1,0 +1,54 @@
+.steps-nav {
+	float: right;
+
+	.disabled {
+		opacity: 0.5;
+	}
+}
+
+.steps-nav__prev, .steps-nav__next {
+	padding: 8px;
+}
+
+.steps-nav__prev {
+	@extend .ion-ios-arrow-back;
+}
+
+.steps-nav__next {
+	@extend .ion-ios-arrow-forward;
+}
+
+/* when used in header */
+/* keep enclosed in ".bar .buttons-right", style should apply everywhere later on */
+.bar .buttons-right {
+	.steps-nav {
+	    height: 34px;    	
+    	margin-right: 15px !important;
+
+    	line-height: 34px;
+
+		span {
+			margin: 0;
+
+			display: inline-block;
+		}
+	}
+
+	.steps-nav__prev, .steps-nav__next {
+		display: none !important;
+	}
+
+	.steps-nav__position, .steps-nav__current {
+		color: $default-color;	
+		font-weight: bold;
+	}
+
+	.steps-nav__skip {
+		@extend %link;
+	}
+}
+
+/* when used in sub header/top-bar */
+.item-divider div[steps-navigation], .item-body div[steps-navigation] {
+	float: right;
+}

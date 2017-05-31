@@ -1,0 +1,68 @@
+<label class="item-select">
+    <span class="item-label">
+    	{{ 'Province' | translate }}
+    </span>
+    <select ng-model="partial.formData.province"
+    		ng-options="item.provinceCode as item.provinceName for item in provinceList"
+    		ng-change="onProvinceChange(partial.formData.province)"
+            required>
+
+        <option value="">
+        	{{ 'All' | translate }}
+        </option>
+    </select>
+</label>
+
+
+<label class="item-select">
+    <span class="item-label">
+    	{{ 'City' | translate }}
+    </span>
+    <select ng-model="partial.formData.city"
+    		ng-options="item.cityCode as item.cityName for item in cityList"
+    		ng-change="onCityChange(partial.formData.province, partial.formData.city)"
+            required>
+
+        <option value="">
+        	{{ 'All' | translate }}
+        </option>
+    </select>
+</label>
+
+
+<label class="item-select">
+    <span class="item-label">
+    	{{ 'Dealership' | translate }}
+    </span>
+    <select ng-model="partial.formData.dealer"
+    		ng-options="item.partnerCode as item.partnerName_en for item in partial.partnerList"
+    		ng-change="onDealerChange()"
+            required>
+
+        <option value="">
+        	{{ 'All' | translate }}
+        </option>
+    </select>
+</label>
+
+
+<div class="item-checkbox-bmw" ng-show="partial.formData.dealer">
+    <input type="checkbox"
+            ng-model="partial.formData.isAgreed"
+            required>
+
+    <a ng-click="showDealerTC()">
+    	{{ 'Dealer Terms and Conditions' | translate }}
+    </a>
+</div>
+
+
+<form-error error-msg="partial.errorMsg"></form-error>
+
+<button type="submit"
+        class="button button-full button-positive"
+        ng-click="partial.addDealer()"
+        ng-disabled="!partial.formData.isAgreed">
+
+        {{ 'Submit' | translate }}
+</button>

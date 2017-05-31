@@ -1,0 +1,23 @@
+<ion-modal-view>
+
+    <div class="bar-header modal-header">
+        <span class="title">
+        	{{ title | translate }}
+        </span>
+        <span class="icon ion-ios-close-empty" ng-click="modal.remove()"></span>
+    </div>
+
+    <ion-content class="padding has-header">
+        <div class="list card">
+            <div class="item item-body aem-model-content" ng-include="contentURL"></div>
+        </div>
+        <div class="row">
+            <div class="col-50">
+                <button class="button button-block button-positive" ng-click="modal.remove()">
+                    {{ 'Close' | translate }}
+                </button>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-modal-view>

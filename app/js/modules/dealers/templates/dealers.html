@@ -1,0 +1,80 @@
+<ion-view view-title="{{ 'my dealerships' | translate }}">
+    <ion-content class="content--no-footer">
+            <ion-refresher on-refresh="dealers.init()"></ion-refresher>
+
+            <div class="item-body dealer-item-body">
+                <div class="dealer-summary">
+                    {{ 'All your BMW Dealers and membership cards at a glance.' | translate }}
+                </div>
+            </div>
+
+
+            <div slides-dynamic-height class="item item-body dealer-slider-container" ng-if="dealers.hasDealers">
+
+                <div class="slide__arrow-wrapper--left" ng-click="dealers.slider.prev()" ng-show="dealers.slider.activeIndex > 0">
+                    <span class="slide__arrow--left"></span>
+                </div>
+                <div class="slide__arrow-wrapper--right" ng-click="dealers.slider.next()" ng-show="dealers.slider.activeIndex < (dealers.list.length - 1)">
+                    <span class="slide__arrow--right"></span>
+                </div>
+
+                <ion-slides options="dealers.slider.options" slider="dealers.slider.delegate">
+                    <ion-slide-page ng-repeat="dealer in dealers.list" ng-click="dealers.openDealerInfo(dealer)">
+
+                        <h3>{{ dealer.partnerName }} &nbsp;<span class="pull-right"> {{ dealer.positionInList}} / {{ dealers.list.length }}</span></h3>
+
+                        <p>{{ dealer.partnerDescription }}</p>
+
+                        <div class="row">
+                            <membership-card card-info="dealer.cardInfo"></membership-card>
+                        </div>
+
+                        <div class="row row__list-info">
+                            <div class="col col-75">
+                                <span class="list-label">{{ 'Status' | translate }}</span>
+                            </div>
+                            <div class="col text-right">
+                                <span class="list-value">{{ dealer.status }}</span>
+                            </div>
+                        </div>
+                        <div class="row row__list-info">
+                            <div class="col col-75">
+                                <span class="list-label">{{ 'Points' | translate }}</span>
+                            </div>
+                            <div class="col text-right">
+                                <span class="list-value">{{ dealer.points }}</span>
+                            </div>
+                        </div>
+                        <div class="row row__list-info">
+                            <div class="col col-75">
+                                <span class="list-label">{{ 'Reach next level' | translate }}</span>
+                            </div>
+                            <div class="col text-right">
+                                <span class="list-value">{{ dealer.pointsForNextStatus }}</span>
+                            </div>
+                        </div>
+
+                    </ion-slide-page>
+                </ion-slides>
+            </div>
+
+            <div class="item-headline gradient-headline">{{ 'Communicate with Dealer' | translate}}</div>
+
+            <div class="item">
+                <div class="row row-no-padding icon-grid-container">
+                    <tabs-menu-item icon-path="img/icons/dealer/DealerLocator.svg" label="'Dealer Locator' | translate" ng-click="dash.openExternalLink(dash.locateYourDealer())"></tabs-menu-item>
+                    <div class="col icon-item-divider"></div>
+                    <tabs-menu-item icon-path="img/icons/dealer/ChatWithDealer.svg" label="'Chat with Dealer' | translate" ng-click="dash.openComingSoonView()"></tabs-menu-item>
+                    <div class="col icon-item-divider"></div>
+                    <tabs-menu-item icon-path="img/icons/dealer/ServiceBooking.svg" label="'Service Booking' | translate" ng-click="dash.openComingSoonView()"></tabs-menu-item>
+                </div>
+            </div>
+
+            <div class="page-divider"></div>
+            <a class="item item-icon-left" href="#" ui-sref="dash.addDealer">
+                <i class="icon ion-ios-plus-outline"></i>
+                {{ 'Add a new Dealer' | translate }}
+            </a>
+            <div class="page-divider"></div>
+    </ion-content>
+</ion-view>

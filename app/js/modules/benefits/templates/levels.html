@@ -1,0 +1,44 @@
+<ion-view view-title="{{ 'Membership Levels' | translate }}">
+    <ion-content class="has-header content--no-footer">
+        <div class="list">
+
+
+
+            <div class="item item-body">
+                <p>{{'Collect points and earn upgrades to a higher Membership Level. Each new Class offers even more exciting rewards.' | translate}}</p>
+            </div>
+
+            <div class="item item-body level-container" ng-repeat="level in levels.list">
+                <div class="level__name">{{level.name}}</div>
+                <div class="row row-no-padding">
+                    <div class="col col-25">
+                        <img class="level__img" ng-src="{{level.imageLink}}" />
+                    </div>
+                    <div class="col col-75">
+                        <div class="level__text" ng-bind-html="level.desc"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <a class="item-headline">
+                   {{'your point list'| translate }}
+            </a>
+
+            <div class="item item-body" ui-sref="dash.activity">
+                <p>{{'An overview and history of your collected membership points.' | translate}}</p>
+                <p class="see-more">{{'See point list' | translate}}</p>
+            </div>
+
+            <a class="item-headline">
+                   {{'current offer'| translate }}
+                 </a>
+            <div class="item item-body" ui-sref="dash.offers">
+                <p>{{'Look up all your current loyalty vouchers in one place.' | translate}}</p>
+                <p class="see-more">{{'See All' | translate}}</p>
+            </div>
+
+
+        </div>
+    </ion-content>
+</ion-view>

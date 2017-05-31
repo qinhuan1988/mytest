@@ -1,0 +1,21 @@
+<ion-view view-title="{{ 'Payment password' | translate }}">
+    <ion-content class="has-header">    
+        
+        <form name="step1Form" class="padding20 form">
+            <div class="list">
+                <label class="item-input">
+                    <!-- <div class="link">{{'Please enter your payment password to verify' |translate}}</div> -->
+                    <!-- <span class="item-label" input-name="password" ng-model="gfStep1.formData.password">{{'payment password' | translate}}</span> -->
+                    <input type="password" ng-model="gfStep1.formData.password" required>
+                </label>
+            </div>
+        </form>
+
+        <div class="padding20">
+            <button class="button button-full button-positive" ng-disabled="step1Form.$invalid" ng-click="gfStep1.submit()">
+                {{ 'Confirm' | translate }}
+            </button>            
+        </div>
+
+    </ion-content>
+</ion-view>

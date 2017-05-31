@@ -1,0 +1,93 @@
+$font-regular: 'BMWGroup';
+$font-bold: 'BMWGlobalBold';
+$font-condensed: 'BMWGroupCondRegular';
+
+$color-primary: #444; 		// dark grey
+$color-secondary: #888;		// light grey
+$color-tertiary: #ddd;		// lighter grey
+
+$color-silver: #cccacb;
+$color-gold: #c19e36;
+$color-platinium: #878789;
+$color-black: #606060;
+$color-red: #c03929;
+
+
+
+/*
+ * placeholders
+ */
+
+%font--bold {
+	font-family: $font-bold;
+}
+%font--regular {
+	font-family: $font-regular;
+}
+%font--condensed {
+	font-family: $font-condensed;
+}
+
+
+
+body {
+    color: $secondary-color;
+}
+
+body,
+i,
+input,
+button,
+select
+{
+	@extend %font--regular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6, {
+    @extend %font--bold;
+    color: $default-color;
+}
+
+%link {
+    color: $emphasis-color;
+}
+
+a {
+    text-decoration: initial;
+    @extend %link;
+}
+
+.silver {
+    color: $color-silver;
+}
+.gold {
+    color: $color-gold;
+}
+.platinium {
+    color: $color-platinium;
+}
+.black {
+    color: $color-black;
+}
+.red {
+    color: $color-red;
+}
+
+%ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}

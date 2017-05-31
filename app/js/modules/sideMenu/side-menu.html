@@ -1,0 +1,38 @@
+<ion-header-bar>
+
+    <button ng-if="dash.parentSidemenu" ng-click="dash.toggleSideNav(dash.parentSidemenu, 'back')" class="button back-button buttons button-clear">
+        <i class="icon ion-ios-arrow-back"></i>
+        <span class="back-text">
+         {{ 'Back' | translate }}
+        </span>
+    </button>
+
+    <h1 class="title">{{ 'Menu' | translate }}</h1>
+</ion-header-bar>
+
+<ion-content class="bmw-more" delegate-handle="sideMenuScroll">
+    <div class="page-divider"></div>
+
+    <div class="menuActiveOverview" ng-include="'js/modules/sideMenu/side-menu-overview.html'"></div>
+
+    <div class="inner-menu menuActiveLP" ng-include="'js/modules/sideMenu/side-menu-lp.html'"></div>
+
+    <div class="inner-menu menuActiveBMW" ng-include="'js/modules/sideMenu/side-menu-bmw.html'"></div>
+    <div class="inner-menu menuActiveBMW1" ng-include="'js/modules/sideMenu/side-menu-bmw-1.html'"></div>
+    <div class="inner-menu menuActiveBMW2" ng-include="'js/modules/sideMenu/side-menu-bmw-2.html'"></div>
+    <div class="inner-menu menuActiveBMW3" ng-include="'js/modules/sideMenu/side-menu-bmw-3.html'"></div>
+    <div class="inner-menu menuActiveBMW4" ng-include="'js/modules/sideMenu/side-menu-bmw-4.html'"></div>
+    <div class="inner-menu menuActiveBMW5" ng-include="'js/modules/sideMenu/side-menu-bmw-5.html'"></div>
+    <div class="inner-menu menuActiveBMW6" ng-include="'js/modules/sideMenu/side-menu-bmw-6.html'"></div>
+    <div class="inner-menu menuActiveBMW7" ng-include="'js/modules/sideMenu/side-menu-bmw-7.html'"></div>
+    <div class="inner-menu menuActiveBMW8" ng-include="'js/modules/sideMenu/side-menu-bmw-8.html'"></div>
+
+    <div class="inner-menu menuActiveMobi" ng-include="'js/modules/sideMenu/side-menu-mobi.html'"></div>
+    <div class="inner-menu menuActiveReachnow" ng-include="'js/modules/sideMenu/side-menu-mobi-reachnow.html'"></div>
+    <div class="inner-menu menuActiveChangenow" ng-include="'js/modules/sideMenu/side-menu-mobi-changenow.html'"></div>
+
+    <div class="inner-menu menuActiveFinancial" ng-include="'js/modules/sideMenu/side-menu-financial.html'"></div>
+    <div class="inner-menu menuActiveOffersNews " ng-include="'js/modules/sideMenu/side-menu-offers-news.html'"></div>
+    <div class="inner-menu menuActiveMe" ng-include="'js/modules/sideMenu/side-menu-me.html'"></div>
+
+</ion-content>

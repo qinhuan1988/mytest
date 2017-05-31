@@ -1,0 +1,260 @@
+<div class="member-dashboard dash-animated" ng-class="{'member-dashboard--opened' : dashboardOpen }">
+    <div class="ios-statusbar-placeholder"></div>
+
+    <div class="dash-svg-content">
+        <dash-radial-gauge member-info="memberInfo" hide-parent="hideDashboard()"></dash-radial-gauge>
+    </div>
+
+    <div class="secondary-content">
+        <!-- tabs -->
+        <div class="row row-no-padding secondary-content-tabs">
+            <div class="col-50 dealers-tab" ng-class="{'selected': isDealersTabShown}" ng-click="showMyDealersTab()">
+                <span>
+                    {{'My Dealerships' | translate}}
+                </span>
+                <span ng-if="hasPartners()">
+                    {{ currentDealerIndex()}} / {{memberInfo.partnerDetails.length }}
+                </span>
+            </div>
+            <div class="col-50 cars-tab" ng-class="{ 'selected': isCarsTabShown }" ng-click="showMyCarsTab()">
+                <span>
+                    {{ 'My Vehicles' | translate }}
+                </span>
+                <span ng-if="hasVehicles()">
+                    {{ currentCarIndex() }} / {{ memberInfo.carsDetails.length }}
+                </span>
+            </div>
+        </div>
+
+        <!-- tabs content -->
+
+        <div ng-if="isDealersTabShown && !loading && !hasPartners()" class="slide--no-data">
+            <div class="col-100">
+                <span>
+                    {{ 'No Dealers available!' | translate }}
+                </span>
+                <a ng-click="goToAddDealer()">
+                    {{ 'Please Add Dealer' | translate }}
+                </a>
+            </div>
+        </div>
+
+        <div ng-if="isDealersTabShown && !loading && hasPartners()" class="dash-slides-container">
+            <div class="slide__arrow-wrapper--left">
+                <span class="slide__arrow--left" ng-click="previousDealer()" ng-show="currentDealerIndex() !== 1"></span>
+            </div>
+            <div class="slide__arrow-wrapper--right">
+                <span class="slide__arrow--right" ng-click="nextDealer()" ng-show="currentDealerIndex() !== memberInfo.partnerDetails.length"></span>
+            </div>
+            <ion-slide-box delegate-handle="dealersDashSlider" show-pager="false">
+                <ion-slide ng-repeat="dealer in memberInfo.partnerDetails">
+
+                        <div class="slide__title">
+                            {{ dealer['partnerName_' + getLang()] }}
+                            <div class="slide__link" ng-click="goDealer()">
+                               {{ 'See more' | translate }}
+                            </div>
+                        </div>
+
+                        <div class="slide__row">
+                            <div class="col col-50 slide__col">
+                                
+                                <div class="row dashboard-inner-grid">
+                                    <div class="col col-50">
+                                        <div class="slide__label">
+                                            {{ 'Dealer Points' | translate }}
+                                        </div>
+                                    </div>
+                                    <div class="col col-50">
+                                        <div class="slide__value slide--abs-right">
+                                            {{ dealer.points | number }}
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col col-50">
+
+                                <div class="row dashboard-inner-grid">
+                                    <div class="col col-33">
+                                        <div class="slide__label label--padding-left">
+                                            {{ 'Status' | translate }}
+                                        </div>
+                                    </div>
+                                    <div class="col col-67">
+                                        <div class="slide__value">
+                                            {{ dealer.status }}
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="slide__row">
+                            <div class="col col-50 slide__col">
+
+                                <div class="row dashboard-inner-grid">
+                                    <div class="col col-50">
+                                        <div class="slide__label">
+                                          {{ 'Reach next level' | translate }}
+                                       </div>
+                                    </div>
+                                    <div class="col col-50">
+                                        <div class="slide__value slide--abs-right">
+                                           {{ dealer.pointsForNextStatus | number }}
+                                         </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col col-50">
+                                <div class="row dashboard-inner-grid">
+                                    <div class="col">
+                                        <div class="slide__link" ng-click="goAddDealer()">
+                                            <i class="icon ion-ios-plus-outline"></i>
+                                            <span>{{ 'Add Dealer' | translate }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+
+        <div ng-show="isCarsTabShown" class="slide--no-data" ng-if="!hasVehicles()">
+            <div class="col-100">
+                <span>
+                    {{ 'No vehicle available!' | translate }}
+                </span>
+                <a ng-click="goToAddVehicle()">
+                    {{ 'Please Add Vehicle' | translate }}
+                </a>
+            </div>
+        </div>
+
+        <div ng-show="isCarsTabShown" class="dash-slides-container" ng-if="hasVehicles()">
+            <div class="slide__arrow-wrapper--left">
+                <span class="slide__arrow--left" ng-click="previousCar()" ng-show="currentCarIndex() !== 1"></span>
+            </div>
+            <div class="slide__arrow-wrapper--right">
+                <span class="slide__arrow--right" ng-click="nextCar()" ng-show="currentCarIndex() !== memberInfo.carsDetails.length"></span>
+            </div>
+            <ion-slide-box delegate-handle="carsDashSlider" show-pager="false">
+                <ion-slide ng-repeat="car in memberInfo.carsDetails">
+
+                    <div ng-if="car.approved" class="slide slide--vehicle">
+                        
+                            <div class="slide__row">
+                                <div class="slide__label">
+                                    {{ 'Car model' | translate }}
+                                </div>
+                                <div class="slide__value">
+                                    {{ car.modelDescription }}
+                                </div>
+                            </div>
+                       
+                       
+                            <div class="row slide__row">
+                                <div class="slide__label">
+                                    {{ 'VIN number' | translate }}
+                                </div>
+                                <div class="slide__value">
+                                    {{ car.vin }}
+                                </div>
+                            </div>
+                        
+                       
+                            <div class="row slide__row">
+                                <div class="slide__link" ng-click="goAddVehicle()">
+                                    <i class="icon-add-vehicle"></i>
+                                    <span>{{'Add vehicle' | translate}}
+                                    </span>
+                                </div>
+                                <div class="slide__link text-right" ng-click="goVehicle()">
+                                    {{'See more' | translate}}
+                                </div>
+                            </div>
+                        
+                    </div>
+                    
+                    <div ng-if="car.pending"  class="slide slide--vehicle">
+                        <div class="row">
+                            <div class="col col-33">
+                                <div class="slide__row">
+                                    <i class="icon-alert-pending"></i>
+                                </div>
+                            </div>
+                            <div class="col col-67">
+                                <div class="slide__row">
+                                      <div class="slide__label">
+                                        {{ 'Car model' | translate }}
+                                      </div>
+                                      <div class="slide__value">
+                                         {{ car.modelDescription }}
+                                      </div>
+                                 </div>
+                                 <div class="slide__row col--bottom-border">
+                                     <div class="slide__label">
+                                         {{ 'VIN number' | translate }}
+                                    </div>
+                                    <div class="slide__value">
+                                        {{ car.vin }}
+                                     </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row slide__row">
+                            <div class="col">
+                                
+                                    <p class="msg-pending" >{{'For security reason, the information will be checked before the vehicle is added to your account.' | translate }}</p>
+                                
+                            </div>
+                         </div>
+                    </div>
+                   <div ng-if="car.rejected"  class="slide slide--vehicle">
+                        <div class="row">
+                            <div class="col col-33">
+                                <div class="slide__row">
+                                    <i class="icon-alert-rejected"></i>
+                                </div>
+                            </div>
+                            <div class="col col-67">
+                                <div class="slide__row">
+                                      <div class="slide__label">
+                                        {{ 'Car model' | translate }}
+                                      </div>
+                                      <div class="slide__value">
+                                         {{ car.modelDescription }}
+                                      </div>
+                                 </div>
+                                 <div class="slide__row col--bottom-border">
+                                     <div class="slide__label">
+                                         {{ 'VIN number' | translate }}
+                                    </div>
+                                    <div class="slide__value">
+                                        {{ car.vin }}
+                                     </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row slide__row">
+                            <div class="col">
+                                
+                                    <p class="msg-rejected" >{{ car.rejectionReason }}</p>
+                                
+                            </div>
+                         </div>
+                    </div>
+
+
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+    </div>
+    <div class="drag-dash">
+        <span id="dashboardPullDown" class="pulldown" on-tap="onTap($event)" on-drag="onDrag($event)" on-release="onRelease($event)"></span>
+    </div>
+</div>

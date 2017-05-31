@@ -1,0 +1,41 @@
+<div class="list">
+
+    <div class="item-body">
+        <p class="vehicle-label-tip">
+          {{'In order to link a vehicle to your account to receive status points and manage your information, please add below your VIN.' | translate}}
+        </p>
+
+        <hr class="horizontal--separator" />
+
+
+        <form name="addVehicleForm" class="add-vehicle-form">
+
+            <div class="input-wrapper--tooltip">
+                <label class="item-input">
+                    <span class="item-label vehicle-vin-label">{{ 'Vehicle Identification Number (VIN)' | translate }}</span>
+
+                    <input type="text"
+                            class="vin-text"
+                            ng-model="addVehicle.vinNo"
+                            validate-length="17"
+                            input-name="vinNo"
+                            error="addVehicle.vinError"
+                            error-message="addVehicle.defaultVinErrorMsg"
+                            required
+                    >
+                </label>
+                <a class="item__tooltip" ng-click="addVehicle.showVINInfo()"></a>
+            </div>
+
+            <form-error-tip error-msg="addVehicle.vinError"></form-error-tip>
+
+        </form>
+    </div>
+
+    <div class="padding20">
+        <button class="button button-full button-positive" ng-disabled="addVehicleForm.$invalid" ng-click="addVehicle.checkVinValidity()">
+            {{'Check your Vehicle Number' | translate}}
+        </button>
+    </div>
+
+</div>

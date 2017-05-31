@@ -1,0 +1,43 @@
+<ion-view can-swipe-back="false" view-title="">
+    <ion-content class="has-header content--no-footer">
+        <!--  <div class="item item-divider">
+            {{'Forgot password' | translate}}
+        </div> -->
+        <div class="padding20 form">
+            <p>
+                {{'Enter your personal information' | translate }}
+            </p>
+            <form name="step2Form" class="bankCard-form">
+                <div class="list">
+                    <div class="item-input">
+                        <span class="item-label">{{'Name' | translate}}</span>
+                        <input type="text" ng-model="forgetPaymentPasswordStep2.cardHolder" required>
+                    </div>
+                    <label class="item-input">
+                        <security-field widget-id="forgetPaymentPasswordStep2.widgetId" widget-value="forgetPaymentPasswordStep2.idnumber" key="forgetPaymentPasswordStep2.key" random-factor="forgetPaymentPasswordStep2.randomFactor" is-invalid="forgetPaymentPasswordStep2.isInvalid" title="{{'ID number' | translate}}" error-msg="{{'ID number has to be 18 characters' | translate}}" regex="^[0-9]{18}$|^[0-9]{17}([0-9]|X|x)$" is-submited="forgetPaymentPasswordStep2.isSubmited" maxlength="18"></security-field>
+                    </label>
+                    <label class="item-input">
+                        <security-field widget-id="forgetPaymentPasswordStep2.widgetId2" widget-value="forgetPaymentPasswordStep2.cardNumber" key="forgetPaymentPasswordStep2.key" random-factor="forgetPaymentPasswordStep2.randomFactor" is-invalid="forgetPaymentPasswordStep2.isInvalid2" number-pad="1" maxlength="19" regex="^(?=[0-9]*$)(?:.{16}|.{19})$" is-submited="forgetPaymentPasswordStep2.isSubmited" title="{{'Card Number' | translate}}" error-msg="{{'bankcard number has to be 16 or 19 digitals' | translate}}"></security-field>
+                    </label>
+                    <label class="item-input" ng-if="forgetPaymentPasswordStep2.isCreditCard">
+                        <security-field widget-id="forgetPaymentPasswordStep2.widgetId3" widget-value="forgetPaymentPasswordStep2.expiredDate" key="forgetPaymentPasswordStep2.key" random-factor="forgetPaymentPasswordStep2.randomFactor" is-invalid="forgetPaymentPasswordStep2.isInvalid" number-pad="1" maxlength="4" regex="^[0-9]{4}$" is-submited="forgetPaymentPasswordStep2.isSubmited" title="{{'Card expiration date: MMYY' | translate}}" error-msg="{{'Card expirty time format incorrect' | translate}}"></security-field>
+                    </label>
+                    <label class="item-input" ng-if="forgetPaymentPasswordStep2.isCreditCard">
+                        <security-field widget-id="forgetPaymentPasswordStep2.widgetId4" widget-value="forgetPaymentPasswordStep2.cvn" key="forgetPaymentPasswordStep2.key" random-factor="forgetPaymentPasswordStep2.randomFactor" is-invalid="forgetPaymentPasswordStep2.isInvalid2" number-pad="1" maxlength="3" regex="^[0-9]{3}$" is-submited="forgetPaymentPasswordStep2.isSubmited" title="{{'CVN' | translate}}" error-msg="{{'CVN invalid' | translate}}"></security-field>
+                    </label>
+                    <label class="item-input">
+                        <span class="item-label">{{'Mobile phone' | translate}}</span>
+                        <input type="tel" maxlength="11" ng-model-options="{allowInvalid: true}" ng-model="forgetPaymentPasswordStep2.phoneNumber" required>
+                        <span class="item-label--error" input-name="phoneNumber" ng-model="forgetPaymentPasswordStep2.phoneNumber" validate-phone-number></span>
+                    </label>
+                    <form-error error-msg="forgetPaymentPasswordStep2.errorMsg"></form-error>
+                    <div class="row row-no-padding padding-vertical">
+                        <button class="button button-full button-positive" ng-disabled="step2Form.$invalid || forgetPaymentPasswordStep2.isInvalid || forgetPaymentPasswordStep2.isInvalid2" ng-click="forgetPaymentPasswordStep2.submit()">
+                            {{'Submit' | translate }}
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

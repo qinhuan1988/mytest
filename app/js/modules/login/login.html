@@ -1,0 +1,74 @@
+<ion-view>
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear" ng-click="login.backHome()">
+            <i class="icon ion-ios-arrow-back"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="form--login">
+
+        <div class="logo-portrait--white_{{login.getCurrentLanguage()}}" ui-sref="home"></div>
+
+        <div class="padding20-side">
+
+            <h5 class="padding-vertical">{{'Log in' | translate}}</h5>
+
+            <p class="padding-vertical">
+                {{'As a member of the Priority Plus Alliance, you enjoy exclusive benefits. Log in now with your password. If you do not have a password, you can log in with a verification code (OTP) sent to your mobile phone.' | translate}}
+            </p>
+
+            <form name="loginForm">
+
+                <label class="item-input">
+                    <span class="item-label">{{'Mobile phone / Membership ID' | translate }}</span>
+                    <input type="text" ng-change="login.setLoginCache()" ng-model="login.username" required>
+                </label>
+
+                <label class="item-input">
+                    <span class="item-label">{{'Password' | translate }}</span>
+                    <input type="password" ng-model="login.password" required>
+                </label>
+
+                <label class="hide">
+                    <input type="text" name="email" ng-model="login.email">
+                </label>
+
+                <div class="row">
+                    <label class="col item-checkbox-bmw">
+                        <input type="checkbox" ng-model="login.rememberMe">
+                        <a>
+                            {{'Remember me' | translate}}
+                        </a>
+                    </label>
+                    <div class="col link--forget-password">
+                        <a ui-sref="forgetPasswordStep1">
+                            {{'Forgot Password' | translate}}
+                        </a>
+                    </div>
+                </div>
+
+                <form-error error-msg="login.errorMsg"></form-error>
+
+                <div class="row row-no-padding">
+                    <button class="button button-full button-positive" ng-disabled="loginForm.$invalid" ng-click="login.login()">
+                        {{'Log in' | translate}}
+                    </button>
+                </div>
+
+                <div class="row row-no-padding">
+                     <button class="button button-full" ui-sref="requestOTP">
+                        {{'Log in with an OTP' | translate}}
+                    </button>
+                </div>
+
+                <br>
+
+                <div class="row row-no-padding">
+                    <button class="button button-full" ui-sref="registration.step1">
+                        {{'Registration' | translate}}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

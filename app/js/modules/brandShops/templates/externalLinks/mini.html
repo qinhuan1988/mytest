@@ -1,0 +1,26 @@
+<div class="brandshop__tiles-list">
+    <div class="tile-block" ng-click="dash.openExternalLink(dash.miniEmall)">
+        <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/brandshop/mini/buynewvehicle.svg">
+        <span class="tile__label" ng-if="brandShopInfo.lang==='en'">{{ 'brandshops-mini-en buy new vehicle online' | translate }}</span>
+        <span class="tile__label" ng-if="brandShopInfo.lang==='zh'">{{ 'brandshops-mini-zh-row-1 buy new vehicle online' | translate }}</span>
+        <span class="tile__label" ng-if="brandShopInfo.lang==='zh'">{{ 'brandshops-mini-zh-row-2 buy new vehicle online' | translate }}</span>
+    </div>
+    <div class="tile-block" ng-click="dash.openExternalLink(dash.miniUsedCar)">
+        <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/brandshop/mini/buyusedvehicle.svg">
+        <span class="tile__label" ng-if="brandShopInfo.lang==='en'">{{ 'brandshops-mini-en buy used vehicle online' | translate }}</span>
+        <span class="tile__label" ng-if="brandShopInfo.lang==='zh'">{{ 'brandshops-mini-zh-row-1 buy used vehicle online' | translate }}</span>
+        <span class="tile__label" ng-if="brandShopInfo.lang==='zh'">{{ 'brandshops-mini-zh-row-2 buy used vehicle online' | translate }}</span>
+    </div>
+    <div class="tile-block" ng-click="dash.openExternalLink(dash.miniBuyAccessories)">
+        <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/brandshop/mini/BuyAccessories.svg">
+        <span class="tile__label" ng-if="brandShopInfo.lang==='en'">{{ 'brandshops-mini-en buy accessories online' | translate }}</span>
+        <span class="tile__label" ng-if="brandShopInfo.lang==='zh'">{{ 'brandshops-mini-zh-row-1 buy accessories online' | translate }}</span>
+        <span class="tile__label" ng-if="brandShopInfo.lang==='zh'">{{ 'brandshops-mini-zh-row-2 buy accessories online' | translate }}</span>
+    </div>
+    <div class="tile-block" ng-click="dash.openExternalLink(dash.miniLifeStyleShop)">
+        <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/brandshop/mini/LifestyleProduct.svg">
+        <span class="tile__label" ng-if="brandShopInfo.lang==='en'">{{ 'brandshops-mini-en lifestyle products' | translate }}</span>
+        <span class="tile__label" ng-if="brandShopInfo.lang==='zh'">{{ 'brandshops-mini-zh-row-1 lifestyle products' | translate }}</span>
+        <span class="tile__label" ng-if="brandShopInfo.lang==='zh'">{{ 'brandshops-mini-zh-row-2 lifestyle products' | translate }}</span>
+    </div>
+</div>

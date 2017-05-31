@@ -1,0 +1,18 @@
+<ion-view view-title="">
+    <ion-content class="content--no-footer">
+
+        <div class="padding10">
+            <label class="item-input">
+                <span class="item-label">{{ 'Postcode' | translate }}</span>
+                <input type="text" ng-model="myPostCode.userInfo.zipcode" required>
+                <span class="item-label--error"
+                        input-name="postCode"
+                        ng-model="myPostCode.userInfo.zipcode"
+                        is-valid="myPostCode.isValid"
+                        validate-post-code>
+                </span>
+            </label>
+        </div>
+
+    </ion-content>
+</ion-view>

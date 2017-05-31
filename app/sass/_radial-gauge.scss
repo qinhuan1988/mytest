@@ -1,0 +1,13 @@
+/* the whole radial gauge should use css instead of D3 manipulations */
+.bmwlp-dash-needle {
+    transform: translate3d(171.5px, 22.5px, 0);
+}
+.bmwlp-dash-gauge-divider {
+  transform: translate3d(96px, 171px, 0);
+}
+.bmwlp-dash-needle image {
+	transition: 1s;
+	transform-origin: 50% 79px;
+
+	transform: rotateZ(-120deg);
+}

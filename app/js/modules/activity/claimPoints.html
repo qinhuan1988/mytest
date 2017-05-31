@@ -1,0 +1,73 @@
+<ion-view view-title="">
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">
+                {{'Claim points' | translate}}
+            </div>
+            <div class="item item-body">
+                <p>{{'If points earned on your membership card are not visible in your activities, you can claim them. You will receive an update after the request is processed.' | translate}}</p>
+                <p>
+                    <h4>{{'Member’s information' | translate}}</h4></p>
+                <div class="row col-100">
+                    <div class="col-50 text-left">
+                        {{'Name' | translate}}
+                    </div>
+                    <div class="col-50 text-right">
+                        {{claimPoints.nameDisplay}}
+                    </div>
+                </div>
+                <div class="row col-100">
+                    <div class="col-50 text-left">
+                        {{'Member ID' | translate}}
+                    </div>
+                    <div class="col-50 text-right">
+                        {{claimPoints.membershipId}}
+                    </div>
+                </div>
+                <p>
+                    <h4>{{'Transaction Information' | translate}}</h4></p>
+                <form name="step1Form" class="claimPoints-form">
+                    <div class="item item-input item-floating-label item-icon-right">
+                        <input type="date" name="transDate" ng-model="claimPoints.transDate" placeholder="{{'Transaction date' | translate}}" required>
+                        <i class="icon ion-ios-calendar" ng-click=""></i>
+                    </div>
+                    <div class=""></div>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">{{'Cashier Receipt ID' | translate}}</span>
+                        <input type="tel" required ng-model="claimPoints.receiptID" placeholder="{{'Cashiers Receipt ID' | translate}}">
+                    </label>
+                    <div class="row">
+                        <div id="activity-file-container">
+                            <input type="file" name="photo" />
+                        </div>
+                    </div>
+                    <div class="row col-100">
+                        <div class="col-50">
+                            <input type="radio" id="btnPartner" name="radButton" value="btnPartner" ng-model="content" checked> {{'Partner' | translate}}
+                            <br>
+                        </div>
+                        <div class="col-50">
+                            <input type="radio" id="btnDealer" name="radButton" value="btnDealer" ng-model="content"> {{'Dealer' | translate}}
+                            <br>
+                        </div>
+                    </div>
+                    <label class="item item-input item-select" ng-show="content == 'btnPartner'">
+                        <select ng-model="selectedPartner" ng-options="item.partnerCode as item.partnerName_en for item in claimPoints.partnerList">
+                            <option value="">{{'Partner' | translate}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-select" ng-show="content == 'btnDealer'">
+                        <select ng-model="selectedDealer" ng-options="item.partnerCode as item.partnerName_en for item in claimPoints.dealerList">
+                            <option value="">{{'Dealer' | translate}}</option>
+                        </select>
+                    </label>
+                    <div class="col-50">
+                        <button class="button button-block button-positive">
+                            {{'Claim' | translate}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

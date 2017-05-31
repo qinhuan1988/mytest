@@ -1,0 +1,51 @@
+<ion-view class="page--wallet" view-title="">
+    <pc-logo></pc-logo>
+    <ion-content class="has-header content--no-footer">
+        <div class="item item-divider">
+            {{'Add a bank card' | translate}}
+            <div steps-navigation label="'2/5' | translate" prev="dash.bankCardStep1"></div>
+        </div>
+        <div class="padding20 bankCard-form">
+            <form name="step2Form">
+                <div class="list">
+                    <label class="item-input" ng-if="bcStep2.isCreditCard">
+                        <security-field widget-id="bcStep2.widgetId" widget-value="bcStep2.expiredDate" key="bcStep2.key" random-factor="bcStep2.randomFactor" is-invalid="bcStep2.isInvalid" number-pad="1" maxlength="4" regex="^[0-9]{4}$" is-submited="bcStep2.isSubmited" title="{{'Card Expiry Date: MMYY' | translate}}" error-msg="{{'Card expirty time format incorrect' | translate}}"></security-field>
+                    </label>
+                    <label class="item-input" ng-if="bcStep2.isCreditCard">
+                        <security-field widget-id="bcStep2.widgetId2" widget-value="bcStep2.cvn" key="bcStep2.key" random-factor="bcStep2.randomFactor" is-invalid="bcStep2.isInvalid2" number-pad="1" maxlength="3" regex="^[0-9]{3}$" is-submited="bcStep2.isSubmited" title="{{'CVN2' | translate}}" error-msg="{{'CVN2 invalid' | translate}}"></security-field>
+                    </label>
+
+
+
+
+                    <label class="item-input">
+                        <span class="item-label">{{ 'Reserved Bank Mobile Number' | translate }}</span>
+                        <input type="tel"
+                                maxlength="11"
+                                ng-model-options="{ allowInvalid: true }"
+                                ng-model="bcStep2.phoneNumber"
+                                required>
+                        <span class="item-label--error"
+                              input-name="phoneNumber"
+                              ng-model="bcStep2.phoneNumber"
+                              validate-phone-number>
+                        </span>
+                    </label>
+
+
+
+
+                    <div class="item-checkbox-bmw">
+                        <input type="checkbox" ng-model="bcStep2.formData.isAgreed1" required>
+                        <a ng-click="bcStep2.showAgreement()">{{'I accept the Terms and Conditions' | translate}}</a>
+                    </div>
+                    <div class="row row-no-padding padding-vertical">
+                        <button class="button button-full button-positive" ng-disabled="step2Form.$invalid || bcStep2.isInvalid || bcStep2.isInvalid2" ng-click="bcStep2.submit()">
+                            {{'Next' | translate }}
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

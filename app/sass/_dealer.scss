@@ -1,0 +1,64 @@
+.dealer-item-body {
+    padding-bottom: 1px;
+}
+.dealer-summary {
+    padding: 0 8px 15px;
+    border-bottom: 1px solid #444;
+}
+.dealer-description {
+    padding: 0 8px 15px;
+}
+
+.dealer-no-border {
+    border: none;
+}
+
+.dealer-slider-container {
+    position: relative;
+    border: none;
+    padding: 0 30px;
+    p {
+        margin: 5px auto;
+    }
+}
+.card-slider-container {
+    height: 240px;
+    position: relative;
+    background: #222;
+}
+
+.dealer-detail-container {
+    padding-bottom: 0;
+    .item_divider {
+        margin-bottom: 15px;
+    }
+}
+.dealer-partner-image {
+    width: 100%;
+}
+
+.dealer-partner-container {
+    img {
+        width: 100%;
+    }
+    p {
+        margin-top: 0;
+    }
+}
+
+.dealer-card-img {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.dealer-card-img qrcode canvas {
+    position: absolute;
+    max-width: 100px;
+    top: 26%;
+    left: 6%;
+    width: 20%;
+}

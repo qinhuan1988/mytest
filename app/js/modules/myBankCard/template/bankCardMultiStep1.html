@@ -1,0 +1,37 @@
+<ion-view class="page--wallet" view-title="">
+    <pc-logo></pc-logo>
+    <ion-content class="has-header content--no-footer">
+        <div class="item item-divider">
+            {{'Add a bank card' | translate}}
+            <div steps-navigation label="'1/3' | translate"></div>
+        </div>
+        <div class="padding10 form">
+            <form name="step1Form" class="bankCard-form">
+                <div class="list">
+                    <label class="item-input">
+                        <security-field
+                            widget-id="bcMultiStep1.widgetId"
+                            widget-value="bcMultiStep1.cardNumber"
+                            key="bcMultiStep1.key"
+                            random-factor="bcMultiStep1.randomFactor"
+                            is-invalid="bcMultiStep1.isInvalid"
+                            number-pad="1"
+                            maxlength="19"
+                            regex="^(?=[0-9]*$)(?:.{16}|.{19})$"
+                            is-submited="bcMultiStep1.isSubmited"
+                            title="{{'Card Number' | translate}}"
+                            error-msg="{{'bankcard number has to be 16 or 19 digitals' | translate}}"></security-field>
+                    </label>
+
+                    <form-error error-msg="bcMultiStep1.errorMsg"></form-error>
+
+                     <div class="row row-no-padding padding-vertical">
+                        <button class="button button-full button-positive" ng-disabled="step1Form.$invalid || bcMultiStep1.isInvalid" ng-click="bcMultiStep1.submit()">
+                            {{'Next' | translate }}
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

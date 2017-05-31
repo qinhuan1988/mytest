@@ -1,0 +1,29 @@
+<div class="items-group">
+    <div class="item item-icon-left bottom-linear-gradient white-space__normal">
+        <i class="bmw-more-lp-logo"></i> {{'loyalty program' | translate}}
+    </div>
+
+    <div class="sub-item">
+
+        <a side-menu-item="membership benefits" class="item item-icon-right" ng-click="dash.closeSideBar(true)" ui-sref="dash.benefits">
+            <i class="icon-benefits"></i> {{ 'membership benefits' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="earn status points" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true)" ui-sref="dash.points">
+            <i class="icon-earnpoints"></i> {{ 'earn status points' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="tutorial" class="item item-icon-right linear-gradient" ng-click="dash.showTutorial()">
+            <i class="icon-tutorial"></i> {{'tutorial' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="Loyalty FAQ" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true);" ui-sref="dash.faq">
+            <i class="icon-bmw-faq"></i> {{'Loyalty FAQ' | translate}}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+    </div>
+</div>

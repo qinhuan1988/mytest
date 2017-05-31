@@ -1,0 +1,52 @@
+<ion-view view-title="{{ 'Programme Benefits' | translate }}">
+    <div class="list programme-header-fixed">
+        <div class="item-headline">
+               {{'your privileges and benefits at a glance'| translate }}
+        </div>
+        <div class="item item-body programme-header">
+            <div class="row row-no-padding">
+                <div class="col" ng-repeat="level in programme.levels">
+                    <img class="level__img" ng-src="{{level.imageLink}}" />
+                </div>
+            </div>
+            <div class="row row-no-padding">
+                <div class="col" ng-repeat="level in programme.levels">
+                    <div class="level__name" ng-style="{'color' : level.colorCode }">{{level.name}}</div>
+                </div>
+            </div>
+            <div class="row row-no-padding">
+                <div class="col" ng-repeat="level in programme.levels">
+                    <div class="level__points">{{level.points}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ion-content class="content--no-footer programme-container">
+        <div class="list programme-benefits-list">
+            <div class="item item-body programme-benefit" ng-repeat="benefit in programme.benefits">
+                <div class="benefit__desc" ng-bind-html="benefit.desc">
+                </div>
+                <div class="row row-no-padding">
+                    <div class="col benefit__level" ng-repeat="level in programme.levels">
+                        <div class="benefit__level--in" ng-style="{'background' : level.colorCode }" ng-if="programme.isLevelInBenefit(level.label, benefit.levels)"></div>
+                        <div class="benefit__level--out" ng-if="!programme.isLevelInBenefit(level.label, benefit.levels)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="item-body">
+                {{ '(1)  Only valid in 2017; for vehicles equipped with Professional Navigation Systems (HU-H), Business Navigation Systems (Entry Nav), or Professional and Business Navigation Systems (CIC).' | translate }}
+            </div>
+            <div class="item-body">
+                {{ '(2)  Based on availability of participating dealerships.' | translate }}
+            </div>
+            <div class="item-body">
+                {{ '(3)  For the duration of your car repair or maintenance we offer you a reimbursement of up to 200RMB on your transportation costs.' | translate }}
+            </div>
+            <div class="item-body">
+                {{ '(4)  Priority for appointments made in advance. Service is based on availability of participating dealerships.' | translate }}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

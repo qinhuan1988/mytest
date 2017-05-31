@@ -1,0 +1,46 @@
+<div class="tab-power-press__button" on-drag="onDrag($event)" on-hold="show()" on-release="hide()"></div>
+<div class="tab-power-press__items">
+
+    <div class="tab-power-press-background"></div>
+
+    <div class="tab-power-press__item" ng-click="redirect({ state: 'dash.coupons' })">
+        <div class="item__label">{{ 'My Vouchers' | translate }}</div>
+        <div class="item__icon">
+           <img class="icon" ng-src="{{imageBaseURL}}img/icons/common/idrive-mycoupons.svg">
+           <img class="icon--highlight" ng-src="{{imageBaseURL}}img/icons/common/idrive-mycoupons-active.png">
+        </div>
+    </div>
+
+    <div class="tab-power-press__item" ng-click="redirect({ state: 'dash.partners' })">
+        <div class="item__label">{{ 'Partner Benefits' | translate }}</div>
+        <div class="item__icon">
+            <img class="icon" ng-src="{{imageBaseURL}}img/icons/common/partners.svg">
+            <img class="icon--highlight" ng-src="{{imageBaseURL}}img/icons/common/partners_Active.png">
+        </div>
+    </div>
+
+    <div class="tab-power-press__item" ng-click="redirect({ state: 'dash.myWallet',  params: { from: 'iDrive' }})">
+        <div class="item__label">{{ 'BMW Pay' | translate }}</div>
+        <div class="item__icon">
+            <img class="icon" ng-src="{{imageBaseURL}}img/icons/common/idrive-bmwpay.svg">
+            <img class="icon--highlight" ng-src="{{imageBaseURL}}img/icons/common/idrive-bmwpay-active.png">
+        </div>
+    </div>
+
+    <div class="tab-power-press__item" ng-click="redirect({ state: 'dash.about' })">
+        <div class="item__label">{{ 'About-in-iDrive' | translate }}</div>
+         <div class="item__icon">
+           <img class="icon" ng-src="{{imageBaseURL}}img/icons/common/idrive-about.svg">
+           <img class="icon--highlight" ng-src="{{imageBaseURL}}img/icons/common/idrive-about-active.png">
+        </div>
+    </div>
+
+    <div class="tab-power-press__item" ng-click="redirect({ externalLinkCbName: 'shareFeedback' })">
+        <div class="item__label">{{ 'Share Feedbacks' | translate }}</div>
+        <div class="item__icon">
+            <img class="icon" ng-src="{{imageBaseURL}}img/icons/common/idrive-feedback-suggestion.svg">
+            <img class="icon--highlight" ng-src="{{imageBaseURL}}img/icons/common/idrive-feedback-suggestion-active.png">
+        </div>
+    </div>
+
+</div>

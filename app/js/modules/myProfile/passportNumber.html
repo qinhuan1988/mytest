@@ -1,0 +1,20 @@
+<ion-view view-title="">
+    <ion-content class="content--no-footer">
+
+       <!--  <div class="item item-divider">
+            {{'Passport Number' | translate}}
+        </div> -->
+
+        <div class="padding10">
+            <p class="assertive" ng-class="{'invisible': !dash.rightBtnDisabled || !myPassportNumber.userInfo.passportNumberValue}">
+                {{'Passport is incorrect' | translate}}
+            </p>
+
+            <label class="item-input">
+                <span class="item-label">{{'Passport Number' | translate}}</span>
+                  <textarea type="text" ng-change="myPassportNumber.checkPassportNumber()" ng-model="myPassportNumber.userInfo.passportNumberValue"></textarea>
+            </label>
+        </div>
+
+    </ion-content>
+</ion-view>

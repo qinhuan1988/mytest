@@ -1,0 +1,30 @@
+<ion-view view-title="{{ 'Membership Benefits' | translate }}">
+    <ion-content class="has-header content--no-footer">
+        <div class="list">
+            <a class="item-headline">
+                     {{'Membership level'| translate }}
+            </a>
+            <div class="item item-body" ui-sref="dash.levels">
+                <img ng-src="{{benefits.assetsPath}}membercards.png" style="width:100%">
+                <p>{{'Collect points and earn upgrades to a higher Membership Level. Each new Class offers even more exciting rewards.' | translate}}</p>
+                <p class="see-more">{{'See more' | translate}}</p>
+            </div>
+
+            <a class="item-headline">
+                     {{'Programme benefits'| translate }}
+            </a>
+            <div class="item item-body" ui-sref="dash.programme">
+                <p>{{'Explore the range of exclusive benefits available for each of the Priority Plus Alliance Levels.' | translate}} </p>
+                <p class="see-more">{{'See more' | translate}}</p>
+            </div>
+
+            <a class="item-headline">
+                     {{'earn status points'| translate }}
+            </a>
+            <div class="item item-body" ui-sref="dash.points">
+                <p>{{'There are so many ways to earn points with Priority Plus Alliance. Discover our extensive network.' | translate}}</p>
+                <p class="see-more">{{'See more' | translate}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+<ion-view view-title="{{ 'Contact' | translate }}">
+    <ion-content class="content--no-footer">
+        <div class="list">
+            <div class="item-body">
+                {{ 'You can contact us via the following channels' | translate }}
+            </div>
+
+            <div class="tiles-list">
+                <div class="tile-block" ng-click="contact.feedback()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/sharefeedback.svg">
+                    <span class="tile__label">{{ 'feedback & suggestion' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="contact.requestQuotation()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/requestquotation.svg">
+                    <span class="tile__label">{{ 'request your quotation' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="contact.call('400-800-6666')">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/callus.svg">
+                    <span class="tile__label">{{ 'BMW' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="contact.call('400-800-6699')">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/callus.svg">
+                    <span class="tile__label">{{ 'MINI' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="contact.call('400-800-6600')">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/callus.svg">
+                    <span class="tile__label">{{ 'Motorrad' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="contact.call('400-800-6611')">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/callus.svg">
+                    <span class="tile__label">{{ 'BMWi' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="contact.call('400-812-9999')">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/callus.svg">
+                    <span class="tile__label">{{ 'Roadside Assistant' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="contact.email('servicecenter@bmw.com.cn')">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/emailus.svg">
+                    <span class="tile__label">{{ 'email us' | translate }}</span>
+                </div>
+                <div class="tile-block" ng-click="contact.faq()">
+                    <img class="tile__image" ng-src="{{imageBaseURL}}img/icons/common/faq.svg">
+                    <span class="tile__label">{{ 'FAQ' | translate }}</span>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

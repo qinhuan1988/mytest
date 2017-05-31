@@ -1,0 +1,58 @@
+<ion-view>
+
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear" ui-sref="login">
+            <i class="icon ion-ios-arrow-back"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="form--login">
+
+        <div class="logo-portrait--white"></div>
+
+        <div class="padding20">
+
+            <h5 class="padding-vertical">{{'Forgot your password?' | translate}}</h5>
+
+            <p class="padding-vertical">
+                {{'If you have forgotten your password, please enter the information below. You will receive a confirmation code (OTP) and be required to create a new password.' | translate }}
+            </p>
+
+            <form name="form1">
+
+                <label class="item-input">
+                    <span class="item-label">{{'Mobile phone' | translate}}</span>
+                    <input type="tel" ng-model="forgetPassword.phoneNumber" required>
+                    <span class="item-label--error" input-name="phoneNumber" ng-model="forgetPassword.phoneNumber" validate-phone-number></span>
+                </label>
+
+                <label class="item-input">
+                    <span class="item-label">{{'Type the numbers' | translate}}</span>
+                    <input type="tel" ng-model="forgetPassword.captchaValue">
+                </label>
+
+                <div class="captcha-box" set-captcha-id="forgetPassword.setCaptchaId(id)" my-captcha="forgetPassword.isCaptchaExpired"></div>
+
+                <button class="button" on-click="forgetPassword.requestOTP()" is-disabled="form1.$invalid" is-sent="forgetPassword.isOTPSent" count-down="forgetPassword.countDown" label="{{'Request OTP' | translate}}">
+                </button>
+
+            </form>
+
+            <form name="form2">
+
+                <label class="item-input">
+                    <span class="item-label">{{'Enter OTP' | translate}}</span>
+                    <input type="tel" ng-disabled="!forgetPassword.canValidateOTP" ng-model="forgetPassword.smsCode" required>
+                </label>
+
+                <form-error error-msg="forgetPassword.errorMsg"></form-error>
+
+                <button class="button button-full button-positive" ng-disabled="form2.$invalid" ng-click="forgetPassword.submit()">
+                    {{'Create new password' | translate}}
+                </button>
+
+            </form>
+        </div>
+    </ion-content>
+
+</ion-view>

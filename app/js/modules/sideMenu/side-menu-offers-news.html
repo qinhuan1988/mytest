@@ -1,0 +1,54 @@
+<div class="items-group">
+    <div class="item item-icon-left bottom-linear-gradient white-space__normal">
+        <i class="icon-offers-news"></i> {{'OFFERS & NEWS' | translate}}
+    </div>
+
+    <div class="sub-item">
+
+        <a side-menu-item="loyalty vouchers" class="item item-icon-right" ng-click="dash.closeSideBar(true);dash.redirectToMyVouchers()">
+            <i class="icon-vouchers"></i> {{ 'My Vouchers' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="partners" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true)" ui-sref="dash.partners">
+            <i class="icon-partners"></i> {{ 'partners' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="gift card" class="item item-icon-right linear-gradient" ng-click="dash.openComingSoonView()">
+            <i class="icon-gift"></i> {{ 'gift card' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="BMW shop" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true);dash.redirectToBrandShopPage('bmw')">
+            <i class="icon-bmw-shop"></i> {{ 'BMW shop' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="MINI shop" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true);dash.redirectToBrandShopPage('mini')">
+            <i class="icon-mini-shop"></i> {{ 'MINI shop' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="Motorrad Shop" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true);dash.redirectToBrandShopPage('motorrad')">
+            <i class="icon-motorrad-shop"></i> {{ 'Motorrad Shop' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="BMW club forum" class="item item-icon-right linear-gradient" ng-click="dash.openComingSoonView()">
+            <i class="icon-bmw-club"></i> {{ 'BMW club forum' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="BMW newsletter" class="item item-icon-right linear-gradient" ng-click="dash.openNewsletterLink(false)">
+            <i class="icon-newsfeed"></i> {{ 'BMW newsletter' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="BMW TV" class="item item-icon-right linear-gradient" ng-click="dash.openExternalLink(dash.tv())">
+            <i class="icon-tv"></i> {{ 'BMW TV' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+    </div>
+</div>

@@ -1,0 +1,433 @@
+$form-text-color: $secondary-color;
+$form-error-color: $unvalid-color;
+$form-element-text-color: $default-color;
+$form-element-border-radius: 5px;
+$form-button-border-radius: 5px;
+$form-element-border-color: $border-color;
+$form-element-background-color: $background-color-quaternary;
+
+.bankCard-form,
+.form,
+.form--bank,
+.form--dealer,
+.form--login,
+.form--registration {
+    background: linear-gradient( #1e1e1e, $background-color-primary );
+}
+/*
+ *
+    <label class="item-input">
+        <span class="input-label">My Label</span>
+        <input type="" name="" />
+    </label>
+
+    <label class="item-input input--unvalid">
+        <span class="input-label">Label</span>
+        <input type="" name="" />
+        <span class="input-label--error">Error label is show due to parent class input--unvalid</span>
+    </label>
+ *
+ */
+%form-wrapper {
+    @extend .item;
+    @extend .item-stacked-label;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: inherit;
+    border: none;
+}
+
+%form-element {
+    width: 100%;
+    padding-left: 10px;
+    color: $form-element-text-color;
+    background: $form-element-background-color;
+    border: 1px solid $form-element-border-color;
+    border-radius: $form-element-border-radius;
+}
+
+.item-input {
+    @extend %form-wrapper;
+
+    input {
+        @extend %form-element;
+        height: 50px;
+    }
+
+    textarea[type="text"] {
+        @extend %form-element;
+        height: 100px;
+    }
+}
+
+.item-select {
+    @extend %form-wrapper;
+    @extend .ion-chevron-down;
+    height: auto;
+
+    select {
+        @extend %form-element;
+        position: relative;
+        height: 50px;
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+.item-select:before {
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    z-index: 1;
+    color: $form-text-color;
+}
+
+.item-select:after {
+    display: none;
+}
+
+.item-label {
+    padding: 0 0 7px;
+    font-size: 14px;
+    font-family: $font-bold;
+    color: $form-text-color;
+    display: block;
+}
+
+.item-label--error {
+    padding-top: 5px;
+    display: none;
+    font-size: 14px;
+    color: $form-error-color;
+    white-space: normal;
+}
+
+.input--unvalid {
+    input {
+        color: $form-error-color;
+        border: 1px solid $form-error-color;
+    }
+
+    .item-label--error {
+        display: block;
+    }
+}
+
+.button,
+button {
+    width: 45%;
+    min-width: 150px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    background: linear-gradient($border-color, $background-color-tertiary);
+    border-radius: $form-button-border-radius;
+}
+
+button.button.activated {
+    border: none;
+}
+
+button.button-block {
+    @extend .button;
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+
+button.button-full {
+    @extend .button;
+    width: 100%;
+    text-align: center;
+}
+
+button.button-positive:not([disabled]) {
+    background: linear-gradient($emphasis-color, #902503);
+}
+/*
+ *
+    <div class="input-wrapper--tooltip">
+        <label class="item-input">
+            <span class="item-label">Label</span>
+            <input type="text />
+        </label>
+        <a class="item__tooltip">
+            <i class="icon ion-information-circled"></i>
+        </a>
+    </div>
+ *
+ */
+.input-wrapper--tooltip {
+    position: relative;
+
+    input {
+        padding-right: 45px;
+    }
+}
+
+.item__tooltip {
+    @extend .icon-tooltip;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 3;
+}
+
+.description-container {
+    .item__tooltip {
+        display: inline-block;
+        position: static;
+        vertical-align: middle;
+    }
+}
+
+.captcha-box {
+    position: initial;
+
+    div {
+        display: inline-block;
+    }
+
+    img {
+        height: 34px;
+        margin-left: 0;
+    }
+
+    a.button {
+        @extend %link;
+        margin-left: 5px;
+        vertical-align: super;
+        font-size: 14px;
+    }
+}
+
+.item-checkbox-bmw {
+    font-size: 12px;
+    font-family: $font-bold;
+
+    input:before {
+        background: $form-element-background-color;
+    }
+
+    input:checked:before {
+        background: $form-element-background-color;
+        border-color: $secondary-color;
+        border-width: 1px;
+    }
+
+    input:checked:after {
+        top: 20%;
+        left: 18%;
+        width: 13px;
+        height: 7px;
+        border-width: 2px;
+        border-color: $emphasis-color;
+    }
+}
+/*}*/
+.form--registration,
+.modal {
+    .row {
+        align-items: center;
+    }
+}
+
+.item-radio input+.radio-content .item-content,
+.item-radio input:checked+.radio-content .item-content {
+    color: $secondary-color;
+    background: $background-color-tertiary;
+}
+
+.item-select .input-label {
+    /*color: #B0B0B0;*/
+    font-size: 14px;
+}
+
+.item-input textarea {
+    height: 80px;
+    padding: 10px 0;
+    /*border: 1px solid #ddd;*/
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.item-input {
+    margin-bottom: 10px;
+}
+
+input[disabled] {
+    opacity: 0.6;
+}
+
+.item-floating-label input.errorInput {
+    border: 1px solid red;
+}
+
+.item-select select {
+    direction: ltr;
+}
+/*
+rewrite ionic floating label style
+*/
+.item-floating-label {
+    background-color: white;
+}
+
+.item-floating-label {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.item-floating-label input {
+    border: 1px solid #ddd;
+    padding-left: 5px;
+    font-size: 12px;
+    background: white;
+}
+
+.captcha-box {
+    text-align: left;
+
+    img {
+        margin-left: 5px;
+    }
+
+    a {
+        font-size: 12px;
+        line-height: 1.2em;
+
+        &.icon-left:before {
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+        }
+    }
+}
+
+.bankCard-form {
+    .input-label {
+        width: 25%;
+    }
+
+    .item-icon-right .icon {
+        top: 11px;
+        font-size: 22px;
+    }
+}
+
+.add-vehicle-form {
+    .input-label {
+        width: 100%;
+    }
+}
+
+.bankCard-date input {
+    text-align: center;
+    padding-right: 0;
+}
+// rewrite ionic checkbox style
+
+.item-checkbox-bmw {
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    position: relative;
+
+    a {
+        position: absolute;
+        top: 9px;
+        left: 30px;
+        font-size: 14px;
+    }
+
+    input {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+
+        &:before {
+            display: table;
+            width: 100%;
+            height: 100%;
+            border-width: 1px;
+            border-style: solid;
+            content: ' ';
+            @include transition(background-color 20ms ease-in-out);
+        }
+
+        &:after {
+            @include transition(opacity .05s ease-in-out);
+            @include rotate(-45deg);
+            position: absolute;
+            top: 32%;
+            left: 24%;
+            display: table;
+            width: 9px;
+            height: 4px;
+            border: 1px solid #fff;
+            border-top: 0;
+            border-right: 0;
+            content: ' ';
+            opacity: 0;
+        }
+
+        &:checked,
+        &:checked:after {
+            opacity: 1;
+        }
+    }
+}
+
+.item-checkbox-bmw {
+    @extend .item;
+    white-space: normal;
+    overflow: visible;
+}
+
+.form-control[readonly] {
+    background-color: transparent;
+}
+
+label.checkbox {
+    font-weight: normal;
+
+    input[type="checkbox"] {
+        margin-left: 0;
+    }
+}
+
+.col-right__cancel {
+    line-height: 35px;
+}
+
+.link--forget-password {
+    text-align: right;
+    line-height: 24px;
+}
+
+.list--ccb {
+    @extend .list
+}
+
+.list--ccb .item-note {
+    @extend .item-note;
+    text-overflow: ellipsis;
+    max-width: 60%;
+    overflow: hidden;
+}
+
+.error-star {
+    color: $unvalid-color;
+    white-space: normal;
+    padding: 0 4px;
+}

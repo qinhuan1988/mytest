@@ -1,0 +1,128 @@
+header {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 7px;
+    z-index: 12;
+    position: relative;
+
+    .logo {
+        width: 100%;
+        max-width: 180px;
+        min-width: 120px;
+        padding: 8px;
+        float: right;
+    }
+}
+
+header {
+    .small-logo {
+        width: 96px;
+        min-width: 50px;
+        padding: 8px;
+    }
+
+    .member-name {
+        margin-left: 8px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-family: $font-bold;
+    }
+
+    .member-level {
+        margin-left: 8px;
+        float: left;
+    }
+
+    .member-level-label {
+        margin-left: 8px;
+        margin-top: -6px;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+}
+
+.small-header {
+    height: 40px;
+
+    .member-level {
+        margin-top: 6px;
+
+        .icon-card {
+            float: left;
+        }
+
+        .bmw-card-info {
+            float: left;
+        }
+    }
+}
+
+.platform-ios.platform-cordova {
+    &:not(.fullscreen) {
+        header {
+            height: 80 + $ios-statusbar-height;
+            padding-top: $ios-statusbar-height;
+        }
+
+        header.small-header {
+            height: 40 + $ios-statusbar-height;
+            padding-top: $ios-statusbar-height;
+        }
+
+        /* ajust header title */
+        .bar-header:not(.bar-subheader)>* {
+            margin-top: 23px;
+        }
+        .bar .title {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .modal-header {
+            padding-top: 30px;
+        }
+    }
+}
+
+.has-dashboard {
+    .bar-header {
+        top: 58px;
+    }
+}
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar.has-dashboard.bar-header {
+    background: radial-gradient(#333 21% ,#111 77%);
+    background-position: 50% 19px;
+    background-size: 665px;
+    background-repeat: no-repeat;
+}
+
+/* reset button style in header */
+.bar,
+.bar-header {
+    button.button {
+        width: auto;
+        margin: 0;
+    }
+
+    .title {
+        @extend %font--bold;
+    }
+}
+
+.page--transaction-history .bar-header {
+    top: 10px;
+}
+
+
+.modal-header {
+	height: 43px;
+	padding: 10px;
+	line-height: 23px;
+	.ion-ios-close-empty {
+		position: absolute;
+		right: 10px;
+		top: 5px;
+		font-size: 35px;
+        width: 30px;
+	}
+}

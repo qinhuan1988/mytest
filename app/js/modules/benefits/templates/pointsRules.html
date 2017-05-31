@@ -1,0 +1,46 @@
+<div class="list">
+    <div class="item item-body points-rule">
+        <h3>
+            {{ 'The BMW Group Loyalty Programme makes it easier than ever to earn points:' | translate }}
+        </h3>
+        <div class="row">
+            <div class="col col-10"><i class="point-rule-icon"></i></div>
+            <div class="col col-90"><span class="point-item-rule">{{ '1 RMB spent = 1 status point.*' | translate }}</span></div>
+        </div>
+        <div class="row">
+            <div class="col col-10"><i class="point-rule-icon"></i></div>
+            <div class="col col-90"><span class="point-item-rule">{{ 'Visit an official dealership for maintenance and check-ups.' | translate }}</span></div>
+        </div>
+        <div class="row">
+            <div class="col col-10"><i class="point-rule-icon"></i></div>
+            <div class="col col-90"><span class="point-item-rule">{{ 'Attend a BMW Group event or activity.' | translate }}</span></div>
+        </div>
+        <p class="points-rule">
+            {{ '*For MINI and BMW Lifestyle products, original parts, and other purchases made at participating dealerships. Based on the Recommended Retail Price. Certain restrictions may apply.' | translate }}
+        </p>
+    </div>
+</div>
+<div class="list points-item-body">
+    <div class="item item-body programme-header">
+        <div class="row row-no-padding">
+            <div class="col" ng-repeat="level in levels">
+                <img class="level__img" ng-src="{{level.imageLink}}" />
+            </div>
+        </div>
+        <div class="row row-no-padding">
+            <div class="col" ng-repeat="level in levels">
+                <div class="level__name" ng-style="{'color' : level.colorCode}">{{level.name}}</div>
+            </div>
+        </div>
+        <hr class="point-horizontal-divider">
+        <span class="points-label">{{ 'Status points' | translate }}</span>
+        <div class="row row-no-padding">
+            <div class="col" ng-repeat="level in levels">
+                <div class="level__points">{{level.points}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="item-body">
+        {{ 'Your membership level gets upgraded to the next tier upon reaching a certain point total, which unlocks even more advantages that enrich your experience.' | translate }}
+    </div>
+</div>

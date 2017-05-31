@@ -1,0 +1,16 @@
+<ion-modal-view class="tutorial">
+
+    <ion-slides options="tutorialModal.slider.options" slider="tutorialModal.slider.delegate" >
+        <ion-slide-page ng-repeat="slide in tutorialModal.slideAssets">
+            <img ng-src="{{ tutorialModal.assetsFolderPath + slide }}" />
+        </ion-slide-page>
+    </ion-slides>
+
+    <div class="skip" ng-click="tutorialModal.remove()" ng-show="activeIndex !== tutorialModal.slideAssets.length">
+        {{ 'tutorial-skip' | translate }}
+    </div>
+    <div class="skip" ng-click="tutorialModal.remove()" ng-show="activeIndex === tutorialModal.slideAssets.length">
+        {{ 'tutorial-done' | translate }}
+    </div>
+    
+</ion-modal-view>

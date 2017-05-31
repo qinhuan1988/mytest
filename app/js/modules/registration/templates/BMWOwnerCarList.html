@@ -1,0 +1,49 @@
+<ion-view>
+    <ion-nav-title>{{ 'Your current vehicle' | translate }}</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+        <div steps-navigation current="3" total="5"></div>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header">
+
+        <div class="form padding20">
+            <p class="item--page-description">
+                {{'According to our records, your current vehicle information is as follows:' | translate}}
+            </p>
+
+            <br>
+
+            <form>
+                <div class="row item_divider">
+                    <div class="col-50 list-value text-center">
+                        {{'Car model' | translate}}
+                    </div>
+                    <div class="col-50 list-value text-center">
+                        {{'VIN Number' | translate}}
+                    </div>
+                </div>
+                <div class="row item_divider text-left list" ng-repeat="item in registrationCarList.vehicleList">
+                    <div class="col-50 car-model-cell text-center">
+                        <b>{{item.model}}</b>
+                    </div>
+                    <div class="col-50 car-model-cell text-center">
+                        {{item.vin}}
+                    </div>
+                </div>
+
+                <form-error error-msg="registrationCarList.errorMsg"></form-error>
+            </form>
+        </div>
+
+        <div class="padding20">
+            <button class="button button-full button-positive" ng-click="registrationCarList.submit()">
+                {{'Continue' | translate}}
+            </button>
+
+            <button class="button button-full" ng-click="registrationCarList.goAddVehicle()">
+                {{'Add another vehicle' | translate }}
+            </button>
+        </div>
+
+    </ion-content>
+</ion-view>

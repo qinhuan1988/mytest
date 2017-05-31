@@ -1,0 +1,6 @@
+<div class="item item-divider item-icon-right" ng-click="toggle()">
+    <i class="icon" ng-class="active === itemId ? 'ion-chevron-up' : 'ion-chevron-down'" style="font-size:10px"></i>
+    <p class="faq-question"> {{question}} </p>
+</div>
+<div class="item" ng-show="active === itemId" ng-bind-html="answer">
+</div>

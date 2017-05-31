@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.mcongroup.bmw.memberapp.sit" android-versionCode="10000" version="0.0.52" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+    <name>BMWLP</name>
+    <description>BMW Loyalty App</description>
+    <author email="marketing@crm-factory.com.cn" href="https://www.mcon-group.com/">MCON GROUP</author>
+
+    <engine name="android" spec="~6.1.0" />
+    <engine name="ios" spec="~4.3.0" />
+
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="target-device" value="handset"/>
+    <preference name="Orientation" value="portrait" />
+
+    <universal-links>
+        <host name="aem-dev.mcon-group.com" scheme="https">
+            <path url="*" />
+        </host>
+        <host name="cmscn-int.bmwgroup.com" scheme="https">
+            <path url="*" />
+        </host>
+        <host name="cmscn.bmwgroup.com" scheme="https">
+            <path url="*" />
+        </host>
+    </universal-links>
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+
+        <icon src="../cordova/icons/ldpi.png" density="ldpi" />
+        <icon src="../cordova/icons/mdpi.png" density="mdpi" />
+        <icon src="../cordova/icons/hdpi.png" density="hdpi" />
+        <icon src="../cordova/icons/xhdpi.png" density="xhdpi" />
+        <icon src="../cordova/icons/xxhdpi.png" density="xxhdpi" />
+
+        <splash src="../cordova/splash/drawable-port-hdpi.png" density="port-hdpi"/>
+        <splash src="../cordova/splash/drawable-port-mdpi.png" density="port-mdpi"/>
+        <splash src="../cordova/splash/drawable-port-ldpi.png" density="port-ldpi"/>
+        <splash src="../cordova/splash/drawable-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
+
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="DisallowOverscroll" value="true"/>
+
+        <icon src="../cordova/icons/icon-20.png" width="20" height="20" />
+        <icon src="../cordova/icons/icon-20@2x.png" width="40" height="40" />
+        <icon src="../cordova/icons/icon-20@3x.png" width="60" height="60" />
+
+        <icon src="../cordova/icons/icon-40.png" width="40" height="40" />
+        <icon src="../cordova/icons/icon-40@2x.png" width="80" height="80" />
+
+        <icon src="../cordova/icons/icon-50.png" width="50" height="50" />
+        <icon src="../cordova/icons/icon-50@2x.png" width="100" height="100" />
+
+        <icon src="../cordova/icons/icon-60.png" width="60" height="60" />
+        <icon src="../cordova/icons/icon-60@3x.png" width="180" height="180" />
+        <icon src="../cordova/icons/icon-60@2x.png" width="120" height="120" />
+
+        <icon src="../cordova/icons/icon-72.png" width="72" height="72" />
+        <icon src="../cordova/icons/icon-72@2x.png" width="144" height="144" />
+
+        <icon src="../cordova/icons/icon-76.png" width="76" height="76" />
+        <icon src="../cordova/icons/icon-76@2x.png" width="152" height="152" />
+        <icon src="../cordova/icons/icon-76@3x.png" width="228" height="228" />
+
+        <icon src="../cordova/icons/icon-83.5@2x.png" width="167" height="167" />
+
+        <icon src="../cordova/icons/icon-small.png" width="29" height="29" />
+        <icon src="../cordova/icons/icon-small@2x.png" width="58" height="58" />
+        <icon src="../cordova/icons/icon-small@3x.png" width="87" height="87" />
+
+        <icon src="../cordova/icons/icon.png" width="57" height="57" />
+        <icon src="../cordova/icons/icon@2x.png" width="114" height="114" />
+
+        <splash src="../cordova/splash/Default-568h@2x~iphone.png" width="640" height="1136" />
+        <splash src="../cordova/splash/Default-667h.png" width="750" height="1334" />
+        <splash src="../cordova/splash/Default-736h.png" width="1242" height="2208" />
+        <splash src="../cordova/splash/Default@2x~iphone.png" width="640" height="960" />
+        <splash src="../cordova/splash/Default~iphone.png" width="320" height="480" />
+    </platform>
+
+</widget>

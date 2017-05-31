@@ -1,0 +1,14 @@
+<ion-view view-title="{{ 'ID validity type' | translate }}">
+    <ion-content class="content--no-footer">
+        <div class="list">
+            <div class="item item-icon-right" ng-if="myIDvalidity.canSelectLongTerm" ng-click="myIDvalidity.setType(1)">
+                {{'Long term' | translate}}
+                <i class="icon ion-ios-checkmark-empty" ng-if='myIDvalidity.value === 1'></i>
+            </div>
+            <div class="item item-icon-right" ng-click="myIDvalidity.setType(0)">
+                {{'Short term' | translate}}
+                <i class="icon ion-ios-checkmark-empty" ng-if='myIDvalidity.value === 0 || !myIDvalidity.canSelectLongTerm'></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+apple_id "jack.sun@mcon-group.com"
+
+
+### if you're in multiple teams...
+
+## Developer Portal (codesigning) [ENTERPRISE/INDIVIDUAL]
+team_name "CRM Factory GmbH"
+team_id "VVQFX9H2W3"
+
+## iTunes Connect (distributing to AppleStore and TestFlight) [INDIVIDUAL]
+itc_team_name "CRM Factory GmbH"
+itc_team_id "117748220"

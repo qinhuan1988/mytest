@@ -1,0 +1,86 @@
+<ion-view view-title="{{ 'my profile' | translate }}">
+    <ion-content class="content--no-footer">
+
+        <ion-refresher on-refresh="myProfile.refreshView()"></ion-refresher>
+
+        <div>
+            <div class="item-body">
+                <!-- <div class="profile-img"></div> -->
+                <div class="profile-info">
+                    {{myProfile.nameDisplay}}
+                    <br> {{'Membership ID' | translate}}: {{myProfile.userInfo.membershipId}}
+                </div>
+            </div>
+            <a class="item item-icon-right" ui-sref="dash.myProvince">
+              {{'Province' | translate}}
+              <span class="item-note">
+                   {{myProfile.userInfo.province}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" ui-sref="dash.myCity">
+              {{'City' | translate}}
+              <span class="item-note">
+                  {{myProfile.userInfo.city}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" ui-sref="dash.myAddress">
+              {{'Address' | translate}}
+              <span class="item-note">
+                  {{myProfile.userInfo.address1}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" ui-sref="dash.myPostCode">
+              {{'Postcode' | translate}}
+              <span class="item-note">
+                  {{myProfile.userInfo.zipcode}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" ui-sref="dash.myPreferredContact">
+              {{'Preferred communication channel' | translate}}
+              <span class="item-note">
+                  {{myProfile.getCommunicationType(myProfile.userInfo.preferredModeOfCommunication) | translate}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" ui-sref="dash.myEmail">
+              {{'E-mail' | translate}}
+              <span class="item-note">
+                  {{myProfile.userInfo.email}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" ui-sref="dash.myIDType">
+              {{'ID type' | translate}}
+              <span class="item-note">
+                 {{myProfile.getIDType(myProfile.userInfo.udf27) | translate}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" ui-sref="dash.myIDNumber" ng-show="myProfile.userInfo.udf27 == 1">
+              {{'ID number' | translate}}
+              <span class="item-note">
+                  {{myProfile.userInfo.udf28}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" ui-sref="dash.myPassport" ng-show="myProfile.userInfo.udf27 == 2">
+              {{'Passport Number' | translate}}
+              <span class="item-note">
+                  {{myProfile.userInfo.udf28}}
+              </span>
+              <i class="icon ion-ios-arrow-right"></i>
+            </a>
+        </div>
+
+        <br>
+
+        <button class="button-block icon-left ion-unlocked" ui-sref="dash.changePassword">
+            {{'Change Password' | translate}}
+        </button>
+
+    </ion-content>
+</ion-view>

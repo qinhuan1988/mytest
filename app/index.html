@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>BMW LP</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="copyright" content="BMW">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!--
+     On build configuration
+    -->
+    <!-- @if CORDOVA=true -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- @endif -->
+</head>
+
+<body>
+    <ion-nav-view></ion-nav-view>
+    
+    <div class="waiting-wrapper" ng-show="loading && !pullToRefresh && !qrCodeRefreshing || isLoadAEM">
+        <div class="img"></div>
+    </div>
+    <script src="js/bundle.js"></script>
+</body>
+
+</html>

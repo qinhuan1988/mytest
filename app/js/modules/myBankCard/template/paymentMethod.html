@@ -1,0 +1,68 @@
+<ion-view  class="page--wallet" view-title="">
+    <ion-nav-bar class="inner-nav-bar">
+        <ion-nav-back-button class="button-clear" ui-sref="dash.myWallet">
+            <i class="icon ion-ios-arrow-back"></i>
+        </ion-nav-back-button>
+         <pc-logo></pc-logo>
+    </ion-nav-bar>
+    <ion-content class="content--no-footer">
+        <div class="list">
+            <div class="item-headline">
+                {{'Payment Methods' | translate}}
+            </div>
+
+            <div class="row item" ng-if="paymentMethod.userCards.length > 0">
+                <div class="col col-67">
+                    {{'Provider' | translate}}
+                </div>
+                <div class="col col-33">
+                    {{'Account' | translate}}
+                </div>
+            </div>
+
+            <ion-list>
+
+                <ion-item ng-repeat="card in paymentMethod.userCards" class="item-remove-animate">
+                    <div class="item-icon-left">
+                        <img class="bank-card-image" ng-src="{{card.imgUrl}}"
+                        fallback-src="'{{imageBaseURL}}img/fallback/{{card.iconId}}.png'"/>
+                        <span class="item-note">{{card.r_name | limitTo : 100 : 9}}</span>
+                    </div>
+                    <ion-option-button class="button-assertive icon ion-close" ng-click="paymentMethod.deleteCard(card)">
+                    </ion-option-button>
+                </ion-item>
+                <!-- <ion-item class="item-remove-animate">
+                    <div class="item-icon-left">
+                        <i class="icon ion-card"></i> {{'Alipay' | translate}}
+                    </div>
+                </ion-item>
+                <ion-item class="item-remove-animate">
+                    <div class="item-icon-left">
+                        <i class="icon ion-card"></i> {{'Wechat' | translate}}
+                    </div>
+                </ion-item> -->
+
+               <!-- <ion-item ng-repeat="card in paymentMethod.giftCards" class="item-remove-animate">
+                    <div class="item-icon-left">
+                        <i class="icon ion-card"></i> {{'Gift card' | translate}}
+                        <span class="item-note">{{card.number}}</span>
+                    </div>
+                    <ion-option-button class="button-assertive icon ion-close" ng-click="paymentMethod.deleteGiftCard(card)">
+                    </ion-option-button>
+                </ion-item>-->
+
+            </ion-list>
+
+            <div class="page-divider" ng-if="paymentMethod.userCards.length > 0"></div>
+            <div class="anchor-wrapper--tooltip">
+                <a class="item item-icon-left" ng-click="paymentMethod.addBankCard()">
+                    <i class="icon ion-ios-plus-outline"></i> {{'Add a bank card' | translate}}
+                </a>
+                <a class="item__tooltip" ng-click="paymentMethod.showBankListInfo()"></a>
+            </div>
+            <!--  <a class="item item-icon-left" ng-click="paymentMethod.addGiftCard()">
+                <i class="icon ion-ios-plus-outline"></i> {{'Add a gift card' | translate}}
+            </a>-->
+        </div>
+    </ion-content>
+</ion-view>

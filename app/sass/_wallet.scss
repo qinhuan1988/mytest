@@ -1,0 +1,182 @@
+.platform-ios.platform-cordova:not(.fullscreen) .inner-nav-bar.myWallet-header {
+    background-color: #0168ae;
+    text-align: center;
+    padding: 10px;
+}
+
+.myWallet-header h4 {
+    color: white;
+    margin: 5px;
+}
+
+.current-value {
+    background-color: white;
+    height: 90px;
+    width: 90px;
+    margin: auto;
+    border: 1px black dotted;
+    border-radius: 45px;
+    border-style: none;
+}
+
+.current-value .label {
+    font-size: 10px;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.current-value .value {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.transparent {
+    background: transparent !important;
+}
+
+.image-modal {
+    width: 100% !important;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.link {
+    color: $emphasis-color;
+}
+
+.close-button {
+    text-align: right;
+}
+
+.bank-card-image {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 20px;
+    margin-top: -6px;
+}
+
+.qr-code-modal {
+    background: transparent;
+    .row + .row {
+        margin: 0;
+    }
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.radioBtn input[type=radio]:checked {
+    background-color: #0168ae;
+}
+
+.radioBtn input[type='radio'] {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid #0168ae;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 5px 0px white inset;
+}
+
+.radioBtn input[type='radio']:hover {
+    box-shadow: 0 0 5px 0px orange inset;
+}
+
+.radioBtn input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+.radioBtn input[type='radio']:checked:before {
+    background: #0168ae;
+}
+
+.pay-password {
+    background-size: percentage(1/6) percentage(1/6);
+    background-image: linear-gradient(to right, #444 1px, transparent 1px);
+    padding-left: 0;
+    border: 1px solid #444;
+    input {
+        letter-spacing: 12vw;
+        font-size: 20px;
+        padding-right: 0;
+        text-indent: 18px;
+        background: transparent;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+.security-plugin-overlay--android {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: transparent;
+}
+
+.transBtnClr {
+    color: #0168ae;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) {
+    .page--wallet .inner-nav-bar {
+        top: -8px;
+    }
+}
+
+.page--wallet {
+
+    .bar-header {
+        top: 12px;
+    }
+
+    .item-divider {
+        min-height: 15px;
+    }
+}
+
+ion-option-button.button-assertive {
+    margin: 0;
+}
+
+.add-card-emphasis {
+    color: $emphasis-color;
+}
+
+.anchor-wrapper--tooltip {
+    position: relative;
+    .item__tooltip {
+        margin-top: -20px;
+
+    }
+}
+
+button.card-responsive, .card-responsive {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+}

@@ -1,0 +1,41 @@
+<div class="items-group">
+    <div class="item item-icon-left bottom-linear-gradient white-space__normal">
+        <i class="icon-me"></i> {{'ME' | translate}}
+    </div>
+
+
+    <div class="sub-item">
+
+        <a side-menu-item="my wallet" class="item item-icon-right" ng-click="dash.closeSideBar(true);" ui-sref="dash.myWallet({ isComingFromSideMenu: true })">
+            <i class="icon-my-wallet"></i> {{ 'my wallet' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="my favorites" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true)" ui-sref="dash.favorites">
+            <i class="icon-favorites"></i> {{ 'my favorites' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="my activity log" class="item item-icon-right linear-gradient"  ng-click="dash.openComingSoonView()">
+            <i class="icon-activity-log"></i> {{ 'my activity log' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="my profile" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true)" ui-sref="dash.myProfile">
+            <i class="icon-my-profile"></i> {{ 'my profile' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="my vehicles" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true)" ui-sref="dash.vehicles">
+            <i class="icon-my-vehicles"></i> {{ 'my vehicles' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+        <a side-menu-item="my dealers" class="item item-icon-right linear-gradient" ng-click="dash.closeSideBar(true)" ui-sref="dash.dealers">
+            <i class="icon-my-dealers"></i> {{ 'my dealers' | translate }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+
+
+    </div>
+</div>

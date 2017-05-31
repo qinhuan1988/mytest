@@ -1,0 +1,342 @@
+$app-background-color: #fdfdfd; // because of the ionic 1.3.1 _variables $button-default-border missing !default
+// so put it for now here, can not be rewrite in advance
+.button-clear.button-clear {
+    color: #b2b2b2;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.pane, ion-header-bar {
+    background-color: $background-color-primary !important;
+}
+
+
+%page-has-background {
+    background: url(../img/main_BG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.ionic-scroll {
+    @extend %page-has-background;
+}
+
+
+
+
+.ng-invalid-new-password,
+.ng-invalid-password {
+    width: 100%;
+    white-space: normal;
+    display: inline;
+    overflow: visible;
+}
+
+
+/*
+rewrite ionic tab item style
+*/
+
+.darkgray {
+    background: #f7f7f7;
+}
+
+.bg-gray,
+.lightgray {
+    background: #fdfdfd;
+}
+
+.gray-container {
+    background: #EBEBEB;
+    padding: 10px;
+}
+
+.padding10 {
+    padding: 10px;
+
+    /*background: $background-color-tertiary;*/
+}
+
+.padding15 {
+    padding: 15px;
+
+    /*background: $background-color-tertiary;*/
+}
+
+.padding20 {
+    padding: 20px;
+
+    /*background: $background-color-tertiary;*/
+
+    &-side {
+        padding: 0 20px;
+    }
+}
+
+.padding30 {
+    padding: 30px;
+}
+
+.margin20 {
+    margin: 20px;
+}
+
+%logo-portrait {
+    width: 125px;
+    height: 136px;
+    margin: 10px auto 0;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.logo-portrait_en {
+    @extend %logo-portrait;
+    background-image: url("../img/logovertical_en.svg");
+}
+.logo-portrait_zh {
+    @extend %logo-portrait;
+    background-image: url("../img/logovertical_zh.svg");
+}
+
+%logo-portrait--white {
+    @extend %logo-portrait;
+    background-position-y: 50%;
+}
+.logo-portrait--white_en {
+    @extend %logo-portrait--white;
+    background-image: url("../img/logo_light_en.svg");
+}
+.logo-portrait--white_zh {
+    @extend %logo-portrait--white;
+    background-image: url("../img/logo_light_zh.svg");
+}
+
+.home-header {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    background-color: transparent;
+    z-index: 9999;
+}
+
+.button-home {
+    height: 40px;
+    text-align: left;
+    padding: 0 15px;
+    width: 90% !important;
+    margin: auto;
+    font-weight: 600;
+    font-size: 12px;
+    background-color: #0066b4 !important;
+}
+
+.no-background {
+    background: none;
+}
+
+.button.button-otp {
+    /*margin: 20px 0 0 10px;*/
+    @media only screen and (max-width: 320px) {
+        font-size: 11px;
+    }
+}
+
+.arrow-solid {
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-45deg);
+    margin: 25px 0 0 15px;
+}
+
+.view-has-tabs {
+    bottom: 100px;
+}
+
+.login-tips {
+    color: #444;
+    font-size: 12px;
+}
+
+.errorMsg-inline {
+    .title {
+        font-weight: bold;
+        font-size: 14px;
+        margin: 0;
+    }
+    .description {
+        font-size: 12px;
+    }
+}
+
+.button.button-light {
+    border-color: #0168ae;
+    color: #0168ae;
+}
+
+.home-video {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.fullscreen-player {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.btn-opt {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.translateY50 {
+    transform: translateY(50%);
+}
+
+.comingSoon-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.icon-col-header {
+    min-height: 48px;
+    overflow: auto;
+    padding: 0.5em;
+}
+
+.icon-col-header img {
+    max-width: 5%;
+    vertical-align: middle;
+}
+
+.icon-col-header span {
+    margin: 0 0 0 5px;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+.contact-preview-scroll {
+    height: 330px;
+}
+
+.padding-bottom.row-no-padding,
+.padding-top.row-no-padding,
+.row-no-padding {
+    padding: 0;
+}
+
+.none-decoration {
+    text-decoration: none;
+}
+
+
+/*
+ * <ion-content class="has-header content--no-footer"></ion-content>
+ */
+
+.view-has-small-header + .view-container ion-content.has-header {
+    bottom: 97px;
+    top: 63px;
+}
+
+.view-has-small-header + .view-container ion-content.content--no-footer {
+    bottom: 50px;
+}
+.item {
+    color: inherit;
+}
+.item, .item-divider {
+    background-color: $background-color-tertiary;
+    border-color: $border-color;
+    color: #ccc;
+}
+.item.active, .item.activated  {
+    background-color: $background-color-tertiary !important;
+    border-color: $border-color !important;
+}
+
+.divider {
+    height: 1px;
+    margin: 4px;
+
+    background: $border-color;
+}
+
+/*.list {
+    background: $background-color-tertiary;
+}*/
+
+.item-body {
+    color: inherit;
+    background: $background-color-tertiary;
+}
+
+.item_divider {
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 4px;
+}
+
+.page-divider {
+    @extend .item;
+    @extend .item_divider;
+
+    background: transparent;
+    border: none;
+    margin-bottom: 0;
+}
+
+.inner-page-divider {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background: transparent;
+}
+
+.user-select {
+    -webkit-user-select: auto !important;
+}
+.clearfix {
+    clear: both;
+}
+
+.icon-grid-container {
+    justify-content: space-between;
+}
+
+.white-space__normal {
+    white-space: normal;
+}
+.platform-ios.platform-cordova {
+    .content--no-footer.scroll-content {
+        margin-bottom: 20px;
+    }
+
+}

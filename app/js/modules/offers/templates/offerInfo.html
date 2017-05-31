@@ -1,0 +1,57 @@
+<ion-view view-title="">
+    <ion-content class="has-header content--no-footer" delegate-handle="offerInfoScroll">
+        <div class="item item-body offer-item-container">
+            <div class="offer-item">
+                <div class="item-headline">
+                    <div class="item-logo">
+                        <img ng-src="{{ offerInfo.details.AEM_partnerLogo }}" fallback-src="'{{ imageBaseURL }}img/fallback/bmwpartner.png'" />
+                    </div>
+                    <div class="item-partner-name">
+                        {{ offerInfo.details.AEM_partnerName }}
+                    </div>
+                    <div class="item-date" ng-if="offerInfo.details.expiryDate && offerInfo.details.expiryDate !== ''">
+                        {{ 'Valid Until' | translate }}
+                        <br> {{ offerInfo.details.expiryDate }}
+                    </div>
+                </div>
+                <div class="item-title">
+                    {{ offerInfo.details.AEM_name }}
+                </div>
+                <div class="item-short-desc">
+                    {{ offerInfo.details.AEM_shortDesc }}
+                </div>
+                <img class="item-image" ng-src="{{ offerInfo.details.AEM_image }}" image-loaded="imageLoaded" ng-show="imageLoaded"  />
+                <img class="item-image" src="img/loading/voucher.svg" ng-show="!imageLoaded" />
+                <div class="voucher-count"  ng-if="offerInfo.details.totalLimit !== 0">
+                    <span class="voucher-count__left">{{ offerInfo.details.limitLeft }}</span>
+                    <span class="voucher-count__total">{{ offerInfo.details.totalLimit }}</span>
+                    <span class="voucher-count__label">{{ 'are available' | translate }}</span>
+                </div>
+            </div>
+
+            <table class="static-menu-icons">
+                <tr>
+                    <td class="menu-icon-wrapper" ng-if="offerInfo.fav" ng-click="offerInfo.fav.action()">
+                        <img class="menu-icon" ng-src="{{imageBaseURL}}img/icons/voucher/isnotfav.svg">
+                    </td>
+                    <td class="menu-icon-wrapper" ng-if="offerInfo.unfav" ng-click="offerInfo.unfav.action()">
+                        <img class="menu-icon" ng-src="{{imageBaseURL}}img/icons/voucher/isfav.svg">
+                    </td>
+                    <td class="menu-icon-wrapper" ng-if="offerInfo.grab" ng-click="offerInfo.grab.action()">
+                        <img class="menu-icon" ng-src="{{imageBaseURL}}img/icons/common/graboffer.svg">
+                    </td>
+                    <td class="menu-icon-wrapper" ng-if="offerInfo.call" ng-click="offerInfo.call.action()">
+                        <img class="menu-icon" ng-src="{{imageBaseURL}}img/icons/common/call.svg">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menu-label" ng-if="offerInfo.fav" ng-click="offerInfo.fav.action()">{{ 'Add to Favorites' | translate }}</td>
+                    <td class="menu-label" ng-if="offerInfo.unfav" ng-click="offerInfo.unfav.action()">{{ 'Remove from Favorites' | translate }}</td>
+                    <td class="menu-label" ng-if="offerInfo.grab" ng-click="offerInfo.grab.action()">{{ 'Choose Offer' | translate }}</td>
+                    <td class="menu-label" ng-if="offerInfo.call" ng-click="offerInfo.call.action()">{{ 'Call' | translate }}</td>
+                </tr>
+            </table>
+            <div ng-bind-html="offerInfo.details.AEM_desc" class="item__details"></div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,67 @@
+<ion-view view-title="{{ 'membership benefits' | translate }}">
+   <ion-content class="content--no-footer">
+      <div class="">
+         <div class="item item-divider"  ui-sref="dash.levelBenefits">
+            {{'Membership level' | translate}}
+         </div>
+         <div class="item item-body">
+            <div class="row row__list-info">
+               <div class="col-50">
+                  <img ng-src="{{imageBaseURL}}img/tier_levels.png">
+               </div>
+               <div class="col-5">
+               </div>
+               <div class="col-50">
+                  <p>{{'Collect points and earn upgrades to a higher Membership Level. Each new Class offers even more exciting rewards.' | translate}}</p>
+                  <div class="col">
+                     <button class="button button-block button-positive" ui-sref="dash.levelBenefits">
+                     {{'See More' | translate}}
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="item item-divider" ui-sref="dash.pointSystem">
+            {{'Programme Benefits' | translate}}
+         </div>
+         <div class="item item-body">
+            <div class="row row__list-info">
+               <div class="col-50">
+                  <img ng-src="{{imageBaseURL}}img/programme-benefits.png">
+               </div>
+               <div class="col-5">
+               </div>
+               <div class="col-50">
+                  <p>{{'Explore the range of exclusive benefits available for each of the Priority Plus Alliance Levels.' | translate}} </p>
+                  <div class="col">
+                     <button class="button button-block button-positive" ui-sref="dash.pointSystem">
+                     {{'See more' | translate}}
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="item item-divider" ui-sref="dash.earnPoint">
+         {{'Earn points' | translate}}
+         </div>
+         <div class="item item-body">
+            <div class="row__list-info">
+               <div>
+                  <p>{{'There are so many ways to earn points with Priority Plus Alliance. Discover our extensive network.' | translate}}</p>
+                  <div class="row row-no-padding">
+                     <div class="col-50">
+
+                     </div>
+                     <div class="col">
+                        <button class="button button-block button-positive" ui-sref="dash.earnPoint">
+                        {{'See more' | translate}}
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </ion-content>
+</ion-view>

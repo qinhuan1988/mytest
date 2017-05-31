@@ -1,0 +1,86 @@
+<ion-view view-title="">
+    <ion-content class="content--no-footer">
+        <div class="list">
+            <div class="item item-divider ">
+                {{ dealerGroupInfo.dealer.partnerGroupName }}
+            </div>
+            <div class="item item-body">
+                <div class="col-100">
+                    <p class="vehicle_text">{{ 'Find all information about our network of dealerships.' | translate }}</p>
+                    <div class="row item_divider ">
+                        <div class="col-100 row">
+                            <div class="col">
+                                <span class="list-label">{{ 'Address' | translate }}</span>
+                            </div>
+                            <div class="col text-right">
+                                <span class="list-value text_font">{{ dealerGroupInfo.selectedDealer.address1 }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row item_divider ">
+                        <div class="col-100 row">
+                            <div class="col">
+                                <span class="list-label">{{ 'Phone' | translate }}</span>
+                            </div>
+                            <div class="col text-right">
+                                <span class="list-value text_font">{{ dealerGroupInfo.selectedDealer.mobileNo }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row item_divider ">
+                        <div class="col-100 row">
+                            <div class="col">
+                                <span class="list-label">{{ 'Email' | translate }}</span>
+                            </div>
+                            <div class="col text-right">
+                                <span class="list-value text_font">{{ dealerGroupInfo.selectedDealer.email }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row item_divider ">
+                        <div class="col-100 row">
+                            <div class="col">
+                                <span class="list-label">{{ 'Website' | translate }}</span>
+                            </div>
+                            <div class="col text-right">
+                                <span class="list-value link text_font">{{ dealerGroupInfo.selectedDealer.diaFileURL }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-50">
+                        <button class="button icon-left ion-ios-location">
+                            {{ 'Address & Map' | translate }}
+                        </button>
+                    </div>
+                    <div class="col-10">
+                    </div>
+                </div>
+            </div>
+            <div class="item item-divider ">
+                <form name="dealerForm">
+                    <label class="item item-input item-select">
+                        <select ng-model="dealerGroupInfo.selectedDealer" ng-options="item as item.partnerName_en for item in dealerGroupInfo.dealerDetails" required>
+                            <option value="">{{ 'See all delearships in the group' | translate }}</option>
+                        </select>
+                    </label>
+                </form>
+            </div>
+            <div class="item item-divider" ng-if="dealerGroupInfo.selectedDealer.benefitToShow">
+                {{ 'Exclusive offers from this dealer group' | translate }}
+            </div>
+
+            <div class="item item-body offer-item-container" ng-if="dealerGroupInfo.selectedDealer.benefitToShow">
+                <div offer-item="dealerGroupInfo.selectedDealer.benefitToShow" partner-item=true></div>
+            </div>
+
+            <p class="item item-body" ng-if="dealerGroupInfo.selectedDealer.benefitToShow">{{ 'Save up to' | translate }} <span class="link">{{ dealerGroupInfo.selectedDealer.benefitDetailsArray[0].communicatedValue | number }}</span></p>
+            <div class="row padding10">
+                <button class="button button-full button-positive icon-left ion-ios-location" ui-sref="dash.coupons">
+                    {{ 'See all offer for you' | translate }}
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
